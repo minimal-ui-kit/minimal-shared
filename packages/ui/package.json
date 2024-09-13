@@ -9,7 +9,8 @@
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component"
+    "generate:component": "turbo gen react-component",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",

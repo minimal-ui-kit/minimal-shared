@@ -1,0 +1,36 @@
+{
+  "name": "@repo/math",
+  "author": "Minimals",
+  "version": "0.0.1",
+  "description": "Helper for setting, getting and deleting cookies on the front end",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "keywords": [
+    "math"
+  ],
+  "exports": {
+    "./add": {
+      "types": "./src/add/index.ts",
+      "default": "./dist/add/index.js"
+    },
+    "./subtract": {
+      "types": "./src/subtract/index.ts",
+      "default": "./dist/subtract/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "tsup": "^6.2.3",
+    "typescript": "latest",
+    "@repo/typescript-config": "*"
+  }
+}

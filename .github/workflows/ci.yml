@@ -38,7 +38,7 @@ jobs:
         run: pnpm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       # - name: 5.Build
       #   run: pnpm build

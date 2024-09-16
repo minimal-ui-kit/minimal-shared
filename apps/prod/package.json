@@ -10,7 +10,7 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
-    "@minimals/mock": "^0.0.2",
+    "@minimals/mock": "latest",
     "@repo/ui": "*",
     "next": "14.2.6",
     "react": "18.3.1",

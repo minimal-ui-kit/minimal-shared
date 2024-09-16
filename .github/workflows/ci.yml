@@ -13,12 +13,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out code
+      - name: Check repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 2
 
-      - name: Setup Node.js environment
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -26,6 +26,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Set npm token
+        run: npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
 
       - name: Build
         run: npm run build
@@ -36,3 +39,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Clean up npm token
+        run: npm config delete //registry.npmjs.org/:_authToken

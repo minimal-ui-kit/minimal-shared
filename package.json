@@ -20,7 +20,7 @@
     "re:dev": "pnpm clean && pnpm install && pnpm dev",
     "re:build": "pnpm clean && pnpm install && pnpm build",
     "pre:publish": "pnpm build && changeset version",
-    "publish": "pnpm build:publish && changeset version && changeset publish"
+    "publish": "pnpm build:publish -r && changeset version && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.8",

@@ -6,6 +6,9 @@
   "engines": {
     "node": "20.x"
   },
+  "publishConfig": {
+    "directory": "package"
+  },
   "scripts": {
     "build": "turbo build lint",
     "build:publish": "turbo build lint --filter=minimal-mock --filter=minimal-shared",

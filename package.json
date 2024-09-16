@@ -9,7 +9,8 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo build",
+    "build": "turbo build lint",
+    "build:release": "turbo build lint --filter=!./apps/*",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "clean": "turbo run clean && rm -rf .turbo node_modules",
@@ -18,8 +19,8 @@
     "changeset:add": "npx changeset add",
     "re:dev": "npm run clean && npm install && turbo dev",
     "re:build": "npm run clean && npm install && turbo build",
-    "prerelease": "turbo run build lint && changeset version",
-    "release": "turbo run build lint && changeset version && changeset publish"
+    "prerelease": "npm run build && changeset version",
+    "release": "npm run build:release && changeset version && changeset publish"
   },
   "devDependencies": {
     "prettier": "^3.2.5",

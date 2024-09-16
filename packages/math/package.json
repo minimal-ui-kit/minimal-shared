@@ -1,7 +1,7 @@
 {
   "name": "@minimals/mock",
   "author": "Minimals",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simulation data is used for Minimal UI and Zone UI",
   "license": "MIT",
   "main": "./dist/index.js",

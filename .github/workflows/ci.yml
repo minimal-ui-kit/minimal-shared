@@ -13,32 +13,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check repository
+      - name: 1.Check repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 2
 
-      - name: Setup Node.js
+      - name: 2.Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
 
-      - name: Install dependencies
+      - name: 3.Install dependencies
         run: npm install
 
-      - name: Set npm token
+      - name: 4.Set npm token
         run: npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
 
-      - name: Build
-        run: npm run build
-
-      - name: Release
+      - name: 5.Release
         run: npm run publish-packages
-
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Clean up npm token
+      - name: 6.Clean up npm token
         run: npm config delete //registry.npmjs.org/:_authToken

@@ -9,7 +9,7 @@ https://www.youtube.com/watch?v=H3iO8sbvUQg
 **Step 1:**
 
 ```sh
-pnpm changeset
+npx changeset add
 ```
 
 **Step 2:** Choose packages
@@ -33,7 +33,7 @@ Version 1.0.0 => 1.0.1
 **Step 4:** Check before publishing (Build & Update changelog)
 
 ```sh
-pnpm pre:publish
+npm run pre:publish
 ```
 
 **Step 5:** Publish on npm
@@ -41,7 +41,7 @@ pnpm pre:publish
 ```sh
 Push code to Github (Github actions)
 # Or
-# pnpm publish
+# npm run publish
 ```
 
 TEST 1

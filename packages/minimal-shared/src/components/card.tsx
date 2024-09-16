@@ -13,8 +13,9 @@ export function Card({
     <a
       className={className}
       href={`${href}?utm_source=create-turbo&utm_medium=basic&utm_campaign=create-turbo"`}
-      rel="noopener noreferrer"
-      target="_blank"
+      rel='noopener noreferrer'
+      target='_blank'
+      style={{ color: 'green', background: 'cyan' }}
     >
       <h2>
         {title} <span>-&gt;</span>

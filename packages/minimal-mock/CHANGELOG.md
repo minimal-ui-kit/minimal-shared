@@ -1,20 +1,25 @@
-# @minimals/mock
+# @minimals/shared
 
-## 3.0.0
+## 2.1.0
 
-### Major Changes
+### Minor Changes
 
-- v3
+- v2.1.0
 
 ## 2.0.0
 
 ### Major Changes
 
 - v2
-- v3
 
 ## 1.0.0
 
 ### Major Changes
+
+- Init
+
+## 1.0.1
+
+### Patch Changes
 
 - Init

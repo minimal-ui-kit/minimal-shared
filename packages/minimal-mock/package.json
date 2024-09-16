@@ -1,6 +1,9 @@
 {
   "name": "@minimals/mock",
-  "version": "3.0.0",
+  "author": "Minimals",
+  "version": "2.1.0",
+  "description": "Simulation data is used for Minimal UI and Zone UI",
+  "license": "MIT",
   "exports": {
     ".": "./src/index.ts",
     "./test": "./src/test/index.ts",
@@ -12,8 +15,8 @@
     "clean": "rm -rf node_modules .turbo .next out dist build"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
     "@turbo/gen": "^1.12.4",
     "@types/node": "^20.11.24",
     "@types/eslint": "^8.56.5",

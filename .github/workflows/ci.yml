@@ -20,19 +20,17 @@ jobs:
       - name: Check repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 2
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'pnpm'
-          cache-dependency-path: examples/basic-pnpm/pnpm-lock.yaml
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - name: Set pnpm token
         run: pnpm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}

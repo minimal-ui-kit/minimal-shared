@@ -33,15 +33,15 @@ Version 1.0.0 => 1.0.1
 **Step 4:** Check before publishing (Build & Update changelog)
 
 ```sh
-pnpm pre:publish
+pnpm pre:release
 ```
 
 **Step 5:** Publish on npm
 
 ```sh
 Push code to Github (Github actions)
-# Or
-# pnpm publish
+# Or (We recommend `release` so that it doesn't conflict with npm's built-in `publish` script.)
+# pnpm release
 ```
 
 TEST 1

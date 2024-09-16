@@ -17,30 +17,28 @@ jobs:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
-      - name: Check repository
+      - name: 📂 Check repository  
         uses: actions/checkout@v4
         with:
           fetch-depth: 2
+     
+      - name: 📦 Setup pnpm  # https://github.com/marketplace/actions/setup-pnpm
+        uses: pnpm/action-setup@v4
 
-      - uses: pnpm/action-setup@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: 📦 Setup Node.js # https://github.com/actions/setup-node
+        uses: actions/setup-node@v4 
         with:
-          node-version: 20
+          node-version-file: './package.json'
           cache: 'pnpm'
 
-      - name: Set pnpm token
+      - name: 🔑 Set pnpm token 
         run: pnpm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
 
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: pnpm install --frozen-lockfile
-
-      # - name: 5.Build
-      #   run: pnpm build
-
-      - name: Release 🚀
+ 
+      - name: 🚀 Release 
         run: pnpm release
 
-      - name: Clean up pnpm token
+      - name: 🧹 Clean up pnpm token
         run: pnpm config delete //registry.npmjs.org/:_authToken

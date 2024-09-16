@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "turbo build lint",
-    "build:publish": "turbo build lint",
+    "build:publish": "turbo build lint --filter=packages/*",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "clean": "turbo clean && rm -rf .turbo node_modules",

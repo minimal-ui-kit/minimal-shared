@@ -12,6 +12,10 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
 
+    env:
+      GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
     steps:
       - name: Check repository
         uses: actions/checkout@v4
@@ -35,9 +39,6 @@ jobs:
 
       - name: Release
         run: npm run publish-packages
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Clean up npm token
         run: npm config delete //registry.npmjs.org/:_authToken

@@ -1,4 +1,4 @@
 export const subtract = (a: number, b: number) => {
-  console.log('SUBTRACTING KKKK', a, b);
+  console.log('SUBTRACTING AAA', a, b);
   return a - b;
 };

@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      PNPM_CACHE_FOLDER: .pnpm-store
       GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
@@ -27,12 +26,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'pnpm'
+          cache-dependency-path: examples/basic-pnpm/pnpm-lock.yaml
 
       - name: Install pnpm
-        run: npm install -g pnpm@latest
-
-      - name: Setup pnpm config
-        run: pnpm config set store-dir $PNPM_CACHE_FOLDER
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
 
       - name: Set pnpm token
         run: pnpm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}

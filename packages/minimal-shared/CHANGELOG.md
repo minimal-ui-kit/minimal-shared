@@ -1,16 +1,17 @@
 # @minimals/shared
 
-## 2.1.0
+## 3.0.0
 
-### Minor Changes
+### Major Changes
 
-- v2.1.0
+- v3
 
 ## 2.0.0
 
 ### Major Changes
 
 - v2
+- v3
 
 ## 1.0.0
 

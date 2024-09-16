@@ -1,33 +1,27 @@
 {
-  "name": "my-turborepo",
-  "packageManager": "npm@10.8.2",
+  "name": "minimal-shared-pnpm",
+  "private": true,
+  "packageManager": "pnpm@9.10.0",
   "engines": {
     "node": "20.x"
   },
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
     "build": "turbo build lint",
     "build:publish": "turbo build lint --filter=!./apps/*",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "clean": "turbo run clean && rm -rf .turbo node_modules",
+    "clean": "turbo clean && rm -rf .turbo node_modules",
     "fm:check": "prettier --check \"**/*.{js,jsx,ts,tsx}\"",
     "fm:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
-    "changeset:add": "npx changeset add",
-    "re:dev": "npm run clean && npm install && npm run dev",
-    "re:build": "npm run clean && npm install && npm run build",
-    "pre:publish": "npm run build && changeset version",
-    "publish": "npm run build:publish && changeset version && changeset publish"
+    "re:dev": "pnpm clean && pnpm install && pnpm dev",
+    "re:build": "pnpm clean && pnpm install && pnpm build",
+    "pre:publish": "pnpm build && changeset version",
+    "publish": "pnpm build:publish && changeset version && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.8",
     "prettier": "^3.2.5",
     "turbo": "^2.1.2",
     "typescript": "^5.4.5"
-  },
-  "dependencies": {
-    "@changesets/cli": "^2.27.8"
   }
 }

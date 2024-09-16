@@ -12,9 +12,13 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "clean": "turbo run clean",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "publish-packages": "turbo run build lint && changeset version && changeset publish"
+    "clean": "turbo run clean && rm -rf .turbo node_modules",
+    "fm:check": "prettier --check \"**/*.{js,jsx,ts,tsx}\"",
+    "fm:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
+    "changeset:add": "npx changeset add",
+    "re:dev": "npm run clean && npm install && turbo dev",
+    "prerelease": "turbo run build lint && changeset version",
+    "release": "turbo run build lint && changeset version && changeset publish"
   },
   "devDependencies": {
     "prettier": "^3.2.5",

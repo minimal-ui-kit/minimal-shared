@@ -1,20 +1,20 @@
 {
   "name": "dev",
-  "version": "0.1.0",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf node_modules .turbo .next out dist build"
   },
   "dependencies": {
-    "@repo/ui": "*",
     "next": "14.2.6",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "@minimals/mock": "*"
+    "@minimals/mock": "*",
+    "@minimals/shared": "*"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",

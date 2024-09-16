@@ -1,7 +1,7 @@
 {
   "name": "@minimals/mock",
   "author": "Minimals",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simulation data is used for Minimal UI and Zone UI",
   "license": "MIT",
   "main": "./dist/index.js",
@@ -28,7 +28,7 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf node_modules .turbo .next out dist build"
   },
   "devDependencies": {
     "tsup": "^6.2.3",

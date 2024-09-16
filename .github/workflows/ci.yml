@@ -38,7 +38,7 @@ jobs:
       #   run: npm run build
 
       - name: Release
-        run: npm run publish-packages
+        run: npm run release
 
       - name: Clean up npm token
         run: npm config delete //registry.npmjs.org/:_authToken

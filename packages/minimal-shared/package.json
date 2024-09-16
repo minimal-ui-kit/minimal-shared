@@ -1,7 +1,6 @@
 {
   "name": "@minimals/shared",
   "version": "3.0.0",
-  "private": true,
   "exports": {
     ".": "./src/index.ts",
     "./hooks": "./src/hooks/index.ts",

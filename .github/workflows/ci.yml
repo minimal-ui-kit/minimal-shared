@@ -30,13 +30,13 @@ jobs:
           cache: 'pnpm'
 
       - name: Install pnpm
-        run: npm i pnpm@latest -g
-
-      - name: Set pnpm token
-        run: pnpm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
+        run: npm install -g pnpm@latest
 
       - name: Setup pnpm config
         run: pnpm config set store-dir $PNPM_CACHE_FOLDER
+
+      - name: Set pnpm token
+        run: pnpm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
 
       - name: Install dependencies
         run: pnpm install
@@ -44,8 +44,8 @@ jobs:
       # - name: 5.Build
       #   run: pnpm build
 
-      - name: Publish  🚀
-        run: pnpm publish
+      - name: Publish 🚀
+        run: pnpm publish --access public
 
       - name: Clean up pnpm token
         run: pnpm config delete //registry.npmjs.org/:_authToken

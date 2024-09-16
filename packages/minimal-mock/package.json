@@ -1,7 +1,6 @@
 {
   "name": "@minimals/mock",
   "version": "3.0.0",
-  "private": true,
   "exports": {
     ".": "./src/index.ts",
     "./test": "./src/test/index.ts",

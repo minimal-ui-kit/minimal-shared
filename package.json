@@ -2,14 +2,13 @@
   "name": "minimal-turborepo",
   "version": "1.0.0",
   "private": true,
-  "files": [],
   "packageManager": "pnpm@9.10.0",
   "engines": {
     "node": "20.x"
   },
   "scripts": {
     "build": "turbo build lint",
-    "build:publish": "turbo build lint --filter=packages/*",
+    "build:publish": "turbo build lint",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "clean": "turbo clean && rm -rf .turbo node_modules",
@@ -18,7 +17,7 @@
     "re:dev": "pnpm clean && pnpm install && pnpm dev",
     "re:build": "pnpm clean && pnpm install && pnpm build",
     "pre:publish": "pnpm build && changeset version",
-    "publish": "pnpm build:publish && changeset version && changeset publish"
+    "publish": "pnpm build:publish && pnpm publish -r"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.8",

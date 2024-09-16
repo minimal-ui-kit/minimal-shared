@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "turbo build lint",
-    "build:publish": "turbo build lint --filter=@minimals/shared --filter=@minimals/mock",
+    "build:release": "turbo build lint",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "clean": "turbo clean && rm -rf .turbo node_modules",
@@ -15,8 +15,8 @@
     "fm:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "re:dev": "pnpm clean && pnpm install && pnpm dev",
     "re:build": "pnpm clean && pnpm install && pnpm build",
-    "pre:publish": "pnpm build && changeset version",
-    "publish": "pnpm build:publish && changeset version && changeset publish"
+    "pre:release": "pnpm build && changeset version",
+    "release": "pnpm build:release && changeset version && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.8",

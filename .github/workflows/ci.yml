@@ -39,8 +39,8 @@ jobs:
       # - name: 5.Build
       #   run: pnpm build
 
-      - name: Publish 🚀
-        run: pnpm publish
+      - name: Release 🚀
+        run: pnpm release
 
       - name: Clean up pnpm token
         run: pnpm config delete //registry.npmjs.org/:_authToken

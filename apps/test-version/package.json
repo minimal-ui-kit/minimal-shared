@@ -1,5 +1,5 @@
 {
-  "name": "vite-version",
+  "name": "test-version",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,8 +11,8 @@
     "clean": "rm -rf node_modules .turbo .next out dist build"
   },
   "dependencies": {
-    "@minimals/mock": "*",
-    "@minimals/shared": "*",
+    "@minimals/mock": "latest",
+    "@minimals/shared": "latest",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

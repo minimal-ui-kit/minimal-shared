@@ -1,3 +1,7 @@
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
 import { Button } from '@minimals/shared/components/button';
 import { Card } from '@minimals/shared/components';
 import styles from './page.module.css';
@@ -13,9 +17,11 @@ export default function Home() {
   const test = useTest();
   const demo = useDemmo();
 
+  const [count, setCount] = useState(0);
+
   return (
     <>
-      <h1>Next.js version</h1>
+      <h1>Vite.js test version</h1>
 
       {test}
       <br />

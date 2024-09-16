@@ -5,8 +5,7 @@ import './App.css';
 import { Button } from '@minimals/shared/components/button';
 import { Card } from '@minimals/shared/components';
 import styles from './page.module.css';
-// import { add } from '@minimals/mock';
-// import { subtract } from '@minimals/mock/subtract';
+
 import { useTest } from '@minimals/shared/hooks/use-test';
 import { useDemmo } from '@minimals/shared/hooks';
 import { add } from '@minimals/mock';

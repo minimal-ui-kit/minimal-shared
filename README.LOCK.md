@@ -33,7 +33,7 @@ Version 1.0.0 => 1.0.1
 **Step 4:** Check before publishing (Build & Update changelog)
 
 ```sh
-npm run prerelease
+npm run pre:publish
 ```
 
 **Step 5:** Publish on npm
@@ -41,5 +41,7 @@ npm run prerelease
 ```sh
 Push code to Github (Github actions)
 # Or
-# npm run release
+# npm run publish
 ```
+
+TEST 1

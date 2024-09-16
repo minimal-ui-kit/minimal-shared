@@ -12,7 +12,7 @@
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf node_modules .turbo .next out dist build"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",

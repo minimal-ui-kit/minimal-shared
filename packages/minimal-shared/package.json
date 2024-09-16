@@ -1,13 +1,14 @@
 {
   "name": "@minimals/shared",
   "author": "Minimals",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Simulation data is used for Minimal UI and Zone UI",
   "license": "MIT",
   "exports": {
-    "./button": "./src/components/button.tsx",
-    "./card": "./src/components/card.tsx",
-    "./code": "./src/components/code.tsx"
+    "./components": "./src/components/index.ts",
+    "./components/*": "./src/components/index.ts",
+    "./hooks": "./src/hooks/index.ts",
+    "./hooks/*": "./src/hooks/index.ts"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",

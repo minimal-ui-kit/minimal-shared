@@ -17,6 +17,7 @@
     "fm:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "changeset:add": "npx changeset add",
     "re:dev": "npm run clean && npm install && turbo dev",
+    "re:build": "npm run clean && npm install && turbo build",
     "prerelease": "turbo run build lint && changeset version",
     "release": "turbo run build lint && changeset version && changeset publish"
   },

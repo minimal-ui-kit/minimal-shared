@@ -1,9 +1,9 @@
 {
-  "name": "docs",
+  "name": "dev",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo --port 3001",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -13,7 +13,8 @@
     "@repo/ui": "*",
     "next": "14.2.6",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "@minimals/mock": "*"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",

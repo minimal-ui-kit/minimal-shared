@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { Button } from '@repo/ui/button';
 import styles from './page.module.css';
-import { add } from '@repo/math/add';
-import { subtract } from '@repo/math/subtract';
+import { add } from '@minimals/mock';
+import { subtract } from '@minimals/mock/subtract';
 
 export default function Home() {
   return (

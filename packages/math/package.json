@@ -1,8 +1,8 @@
 {
-  "name": "@repo/math",
+  "name": "@minimals/mock",
   "author": "Minimals",
-  "version": "0.0.1",
-  "description": "Helper for setting, getting and deleting cookies on the front end",
+  "version": "0.0.2",
+  "description": "Simulation data is used for Minimal UI and Zone UI",
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -11,17 +11,19 @@
     "dist/**"
   ],
   "keywords": [
-    "math"
+    "mock data",
+    "test data",
+    "faker data",
+    "simulation data"
   ],
   "exports": {
-    "./add": {
-      "types": "./src/add/index.ts",
-      "default": "./dist/add/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     },
-    "./subtract": {
-      "types": "./src/subtract/index.ts",
-      "default": "./dist/subtract/index.js"
-    }
+    "./add": "./src/add/index.ts",
+    "./subtract": "./src/subtract/index.ts"
   },
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",

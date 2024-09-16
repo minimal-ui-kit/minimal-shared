@@ -1,6 +1,13 @@
 {
   "name": "my-turborepo",
-  "private": true,
+  "packageManager": "npm@10.8.2",
+  "engines": {
+    "node": "20.x"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
@@ -14,14 +21,6 @@
     "turbo": "^2.1.2",
     "typescript": "^5.4.5"
   },
-  "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "npm@10.8.2",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "dependencies": {
     "@changesets/cli": "^2.27.8"
   }

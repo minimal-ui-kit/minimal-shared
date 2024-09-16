@@ -1,20 +1,20 @@
 {
-  "name": "web",
+  "name": "prod",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev --turbo --port 3001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
+    "@minimals/mock": "^0.0.2",
     "@repo/ui": "*",
     "next": "14.2.6",
     "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "@repo/math": "*"
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",

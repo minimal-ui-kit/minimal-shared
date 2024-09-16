@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "turbo build lint",
-    "build:publish": "turbo build lint --no-git-checks --filter=!./apps/*",
+    "build:publish": "turbo build lint --filter=!./apps/*",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "clean": "turbo clean && rm -rf .turbo node_modules",

@@ -44,5 +44,48 @@ Push code to Github (Github actions)
 # pnpm release
 ```
 
-TEST 1
-TEST 2
+---
+
+###### How to add dependency to PNPM workspace?
+
+```sh
+# Using the exact package name
+pnpm add <package_to_add> --filter <workspace_name>
+# Or using a pattern
+pnpm add <package_to_add> --filter <prefix>/*
+# Add dependency for all workspaces
+pnpm add typescript@5.5.4 -r
+# Add dependency for all workspaces except repo '@repo/typescript-config'
+pnpm add typescript@5.4.5 -r --filter '!@repo/typescript-config'
+# Keeping dependencies on the same version
+# https://turbo.build/repo/docs/crafting-your-repository/managing-dependencies#keeping-dependencies-on-the-same-version
+pnpm up --recursive typescript@latest
+
+pnpm up --recursive typescript@5
+```
+
+###### How to clear cache?
+
+```sh
+pnpm store prune
+```
+
+###### Export package
+
+```json
+// package.json
+// https://github.com/vercel/turborepo/discussions/612
+  "publishConfig": {
+    "directory": "src"
+  },
+// Or
+  "exports": {
+    ".": "./src/index.ts",
+    "./utils": "./src/utils/index.ts",
+    "./utils/*": "./src/utils/index.ts",
+    "./hooks": "./src/hooks/index.ts",
+    "./hooks/*": "./src/hooks/index.ts",
+    "./components": "./src/components/index.ts",
+    "./components/*": "./src/components/index.ts"
+  },
+```

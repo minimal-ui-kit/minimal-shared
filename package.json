@@ -1,27 +1,33 @@
 {
-  "name": "minimal-shared",
-  "version": "0.0.1",
+  "name": "minimal-turborepo",
+  "version": "1.0.0",
   "packageManager": "pnpm@9.10.0",
   "engines": {
     "node": "20.x"
   },
   "scripts": {
-    "build": "turbo build lint",
-    "build:release": "turbo build lint",
-    "dev": "turbo dev",
+    "preinstall": "npx only-allow pnpm",
+    "dev": "turbo dev --filter=!next-ts",
+    "build": "turbo build --filter=!next-ts",
     "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
     "clean": "turbo clean && rm -rf .turbo node_modules",
     "fm:check": "prettier --check \"**/*.{js,jsx,ts,tsx}\"",
     "fm:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "re:dev": "pnpm clean && pnpm install && pnpm dev",
     "re:build": "pnpm clean && pnpm install && pnpm build",
-    "pre:release": "pnpm build && changeset version",
-    "release": "pnpm build:release && changeset version && changeset publish"
+    "build:release": "turbo build --filter=!vite-ts --filter=!next-ts",
+    "check:update": "pnpm update --interactive --recursive --latest",
+    "pre:release": "pnpm build:release && changeset version",
+    "release": "pnpm build:release && changeset version && changeset publish",
+    "syncpack": "npx syncpack list-mismatches --types 'prod,dev'"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.8",
-    "prettier": "^3.2.5",
+    "@types/fs-extra": "^11.0.4",
+    "prettier": "^3.3.3",
+    "syncpack": "^13.0.0",
     "turbo": "^2.1.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.4"
   }
 }

@@ -1,19 +1,28 @@
 {
-  "name": "@repo/eslint-config",
+  "name": "@minimals/eslint-config",
+  "author": "Minimals",
   "version": "0.0.0",
+  "description": "Vite Starter & TypeScript",
+  "license": "MIT",
   "private": true,
-  "files": [
-    "library.js",
-    "next.js",
-    "react-internal.js"
-  ],
+  "scripts": {
+    "clean": "rm -rf node_modules .turbo .next out dist build"
+  },
   "devDependencies": {
-    "@vercel/style-guide": "^5.2.0",
-    "eslint-config-turbo": "^2.0.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-only-warn": "^1.1.0",
-    "@typescript-eslint/parser": "^7.1.0",
-    "@typescript-eslint/eslint-plugin": "^7.1.0",
-    "typescript": "^5.3.3"
+    "@eslint/compat": "^1.1.1",
+    "@eslint/js": "^9.10.0",
+    "eslint": "^9.10.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-perfectionist": "^3.6.0",
+    "eslint-plugin-react": "^7.36.1",
+    "eslint-plugin-react-hooks": "5.1.0-rc-778e1ed2-20240926",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "globals": "^15.9.0",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.6.0"
+  },
+  "overrides": {
+    "eslint": "$eslint"
   }
 }

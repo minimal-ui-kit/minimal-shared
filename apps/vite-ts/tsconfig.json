@@ -1,0 +1,9 @@
+{
+  "extends": "@minimals/ts-config/vite.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "moduleResolution": "Node"
+  },
+  "include": ["src", "vite.config.ts"],
+  "exclude": ["node_modules"]
+}

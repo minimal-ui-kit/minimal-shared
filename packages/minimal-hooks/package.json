@@ -1,0 +1,80 @@
+{
+  "name": "@minimals/hooks",
+  "author": "Minimals",
+  "version": "3.1.0",
+  "description": "Vite Starter & TypeScript",
+  "keywords": [
+    "typescript",
+    "react",
+    "hooks"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*",
+        "src/*/index",
+        "dist/index.d.ts"
+      ]
+    }
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./src/*.ts",
+      "default": "./dist/*.js"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
+    "lint:fix": "eslint --fix \"**/*.{js,jsx,ts,tsx}\"",
+    "clean": "rm -rf node_modules .turbo .next out dist build",
+    "re:build": "pnpm clean && pnpm install && pnpm build",
+    "tsconfig": "npx tsc --showConfig"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.13.1",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@iconify/react": "^5.0.2",
+    "@minimals/utils": "workspace:*",
+    "@mui/lab": "5.0.0-alpha.173",
+    "@mui/material": "^5.16.7",
+    "@mui/system": "^5.16.7",
+    "@mui/x-data-grid": "^7.18.0",
+    "@mui/x-date-pickers": "^7.18.0",
+    "@mui/x-tree-view": "^7.18.0",
+    "dayjs": "^1.11.13",
+    "fast-glob": "^3.3.2",
+    "fs-extra": "^11.2.0",
+    "glob": "^11.0.0",
+    "react": "^18.3.1",
+    "react-router-dom": "^6.26.1",
+    "sonner": "^1.5.0"
+  },
+  "devDependencies": {
+    "@minimals/eslint-config": "workspace:*",
+    "@minimals/ts-config": "workspace:*",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.4.2",
+    "@types/react": "18.3.4",
+    "tsup": "^8.3.0",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "react": "^17 || ^18"
+  }
+}

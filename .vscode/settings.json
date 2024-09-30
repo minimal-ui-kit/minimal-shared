@@ -1,7 +1,48 @@
 {
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
   "eslint.workingDirectories": [
     {
-      "mode": "auto"
+      "directory": "apps/vite-ts",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "apps/next-ts",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "packages/eslint-config",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "packages/ts-config",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "packages/minimal-mock",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "packages/minimal-hooks",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "packages/minimal-utils",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "packages/private-ui",
+      "changeProcessCWD": true
     }
-  ]
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.validate.enable": false
 }

@@ -1,6 +1,6 @@
 {
-  "name": "minimal-turborepo",
-  "version": "1.0.0",
+  "name": "minimal-shared",
+  "version": "0.0.1",
   "packageManager": "pnpm@9.10.0",
   "engines": {
     "node": "20.x"

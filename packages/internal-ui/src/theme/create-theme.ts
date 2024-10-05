@@ -11,6 +11,10 @@ import type { CreateThemeProps } from './types';
 // ----------------------------------------------------------------------
 
 export function createTheme(props?: CreateThemeProps): Theme {
+  const settings = props?.settings;
+  const localeComponents = props?.localeComponents || {};
+  const overridesTheme = props?.overridesTheme || {};
+
   const initialTheme = {
     colorSchemes,
     shadows: shadows(props?.settings?.colorScheme ?? 'light'),
@@ -28,10 +32,10 @@ export function createTheme(props?: CreateThemeProps): Theme {
   /**
    * 1.Update values from settings before creating theme.
    */
-  const updateTheme = props?.settings
+  const updateTheme = settings
     ? updateCoreWithSettings({
         theme: initialTheme,
-        settings: props?.settings,
+        settings,
         primaryPalette: props?.primaryPalette,
       })
     : initialTheme;
@@ -39,11 +43,9 @@ export function createTheme(props?: CreateThemeProps): Theme {
   /**
    * 2.Create theme + add locale + update component with settings.
    */
-  const _localeComponents = props?.localeComponents ? props.localeComponents : {};
-  const _updateComponents = props?.settings ? updateComponentsWithSettings(props.settings) : {};
-  const _overridesTheme = props?.overridesTheme ? props.overridesTheme : {};
+  const settingsComponents = settings ? updateComponentsWithSettings(settings) : {};
 
-  const theme = extendTheme(updateTheme, _localeComponents, _updateComponents, _overridesTheme);
+  const theme = extendTheme(updateTheme, localeComponents, settingsComponents, overridesTheme);
 
   return theme;
 }

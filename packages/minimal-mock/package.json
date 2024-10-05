@@ -68,7 +68,7 @@
     "dev": "tsup --watch",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint --fix \"**/*.{js,jsx,ts,tsx}\"",
-    "lint:print": "npx eslint --print-config eslint.config.mjs > eslint-config-print.json",
+    "lint:print": "npx eslint --print-config eslint.config.mjs > eslint-show-config.json",
     "clean": "rm -rf node_modules .turbo .next out dist build",
     "re:dev": "pnpm clean && pnpm install && pnpm dev",
     "re:build": "pnpm clean && pnpm install && pnpm build",

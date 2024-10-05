@@ -2,7 +2,7 @@
   "name": "internal-ts-config",
   "author": "Minimals",
   "version": "1.0.0",
-  "description": "Vite Starter & TypeScript",
+  "description": "Share configuration typescript in Minimal UI and Zone UI",
   "license": "MIT",
   "private": true,
   "publishConfig": {

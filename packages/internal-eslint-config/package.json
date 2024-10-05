@@ -1,11 +1,12 @@
 {
   "name": "internal-eslint-config",
   "author": "Minimals",
-  "version": "0.0.0",
-  "description": "Vite Starter & TypeScript",
+  "version": "1.0.0",
+  "description": "Share configuration eslint in Minimal UI and Zone UI",
   "license": "MIT",
   "private": true,
   "scripts": {
+    "lint:print": "npx eslint --print-config eslint.config.mjs > eslint-show-config.json",
     "clean": "rm -rf node_modules .turbo .next out dist build"
   },
   "devDependencies": {

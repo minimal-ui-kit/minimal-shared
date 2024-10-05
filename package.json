@@ -18,7 +18,7 @@
     "fm:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "re:dev": "pnpm clean && pnpm install && pnpm dev",
     "re:build": "pnpm clean && pnpm install && pnpm build",
-    "build:release": "turbo build --filter=!vite-ts --filter=!next-ts",
+    "build:release": "turbo build --filter=@minimals/hooks --filter=@minimals/utils",
     "check:update": "pnpm update --interactive --recursive --latest",
     "pre:release": "pnpm build:release && changeset version",
     "release": "pnpm build:release && changeset version && changeset publish",

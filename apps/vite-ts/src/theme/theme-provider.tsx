@@ -1,7 +1,6 @@
 import type { SettingsState, SettingsContextValue } from 'internal-ui/components/settings';
 
-import { createPaletteChannel } from 'internal-ui/theme/styles';
-import { ThemeProvider as Provider } from 'internal-ui/theme/theme-provider';
+import { createPaletteChannel, ThemeProvider as Provider } from 'internal-ui/theme';
 
 import { useTranslate } from 'src/locales';
 

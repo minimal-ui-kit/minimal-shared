@@ -2,13 +2,9 @@
   "name": "internal-ui",
   "author": "Minimals",
   "version": "6.1.0",
-  "description": "Vite Starter & TypeScript",
-  "keywords": [
-    "typescript",
-    "react",
-    "hooks"
-  ],
-  "license": "MIT",
+  "description": "Test share components",
+  "private": true,
+  "sideEffects": false,
   "type": "module",
   "main": "./dist/index.js",
   "types": "./src/index.ts",
@@ -66,7 +62,6 @@
       "default": "./dist/theme/*/index.js"
     }
   },
-  "sideEffects": false,
   "scripts": {
     "build": "NODE_OPTIONS='--max-old-space-size=16384' tsup ",
     "dev": "NODE_OPTIONS='--max-old-space-size=16384' tsup --watch",

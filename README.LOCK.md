@@ -62,6 +62,9 @@ pnpm add typescript@5.4.5 -r --filter '!@repo/typescript-config'
 pnpm up --recursive typescript@latest
 
 pnpm up --recursive typescript@5
+
+# Check update
+pnpm update --interactive --recursive --latest
 ```
 
 ###### How to clear cache?

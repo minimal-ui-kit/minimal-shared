@@ -2,7 +2,7 @@
   "name": "@minimals/hooks",
   "author": "Minimals",
   "version": "1.0.0",
-  "description": "Some hooks used in Minimal UI and Zone UI",
+  "description": "Some hooks used in Minimal UI and Zone UI.",
   "keywords": [
     "typescript",
     "react",

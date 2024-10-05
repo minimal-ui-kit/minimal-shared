@@ -2,7 +2,7 @@
   "name": "internal-eslint-config",
   "author": "Minimals",
   "version": "1.0.0",
-  "description": "Share configuration eslint in Minimal UI and Zone UI",
+  "description": "Share configuration eslint in Minimal UI and Zone UI.",
   "license": "MIT",
   "private": true,
   "scripts": {

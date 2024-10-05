@@ -18,18 +18,18 @@
     "fm:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "re:dev": "pnpm clean && pnpm install && pnpm dev",
     "re:build": "pnpm clean && pnpm install && pnpm build",
-    "build:release": "turbo build --filter=@minimals/hooks --filter=@minimals/utils",
+    "build:release": "turbo build --filter=@minimals/hooks --filter=@minimals/utils --filter=@minimals/mock",
     "check:update": "pnpm update --interactive --recursive --latest",
     "pre:release": "pnpm build:release && changeset version",
     "release": "pnpm build:release && changeset version && changeset publish",
     "syncpack": "npx syncpack list-mismatches --types 'prod,dev'"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.8",
+    "@changesets/cli": "^2.27.9",
     "@types/fs-extra": "^11.0.4",
     "prettier": "^3.3.3",
     "syncpack": "^13.0.0",
-    "turbo": "^2.1.2",
+    "turbo": "^2.1.3",
     "typescript": "^5.5.4"
   }
 }

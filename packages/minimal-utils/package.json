@@ -2,7 +2,7 @@
   "name": "@minimals/utils",
   "author": "Minimals",
   "version": "1.0.0",
-  "description": "Some utils used in Minimal UI and Zone UI",
+  "description": "Some utils used in Minimal UI and Zone UI.",
   "keywords": [
     "typescript",
     "react",

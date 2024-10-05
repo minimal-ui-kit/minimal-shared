@@ -1,5 +1,5 @@
 import type { CardProps } from '@mui/material/Card';
-import type { ChartOptions } from 'private-ui/components/chart';
+import type { ChartOptions } from 'internal-ui/components/chart';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -9,7 +9,7 @@ import { useTheme } from '@mui/material/styles';
 
 import { useResponsive } from '@minimals/hooks/use-responsive';
 
-import { Chart, useChart } from 'private-ui/components/chart';
+import { Chart, useChart } from 'internal-ui/components/chart';
 
 import { fNumber } from 'src/utils/format-number';
 

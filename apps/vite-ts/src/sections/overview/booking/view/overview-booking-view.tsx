@@ -5,7 +5,7 @@ import {
   BookingIllustration,
   CheckInIllustration,
   CheckoutIllustration,
-} from 'private-ui/assets/illustrations';
+} from 'internal-ui/assets/illustrations';
 
 import { DashboardContent } from 'src/layouts/dashboard';
 import { _bookings, _bookingNew, _bookingReview, _bookingsOverview } from 'src/_mock';

@@ -9,8 +9,8 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import { alpha as hexAlpha } from '@mui/material/styles';
 
-import { Label } from 'private-ui/components/label';
-import { varAlpha, bgGradient } from 'private-ui/theme/styles';
+import { Label } from 'internal-ui/components/label';
+import { varAlpha, bgGradient } from 'internal-ui/theme/styles';
 
 import { paths } from 'src/routes/paths';
 

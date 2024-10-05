@@ -6,7 +6,7 @@ import Card from '@mui/material/Card';
 import { fPercent, fShortenNumber } from 'src/utils/format-number';
 
 // ----------------------------------------------------------------------
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 type Props = CardProps & {
   title: string;

@@ -1,5 +1,5 @@
 {
-  "extends": "@minimals/ts-config/nextjs.json",
+  "extends": "internal-ts-config/nextjs.json",
   "compilerOptions": {
     "baseUrl": ".",
     "plugins": [{ "name": "next" }]

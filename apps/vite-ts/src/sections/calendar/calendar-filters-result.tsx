@@ -7,8 +7,8 @@ import { useCallback } from 'react';
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { chipProps, FiltersBlock, FiltersResult } from 'private-ui/components/filters-result';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { chipProps, FiltersBlock, FiltersResult } from 'internal-ui/components/filters-result';
 
 import { fDateRangeShortLabel } from 'src/utils/format-time';
 

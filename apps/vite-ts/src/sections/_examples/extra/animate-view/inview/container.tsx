@@ -5,7 +5,7 @@ import { m } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 
-import { AnimateText, MotionContainer } from 'private-ui/components/animate';
+import { AnimateText, MotionContainer } from 'internal-ui/components/animate';
 
 import { _mock } from 'src/_mock';
 

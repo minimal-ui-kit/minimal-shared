@@ -1,6 +1,6 @@
 import Stack from '@mui/material/Stack';
 
-import { NavUl } from 'private-ui/components/nav-section';
+import { NavUl } from 'internal-ui/components/nav-section';
 
 import { NavList } from './nav-desktop-list';
 

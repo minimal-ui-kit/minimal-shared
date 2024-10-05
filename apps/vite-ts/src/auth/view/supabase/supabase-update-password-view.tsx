@@ -11,9 +11,9 @@ import InputAdornment from '@mui/material/InputAdornment';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { NewPasswordIcon } from 'private-ui/assets/icons';
-import { Form, Field } from 'private-ui/components/hook-form';
+import { Iconify } from 'internal-ui/components/iconify';
+import { NewPasswordIcon } from 'internal-ui/assets/icons';
+import { Form, Field } from 'internal-ui/components/hook-form';
 
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';

@@ -11,7 +11,7 @@ import { styled, useTheme } from '@mui/material/styles';
 
 import { useScrollOffsetTop } from '@minimals/hooks/use-scroll-offset-top';
 
-import { bgBlur, varAlpha } from 'private-ui/theme/styles';
+import { bgBlur, varAlpha } from 'internal-ui/theme/styles';
 
 import { layoutClasses } from '../classes';
 

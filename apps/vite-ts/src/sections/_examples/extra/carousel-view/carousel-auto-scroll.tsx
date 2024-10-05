@@ -2,7 +2,7 @@ import AutoScroll from 'embla-carousel-auto-scroll';
 
 import Box from '@mui/material/Box';
 
-import { Carousel, useCarousel, CarouselProgressBar } from 'private-ui/components/carousel';
+import { Carousel, useCarousel, CarouselProgressBar } from 'internal-ui/components/carousel';
 
 import { IndexLabel, PlayButton } from './elements';
 

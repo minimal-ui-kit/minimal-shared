@@ -17,9 +17,9 @@ import InputAdornment from '@mui/material/InputAdornment';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import AvatarGroup, { avatarGroupClasses } from '@mui/material/AvatarGroup';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Image } from 'private-ui/components/image';
-import { Iconify } from 'private-ui/components/iconify';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Image } from 'internal-ui/components/image';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { fDate } from 'src/utils/format-time';
 import { fShortenNumber } from 'src/utils/format-number';

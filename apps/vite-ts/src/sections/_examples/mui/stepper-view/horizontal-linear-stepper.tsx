@@ -9,7 +9,7 @@ import Stepper from '@mui/material/Stepper';
 import StepLabel from '@mui/material/StepLabel';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha } from 'private-ui/theme/styles';
+import { varAlpha } from 'internal-ui/theme/styles';
 
 // ----------------------------------------------------------------------
 

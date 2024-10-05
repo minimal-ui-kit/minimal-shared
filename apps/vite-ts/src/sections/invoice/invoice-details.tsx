@@ -14,8 +14,8 @@ import TableBody from '@mui/material/TableBody';
 import Typography from '@mui/material/Typography';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 
-import { Label } from 'private-ui/components/label';
-import { Scrollbar } from 'private-ui/components/scrollbar';
+import { Label } from 'internal-ui/components/label';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
 
 import { fDate } from 'src/utils/format-time';
 import { fCurrency } from 'src/utils/format-number';

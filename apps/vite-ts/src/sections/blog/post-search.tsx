@@ -10,8 +10,8 @@ import Typography from '@mui/material/Typography';
 import InputAdornment from '@mui/material/InputAdornment';
 import Autocomplete, { autocompleteClasses } from '@mui/material/Autocomplete';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { SearchNotFound } from 'private-ui/components/search-not-found';
+import { Iconify } from 'internal-ui/components/iconify';
+import { SearchNotFound } from 'internal-ui/components/search-not-found';
 
 import { useRouter } from 'src/routes/hooks';
 

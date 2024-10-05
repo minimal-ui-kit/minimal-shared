@@ -3,8 +3,8 @@ import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 import TableBody from '@mui/material/TableBody';
 
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { TableHeadCustom } from 'private-ui/components/table';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { TableHeadCustom } from 'internal-ui/components/table';
 
 // ----------------------------------------------------------------------
 

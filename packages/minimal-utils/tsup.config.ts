@@ -6,21 +6,21 @@ import { defineConfig } from 'tsup';
 // ----------------------------------------------------------------------
 
 const excludedFiles = ['!src/**/*.d.ts'];
+const copyFiles = ['src/**/index.ts'];
 
-export default defineConfig({
+export default defineConfig((options) => ({
   dts: true,
   clean: true,
   outDir: 'dist',
   format: ['esm'],
   splitting: false,
   sourcemap: false,
+  minify: !options.watch,
   entry: ['src/**/*', ...excludedFiles],
   onSuccess: async () => {
     try {
       // Copy all index.ts files from src to dist
-      const srcIndexTsFiles: string[] = glob.sync('src/**/index.ts');
-
-      console.log('srcIndexTsFiles', srcIndexTsFiles);
+      const srcIndexTsFiles: string[] = glob.sync(copyFiles);
 
       await Promise.all(
         srcIndexTsFiles.map(async (file) => {
@@ -29,9 +29,9 @@ export default defineConfig({
         })
       );
 
-      console.log('Files copied successfully!');
+      console.log('>> Files copied successfully!');
     } catch (error) {
-      console.error('Error during onSuccess:', error);
+      console.error('>> Error during onSuccess:', error);
     }
   },
-});
+}));

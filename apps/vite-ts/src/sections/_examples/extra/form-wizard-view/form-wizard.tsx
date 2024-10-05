@@ -8,7 +8,7 @@ import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import LoadingButton from '@mui/lab/LoadingButton';
 
-import { Form } from 'private-ui/components/hook-form';
+import { Form } from 'internal-ui/components/hook-form';
 
 import { Stepper, StepOne, StepTwo, StepThree, StepCompleted } from './form-steps';
 

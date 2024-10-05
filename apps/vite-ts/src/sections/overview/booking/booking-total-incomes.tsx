@@ -1,13 +1,13 @@
 import type { CardProps } from '@mui/material/Card';
-import type { ChartOptions } from 'private-ui/components/chart';
+import type { ChartOptions } from 'internal-ui/components/chart';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import { useTheme, alpha as hexAlpha } from '@mui/material/styles';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { SvgColor } from 'private-ui/components/svg-color';
-import { Chart, useChart } from 'private-ui/components/chart';
+import { Iconify } from 'internal-ui/components/iconify';
+import { SvgColor } from 'internal-ui/components/svg-color';
+import { Chart, useChart } from 'internal-ui/components/chart';
 
 import { fPercent, fCurrency } from 'src/utils/format-number';
 

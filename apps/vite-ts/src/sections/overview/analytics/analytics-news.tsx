@@ -9,8 +9,8 @@ import Avatar from '@mui/material/Avatar';
 import CardHeader from '@mui/material/CardHeader';
 import ListItemText from '@mui/material/ListItemText';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
 
 import { fToNow } from 'src/utils/format-time';
 

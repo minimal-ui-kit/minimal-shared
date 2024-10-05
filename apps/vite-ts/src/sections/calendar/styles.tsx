@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles';
 
-import { varAlpha } from 'private-ui/theme/styles';
+import { varAlpha } from 'internal-ui/theme/styles';
 
 // ----------------------------------------------------------------------
 

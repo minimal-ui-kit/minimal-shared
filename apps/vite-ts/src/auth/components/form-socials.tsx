@@ -3,7 +3,7 @@ import type { BoxProps } from '@mui/material/Box';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 
-import { GithubIcon, GoogleIcon, TwitterIcon } from 'private-ui/assets/icons';
+import { GithubIcon, GoogleIcon, TwitterIcon } from 'internal-ui/assets/icons';
 
 // ----------------------------------------------------------------------
 

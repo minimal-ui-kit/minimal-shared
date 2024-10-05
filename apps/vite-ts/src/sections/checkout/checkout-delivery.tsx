@@ -8,8 +8,8 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Iconify } from 'private-ui/components/iconify';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
 
 // ----------------------------------------------------------------------
 

@@ -17,9 +17,9 @@ import Autocomplete from '@mui/material/Autocomplete';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { fileFormat, FileThumbnail } from 'private-ui/components/file-thumbnail';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { fileFormat, FileThumbnail } from 'internal-ui/components/file-thumbnail';
 
 import { fData } from 'src/utils/format-number';
 import { fDateTime } from 'src/utils/format-time';

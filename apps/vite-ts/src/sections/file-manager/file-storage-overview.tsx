@@ -1,12 +1,12 @@
 import type { CardProps } from '@mui/material/Card';
-import type { ChartOptions } from 'private-ui/components/chart';
+import type { ChartOptions } from 'internal-ui/components/chart';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 import { useTheme } from '@mui/material/styles';
 
-import { Chart, useChart } from 'private-ui/components/chart';
+import { Chart, useChart } from 'internal-ui/components/chart';
 
 import { fData } from 'src/utils/format-number';
 

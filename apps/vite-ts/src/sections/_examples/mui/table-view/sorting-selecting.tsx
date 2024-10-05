@@ -11,8 +11,8 @@ import TableBody from '@mui/material/TableBody';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
 import {
   useTable,
   emptyRows,
@@ -21,7 +21,7 @@ import {
   TableHeadCustom,
   TableSelectedAction,
   TablePaginationCustom,
-} from 'private-ui/components/table';
+} from 'internal-ui/components/table';
 
 // ----------------------------------------------------------------------
 

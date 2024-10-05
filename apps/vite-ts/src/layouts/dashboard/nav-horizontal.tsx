@@ -1,11 +1,11 @@
 import type { Breakpoint } from '@mui/material/styles';
-import type { NavSectionProps } from 'private-ui/components/nav-section';
+import type { NavSectionProps } from 'internal-ui/components/nav-section';
 
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { NavSectionHorizontal } from 'private-ui/components/nav-section';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { NavSectionHorizontal } from 'internal-ui/components/nav-section';
 
 // ----------------------------------------------------------------------
 

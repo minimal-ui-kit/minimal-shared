@@ -3,7 +3,7 @@ import type { IChatParticipant, IChatConversation } from 'src/types/chat';
 import Stack from '@mui/material/Stack';
 import Drawer from '@mui/material/Drawer';
 
-import { Scrollbar } from 'private-ui/components/scrollbar';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
 
 import { ChatRoomGroup } from './chat-room-group';
 import { ChatRoomSkeleton } from './chat-skeleton';

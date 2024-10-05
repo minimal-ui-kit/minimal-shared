@@ -6,9 +6,9 @@ import Card from '@mui/material/Card';
 import LoadingButton from '@mui/lab/LoadingButton';
 import InputAdornment from '@mui/material/InputAdornment';
 
-import { toast } from 'private-ui/components/snackbar';
-import { Form, Field } from 'private-ui/components/hook-form';
-import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'private-ui/assets/icons';
+import { toast } from 'internal-ui/components/snackbar';
+import { Form, Field } from 'internal-ui/components/hook-form';
+import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'internal-ui/assets/icons';
 
 // ----------------------------------------------------------------------
 

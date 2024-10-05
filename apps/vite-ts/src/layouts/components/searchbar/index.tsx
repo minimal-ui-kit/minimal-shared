@@ -1,5 +1,5 @@
 import type { BoxProps } from '@mui/material/Box';
-import type { NavSectionProps } from 'private-ui/components/nav-section';
+import type { NavSectionProps } from 'internal-ui/components/nav-section';
 
 import { useState, useCallback } from 'react';
 import parse from 'autosuggest-highlight/parse';
@@ -17,11 +17,11 @@ import { isExternalLink } from '@minimals/utils/routes';
 import { useBoolean } from '@minimals/hooks/use-boolean';
 import { useEventListener } from '@minimals/hooks/use-event-listener';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { SearchNotFound } from 'private-ui/components/search-not-found';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { SearchNotFound } from 'internal-ui/components/search-not-found';
 
 import { useRouter } from 'src/routes/hooks';
 

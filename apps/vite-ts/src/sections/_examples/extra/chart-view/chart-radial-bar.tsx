@@ -1,7 +1,7 @@
 import { useTheme } from '@mui/material/styles';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Chart, useChart, ChartLegends } from 'private-ui/components/chart';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Chart, useChart, ChartLegends } from 'internal-ui/components/chart';
 
 import { fNumber } from 'src/utils/format-number';
 

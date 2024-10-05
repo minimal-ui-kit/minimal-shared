@@ -2,7 +2,7 @@ import Autoplay from 'embla-carousel-autoplay';
 
 import Box from '@mui/material/Box';
 
-import { Carousel, useCarousel, CarouselDotButtons } from 'private-ui/components/carousel';
+import { Carousel, useCarousel, CarouselDotButtons } from 'internal-ui/components/carousel';
 
 import { IndexLabel, PlayButton } from './elements';
 

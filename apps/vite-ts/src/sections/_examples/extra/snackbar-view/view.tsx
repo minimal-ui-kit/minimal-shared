@@ -1,9 +1,9 @@
-import type { ToastT } from 'private-ui/components/snackbar';
+import type { ToastT } from 'internal-ui/components/snackbar';
 
 import Button from '@mui/material/Button';
 
-import { toast } from 'private-ui/components/snackbar';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { toast } from 'internal-ui/components/snackbar';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

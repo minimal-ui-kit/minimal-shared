@@ -4,8 +4,8 @@ import Tooltip from '@mui/material/Tooltip';
 import { useTheme } from '@mui/material/styles';
 import AvatarGroup, { avatarGroupClasses } from '@mui/material/AvatarGroup';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { Iconify } from 'internal-ui/components/iconify';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

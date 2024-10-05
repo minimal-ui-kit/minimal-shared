@@ -8,7 +8,7 @@ import SvgIcon from '@mui/material/SvgIcon';
 import { useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 
-import { varHover, AnimateAvatar } from 'private-ui/components/animate';
+import { varHover, AnimateAvatar } from 'internal-ui/components/animate';
 
 // ----------------------------------------------------------------------
 

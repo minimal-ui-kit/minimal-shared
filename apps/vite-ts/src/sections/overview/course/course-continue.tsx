@@ -8,7 +8,7 @@ import Avatar from '@mui/material/Avatar';
 import CardHeader from '@mui/material/CardHeader';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 
-import { varAlpha } from 'private-ui/theme/styles';
+import { varAlpha } from 'internal-ui/theme/styles';
 
 import { fPercent } from 'src/utils/format-number';
 

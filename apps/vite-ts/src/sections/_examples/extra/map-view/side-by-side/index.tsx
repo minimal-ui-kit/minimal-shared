@@ -2,7 +2,7 @@ import type { MapProps, ViewStateChangeEvent } from 'react-map-gl';
 
 import { useMemo, useState, useCallback } from 'react';
 
-import { Map } from 'private-ui/components/map';
+import { Map } from 'internal-ui/components/map';
 
 import { ControlPanel } from './control-panel';
 

@@ -3,7 +3,7 @@ import Stack from '@mui/material/Stack';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
-import { maxLine } from 'private-ui/theme/styles';
+import { maxLine } from 'internal-ui/theme/styles';
 
 import { ComponentBlock } from '../../component-block';
 

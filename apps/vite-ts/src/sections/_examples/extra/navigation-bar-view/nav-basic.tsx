@@ -5,11 +5,11 @@ import IconButton from '@mui/material/IconButton';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Logo } from 'private-ui/components/logo';
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { SvgColor } from 'private-ui/components/svg-color';
-import { NavBasicMobile, NavBasicDesktop } from 'private-ui/components/nav-basic';
+import { Logo } from 'internal-ui/components/logo';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { SvgColor } from 'internal-ui/components/svg-color';
+import { NavBasicMobile, NavBasicDesktop } from 'internal-ui/components/nav-basic';
 
 import { CONFIG } from 'src/config-global';
 

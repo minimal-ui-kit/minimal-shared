@@ -1,6 +1,6 @@
 import { useTheme, alpha as hexAlpha } from '@mui/material/styles';
 
-import { Chart, useChart, ChartLegends } from 'private-ui/components/chart';
+import { Chart, useChart, ChartLegends } from 'internal-ui/components/chart';
 
 // ----------------------------------------------------------------------
 

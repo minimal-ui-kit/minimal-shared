@@ -22,14 +22,14 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import { useTabs } from '@minimals/hooks/use-tabs';
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { CustomTabs } from 'private-ui/components/custom-tabs';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { CustomTabs } from 'internal-ui/components/custom-tabs';
 import {
   useDateRangePicker,
   CustomDateRangePicker,
-} from 'private-ui/components/custom-date-range-picker';
+} from 'internal-ui/components/custom-date-range-picker';
 
 import { KanbanDetailsToolbar } from './kanban-details-toolbar';
 import { KanbanInputName } from '../components/kanban-input-name';

@@ -43,7 +43,7 @@
     "@iconify/react": "^5.0.2",
     "@minimals/hooks": "workspace:*",
     "@minimals/mock": "workspace:*",
-    "private-ui": "workspace:*",
+    "internal-ui": "workspace:*",
     "@minimals/utils": "workspace:*",
     "@mui/lab": "5.0.0-alpha.173",
     "@mui/material": "^5.16.7",
@@ -113,8 +113,8 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@minimals/eslint-config": "workspace:*",
-    "@minimals/ts-config": "workspace:*",
+    "internal-eslint-config": "workspace:*",
+    "internal-ts-config": "workspace:*",
     "@types/autosuggest-highlight": "^3.2.3",
     "@types/node": "^22.4.2",
     "@types/nprogress": "^0.2.3",

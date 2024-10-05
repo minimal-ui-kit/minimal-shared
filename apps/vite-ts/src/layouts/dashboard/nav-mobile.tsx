@@ -1,13 +1,13 @@
-import type { NavSectionProps } from 'private-ui/components/nav-section';
+import type { NavSectionProps } from 'internal-ui/components/nav-section';
 
 import { useEffect } from 'react';
 
 import Box from '@mui/material/Box';
 import Drawer, { drawerClasses } from '@mui/material/Drawer';
 
-import { Logo } from 'private-ui/components/logo';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { NavSectionVertical } from 'private-ui/components/nav-section';
+import { Logo } from 'internal-ui/components/logo';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { NavSectionVertical } from 'internal-ui/components/nav-section';
 
 import { usePathname } from 'src/routes/hooks';
 

@@ -8,9 +8,9 @@ import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
 
-import { FlagIcon } from 'private-ui/components/iconify';
-import { varHover } from 'private-ui/components/animate';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { FlagIcon } from 'internal-ui/components/iconify';
+import { varHover } from 'internal-ui/components/animate';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 import { useTranslate } from 'src/locales';
 

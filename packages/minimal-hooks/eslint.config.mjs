@@ -1,4 +1,4 @@
-import eslintShared from '@minimals/eslint-config/index.mjs';
+import eslintShared from 'internal-eslint-config/index.mjs';
 
 // ----------------------------------------------------------------------
 

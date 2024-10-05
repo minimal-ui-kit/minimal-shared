@@ -13,9 +13,9 @@ import InputBase from '@mui/material/InputBase';
 import Grid from '@mui/material/Unstable_Grid2';
 import CardHeader from '@mui/material/CardHeader';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Iconify } from 'private-ui/components/iconify';
-import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'private-ui/assets/icons';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
+import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'internal-ui/assets/icons';
 
 import { fNumber } from 'src/utils/format-number';
 

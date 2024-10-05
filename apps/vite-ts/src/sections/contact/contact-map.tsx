@@ -6,8 +6,8 @@ import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Map, MapPopup, MapMarker, MapControl } from 'private-ui/components/map';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Map, MapPopup, MapMarker, MapControl } from 'internal-ui/components/map';
 
 // ----------------------------------------------------------------------
 

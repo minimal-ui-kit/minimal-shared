@@ -9,8 +9,8 @@ import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Iconify } from 'private-ui/components/iconify';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { fDateTime } from 'src/utils/format-time';
 import { fPercent } from 'src/utils/format-number';

@@ -1,6 +1,6 @@
 import { useTheme } from '@mui/material/styles';
 
-import { Chart, useChart } from 'private-ui/components/chart';
+import { Chart, useChart } from 'internal-ui/components/chart';
 
 // ----------------------------------------------------------------------
 

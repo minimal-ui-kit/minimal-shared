@@ -5,7 +5,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

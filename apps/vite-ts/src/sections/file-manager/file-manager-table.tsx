@@ -1,6 +1,6 @@
 import type { IFile } from 'src/types/file';
 import type { BoxProps } from '@mui/material/Box';
-import type { TableProps } from 'private-ui/components/table';
+import type { TableProps } from 'internal-ui/components/table';
 
 import Box from '@mui/material/Box';
 import Table from '@mui/material/Table';
@@ -11,13 +11,13 @@ import TableContainer from '@mui/material/TableContainer';
 import { tableCellClasses } from '@mui/material/TableCell';
 import { tablePaginationClasses } from '@mui/material/TablePagination';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 import {
   TableNoData,
   TableHeadCustom,
   TableSelectedAction,
   TablePaginationCustom,
-} from 'private-ui/components/table';
+} from 'internal-ui/components/table';
 
 import { FileManagerTableRow } from './file-manager-table-row';
 

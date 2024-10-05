@@ -7,8 +7,8 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemButton from '@mui/material/ListItemButton';
 
-import { Label } from 'private-ui/components/label';
-import { FileThumbnail } from 'private-ui/components/file-thumbnail';
+import { Label } from 'internal-ui/components/label';
+import { FileThumbnail } from 'internal-ui/components/file-thumbnail';
 
 import { fToNow } from 'src/utils/format-time';
 

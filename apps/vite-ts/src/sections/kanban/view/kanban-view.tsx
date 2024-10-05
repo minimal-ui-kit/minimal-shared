@@ -32,8 +32,8 @@ import Switch from '@mui/material/Switch';
 import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { hideScrollY } from 'private-ui/theme/styles';
-import { EmptyContent } from 'private-ui/components/empty-content';
+import { hideScrollY } from 'internal-ui/theme/styles';
+import { EmptyContent } from 'internal-ui/components/empty-content';
 
 import { DashboardContent } from 'src/layouts/dashboard';
 import { moveTask, moveColumn, useGetBoard } from 'src/actions/kanban';

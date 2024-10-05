@@ -7,8 +7,8 @@ import Card from '@mui/material/Card';
 import Avatar from '@mui/material/Avatar';
 import CardHeader from '@mui/material/CardHeader';
 
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { ColorPreview } from 'private-ui/components/color-utils';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { ColorPreview } from 'internal-ui/components/color-utils';
 
 import { fCurrency } from 'src/utils/format-number';
 

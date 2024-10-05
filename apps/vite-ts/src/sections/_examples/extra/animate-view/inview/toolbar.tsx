@@ -6,7 +6,7 @@ import Switch from '@mui/material/Switch';
 import IconButton from '@mui/material/IconButton';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 // ----------------------------------------------------------------------
 

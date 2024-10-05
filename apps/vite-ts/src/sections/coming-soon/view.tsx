@@ -10,9 +10,9 @@ import { outlinedInputClasses } from '@mui/material/OutlinedInput';
 
 import { useCountdownDate } from '@minimals/hooks/use-countdown';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { ComingSoonIllustration } from 'private-ui/assets/illustrations';
-import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'private-ui/assets/icons';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { ComingSoonIllustration } from 'internal-ui/assets/illustrations';
+import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'internal-ui/assets/icons';
 
 import { _socials } from 'src/_mock';
 

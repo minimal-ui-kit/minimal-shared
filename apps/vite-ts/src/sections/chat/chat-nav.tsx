@@ -12,8 +12,8 @@ import ClickAwayListener from '@mui/material/ClickAwayListener';
 
 import { useResponsive } from '@minimals/hooks/use-responsive';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
 
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';

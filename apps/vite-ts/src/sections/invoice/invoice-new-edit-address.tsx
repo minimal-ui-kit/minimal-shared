@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import { useBoolean } from '@minimals/hooks/use-boolean';
 import { useResponsive } from '@minimals/hooks/use-responsive';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { _addressBooks } from 'src/_mock';
 

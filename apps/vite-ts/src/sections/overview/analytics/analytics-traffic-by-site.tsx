@@ -5,8 +5,8 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { GoogleIcon, TwitterIcon, FacebookIcon, LinkedinIcon } from 'private-ui/assets/icons';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { GoogleIcon, TwitterIcon, FacebookIcon, LinkedinIcon } from 'internal-ui/assets/icons';
 
 import { fShortenNumber } from 'src/utils/format-number';
 

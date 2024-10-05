@@ -3,7 +3,7 @@ import { useState, useCallback } from 'react';
 import Pagination from '@mui/material/Pagination';
 import TablePagination from '@mui/material/TablePagination';
 
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

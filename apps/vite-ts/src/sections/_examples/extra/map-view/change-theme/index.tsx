@@ -2,7 +2,7 @@ import type { MapProps } from 'react-map-gl';
 
 import { useState, useCallback } from 'react';
 
-import { Map, MapControl } from 'private-ui/components/map';
+import { Map, MapControl } from 'internal-ui/components/map';
 
 import { ControlPanel } from './control-panel';
 

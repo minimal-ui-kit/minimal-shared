@@ -13,9 +13,9 @@ import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import AvatarGroup, { avatarGroupClasses } from '@mui/material/AvatarGroup';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { imageClasses } from 'private-ui/components/image';
-import { varAlpha, stylesMode } from 'private-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
+import { imageClasses } from 'internal-ui/components/image';
+import { varAlpha, stylesMode } from 'internal-ui/theme/styles';
 
 import { kanbanClasses } from '../classes';
 

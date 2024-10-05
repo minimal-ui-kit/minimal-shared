@@ -1,0 +1,14 @@
+{
+  "name": "internal-ts-config",
+  "author": "Minimals",
+  "version": "1.0.0",
+  "description": "Vite Starter & TypeScript",
+  "license": "MIT",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules .turbo .next out dist build"
+  }
+}

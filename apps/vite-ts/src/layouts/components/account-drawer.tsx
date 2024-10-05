@@ -12,11 +12,11 @@ import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { AnimateAvatar } from 'private-ui/components/animate';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { AnimateAvatar } from 'internal-ui/components/animate';
 
 import { paths } from 'src/routes/paths';
 import { useRouter, usePathname } from 'src/routes/hooks';

@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Badge from '@mui/material/Badge';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';

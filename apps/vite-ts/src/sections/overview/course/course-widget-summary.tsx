@@ -1,12 +1,12 @@
 import type { CardProps } from '@mui/material/Card';
-import type { ColorType } from 'private-ui/theme/core';
+import type { ColorType } from 'internal-ui/theme/core';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { SvgColor } from 'private-ui/components/svg-color';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { SvgColor } from 'internal-ui/components/svg-color';
 
 import { fNumber } from 'src/utils/format-number';
 

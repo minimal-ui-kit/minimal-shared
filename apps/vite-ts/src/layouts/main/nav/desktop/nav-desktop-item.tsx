@@ -9,8 +9,8 @@ import { styled } from '@mui/material/styles';
 import ButtonBase from '@mui/material/ButtonBase';
 import CardActionArea from '@mui/material/CardActionArea';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { useNavItem } from 'private-ui/components/nav-section';
+import { Iconify } from 'internal-ui/components/iconify';
+import { useNavItem } from 'internal-ui/components/nav-section';
 
 import { RouterLink } from 'src/routes/components';
 

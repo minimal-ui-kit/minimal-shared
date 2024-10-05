@@ -3,7 +3,7 @@ import type { GridColDef } from '@mui/x-data-grid';
 
 import { DataGrid, GridActionsCellItem } from '@mui/x-data-grid';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 // ----------------------------------------------------------------------
 

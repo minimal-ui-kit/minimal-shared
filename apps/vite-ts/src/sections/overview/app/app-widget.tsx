@@ -1,12 +1,12 @@
 import type { BoxProps } from '@mui/material/Box';
-import type { ChartOptions } from 'private-ui/components/chart';
+import type { ChartOptions } from 'internal-ui/components/chart';
 
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { SvgColor } from 'private-ui/components/svg-color';
-import { Chart, useChart } from 'private-ui/components/chart';
+import { Iconify } from 'internal-ui/components/iconify';
+import { SvgColor } from 'internal-ui/components/svg-color';
+import { Chart, useChart } from 'internal-ui/components/chart';
 
 import { fNumber } from 'src/utils/format-number';
 

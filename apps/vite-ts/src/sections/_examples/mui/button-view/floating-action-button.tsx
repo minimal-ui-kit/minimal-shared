@@ -3,8 +3,8 @@ import { m } from 'framer-motion';
 import Stack from '@mui/material/Stack';
 import Fab, { fabClasses } from '@mui/material/Fab';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { varHover } from 'private-ui/components/animate';
+import { Iconify } from 'internal-ui/components/iconify';
+import { varHover } from 'internal-ui/components/animate';
 
 import { ComponentBlock } from '../../component-block';
 

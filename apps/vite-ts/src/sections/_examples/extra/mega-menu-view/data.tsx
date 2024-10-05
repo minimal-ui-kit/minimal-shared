@@ -1,5 +1,5 @@
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { _mock } from 'src/_mock';
 

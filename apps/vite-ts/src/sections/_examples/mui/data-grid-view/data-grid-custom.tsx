@@ -31,9 +31,9 @@ import {
   GridToolbarDensitySelector,
 } from '@mui/x-data-grid';
 
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { EmptyContent } from 'private-ui/components/empty-content';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { EmptyContent } from 'internal-ui/components/empty-content';
 
 import { fPercent } from 'src/utils/format-number';
 import { fDate, fTime } from 'src/utils/format-time';

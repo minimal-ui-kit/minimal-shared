@@ -11,8 +11,8 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import LoadingButton from '@mui/lab/LoadingButton';
 
-import { toast } from 'private-ui/components/snackbar';
-import { Form, Field, schemaHelper } from 'private-ui/components/hook-form';
+import { toast } from 'internal-ui/components/snackbar';
+import { Form, Field, schemaHelper } from 'internal-ui/components/hook-form';
 
 import { fData } from 'src/utils/format-number';
 

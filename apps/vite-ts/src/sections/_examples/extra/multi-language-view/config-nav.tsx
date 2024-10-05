@@ -1,8 +1,8 @@
 import type { TFunction } from 'i18next';
 
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { SvgColor } from 'private-ui/components/svg-color';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { SvgColor } from 'internal-ui/components/svg-color';
 
 import { paths } from 'src/routes/paths';
 

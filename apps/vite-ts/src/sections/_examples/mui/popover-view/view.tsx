@@ -1,4 +1,4 @@
-import type { PopoverArrow } from 'private-ui/components/custom-popover';
+import type { PopoverArrow } from 'internal-ui/components/custom-popover';
 
 import { useRef, useState, useCallback } from 'react';
 
@@ -12,9 +12,9 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { Iconify } from 'internal-ui/components/iconify';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 import { paths } from 'src/routes/paths';
 

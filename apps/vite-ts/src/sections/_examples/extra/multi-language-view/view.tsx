@@ -15,9 +15,9 @@ import TablePagination from '@mui/material/TablePagination';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { FlagIcon } from 'private-ui/components/iconify';
-import { NavSectionVertical } from 'private-ui/components/nav-section';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { FlagIcon } from 'internal-ui/components/iconify';
+import { NavSectionVertical } from 'internal-ui/components/nav-section';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

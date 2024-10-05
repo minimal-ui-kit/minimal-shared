@@ -5,9 +5,9 @@ import Stack from '@mui/material/Stack';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { EmptyContent } from 'private-ui/components/empty-content';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { EmptyContent } from 'internal-ui/components/empty-content';
 
 import { CONFIG } from 'src/config-global';
 

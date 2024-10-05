@@ -16,7 +16,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 // ----------------------------------------------------------------------
 

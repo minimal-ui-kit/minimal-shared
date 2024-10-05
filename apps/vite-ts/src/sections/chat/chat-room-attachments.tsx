@@ -6,7 +6,7 @@ import ListItemText from '@mui/material/ListItemText';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { FileThumbnail } from 'private-ui/components/file-thumbnail';
+import { FileThumbnail } from 'internal-ui/components/file-thumbnail';
 
 import { fDateTime } from 'src/utils/format-time';
 

@@ -1,5 +1,5 @@
 import type { CardProps } from '@mui/material/Card';
-import type { TableHeadCustomProps } from 'private-ui/components/table';
+import type { TableHeadCustomProps } from 'internal-ui/components/table';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -14,11 +14,11 @@ import TableCell from '@mui/material/TableCell';
 import CardHeader from '@mui/material/CardHeader';
 import IconButton from '@mui/material/IconButton';
 
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { TableHeadCustom } from 'private-ui/components/table';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { TableHeadCustom } from 'internal-ui/components/table';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 import { fCurrency } from 'src/utils/format-number';
 

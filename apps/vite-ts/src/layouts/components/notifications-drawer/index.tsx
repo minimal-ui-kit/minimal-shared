@@ -16,11 +16,11 @@ import IconButton from '@mui/material/IconButton';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { varHover } from 'private-ui/components/animate';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { CustomTabs } from 'private-ui/components/custom-tabs';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { varHover } from 'internal-ui/components/animate';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { CustomTabs } from 'internal-ui/components/custom-tabs';
 
 import { NotificationItem } from './notification-item';
 

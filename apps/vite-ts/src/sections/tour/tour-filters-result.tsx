@@ -8,7 +8,7 @@ import { useCallback } from 'react';
 import Chip from '@mui/material/Chip';
 import Avatar from '@mui/material/Avatar';
 
-import { chipProps, FiltersBlock, FiltersResult } from 'private-ui/components/filters-result';
+import { chipProps, FiltersBlock, FiltersResult } from 'internal-ui/components/filters-result';
 
 import { fDateRangeShortLabel } from 'src/utils/format-time';
 

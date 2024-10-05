@@ -6,8 +6,8 @@ import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 
-import { Label } from 'private-ui/components/label';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { Label } from 'internal-ui/components/label';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 import { paths } from 'src/routes/paths';
 import { useRouter, usePathname } from 'src/routes/hooks';

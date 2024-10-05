@@ -6,7 +6,7 @@ import { useMemo, Suspense, useEffect, useCallback, createContext } from 'react'
 
 import { getStorage, useLocalStorage } from '@minimals/hooks/use-local-storage';
 
-import { SplashScreen } from 'private-ui/components/loading-screen';
+import { SplashScreen } from 'internal-ui/components/loading-screen';
 
 import { paths } from 'src/routes/paths';
 import { useRouter, useSearchParams } from 'src/routes/hooks';

@@ -6,7 +6,7 @@ import {
   CarouselThumb,
   CarouselThumbs,
   CarouselArrowNumberButtons,
-} from 'private-ui/components/carousel';
+} from 'internal-ui/components/carousel';
 
 import { IndexLabel } from './elements';
 

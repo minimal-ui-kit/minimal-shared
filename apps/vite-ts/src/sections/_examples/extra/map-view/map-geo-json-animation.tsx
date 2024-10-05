@@ -5,7 +5,7 @@ import { Layer, Source } from 'react-map-gl';
 
 import { useTheme } from '@mui/material/styles';
 
-import { Map, MapControl } from 'private-ui/components/map';
+import { Map, MapControl } from 'internal-ui/components/map';
 
 // ----------------------------------------------------------------------
 

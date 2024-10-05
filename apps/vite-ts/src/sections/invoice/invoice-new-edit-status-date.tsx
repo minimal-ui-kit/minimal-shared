@@ -3,7 +3,7 @@ import { useFormContext } from 'react-hook-form';
 import Stack from '@mui/material/Stack';
 import MenuItem from '@mui/material/MenuItem';
 
-import { Field } from 'private-ui/components/hook-form';
+import { Field } from 'internal-ui/components/hook-form';
 
 // ----------------------------------------------------------------------
 

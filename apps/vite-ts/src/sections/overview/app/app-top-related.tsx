@@ -13,10 +13,10 @@ import { svgIconClasses } from '@mui/material/SvgIcon';
 
 import { useTabs } from '@minimals/hooks/use-tabs';
 
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { CustomTabs } from 'private-ui/components/custom-tabs';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { CustomTabs } from 'internal-ui/components/custom-tabs';
 
 import { fData, fCurrency, fShortenNumber } from 'src/utils/format-number';
 

@@ -4,8 +4,8 @@ import Paper from '@mui/material/Paper';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { MegaMenuVertical } from 'private-ui/components/mega-menu';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { MegaMenuVertical } from 'internal-ui/components/mega-menu';
 
 import { navItems1 } from './data';
 

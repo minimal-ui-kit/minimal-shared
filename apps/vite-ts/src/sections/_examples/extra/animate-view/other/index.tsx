@@ -4,14 +4,14 @@ import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Iconify } from 'private-ui/components/iconify';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
 import {
   AnimateLogo1,
   AnimateLogo2,
   AnimateBorder,
   AnimateAvatar,
-} from 'private-ui/components/animate';
+} from 'internal-ui/components/animate';
 
 import { _mock } from 'src/_mock';
 

@@ -6,7 +6,7 @@ import Avatar from '@mui/material/Avatar';
 import { useTheme } from '@mui/material/styles';
 import ListItemText from '@mui/material/ListItemText';
 
-import { varAlpha, bgGradient } from 'private-ui/theme/styles';
+import { varAlpha, bgGradient } from 'internal-ui/theme/styles';
 
 // ----------------------------------------------------------------------
 

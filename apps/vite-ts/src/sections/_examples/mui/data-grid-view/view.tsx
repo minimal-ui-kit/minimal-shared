@@ -6,7 +6,7 @@ import Container from '@mui/material/Container';
 import CardHeader from '@mui/material/CardHeader';
 import Typography from '@mui/material/Typography';
 
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

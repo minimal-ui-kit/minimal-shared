@@ -1,13 +1,13 @@
 import type { Breakpoint } from '@mui/material/styles';
-import type { NavSectionProps } from 'private-ui/components/nav-section';
+import type { NavSectionProps } from 'internal-ui/components/nav-section';
 
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 
-import { Logo } from 'private-ui/components/logo';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { varAlpha, hideScrollY } from 'private-ui/theme/styles';
-import { NavSectionMini, NavSectionVertical } from 'private-ui/components/nav-section';
+import { Logo } from 'internal-ui/components/logo';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { varAlpha, hideScrollY } from 'internal-ui/theme/styles';
+import { NavSectionMini, NavSectionVertical } from 'internal-ui/components/nav-section';
 
 import { NavUpgrade } from '../components/nav-upgrade';
 import { NavToggleButton } from '../components/nav-toggle-button';

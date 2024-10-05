@@ -1,4 +1,4 @@
-import type { MediaFontSize } from 'private-ui/theme/styles';
+import type { MediaFontSize } from 'internal-ui/theme/styles';
 import type { Variant } from '@mui/material/styles/createTypography';
 
 import Box from '@mui/material/Box';
@@ -9,8 +9,8 @@ import Typography from '@mui/material/Typography';
 
 import { useResponsive } from '@minimals/hooks/use-responsive';
 
-import { remToPx } from 'private-ui/theme/styles';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { remToPx } from 'internal-ui/theme/styles';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

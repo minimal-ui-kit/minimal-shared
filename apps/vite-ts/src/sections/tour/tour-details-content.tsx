@@ -9,10 +9,10 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ListItemText from '@mui/material/ListItemText';
 
-import { Image } from 'private-ui/components/image';
-import { Iconify } from 'private-ui/components/iconify';
-import { Markdown } from 'private-ui/components/markdown';
-import { Lightbox, useLightBox } from 'private-ui/components/lightbox';
+import { Image } from 'internal-ui/components/image';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Markdown } from 'internal-ui/components/markdown';
+import { Lightbox, useLightBox } from 'internal-ui/components/lightbox';
 
 import { fDate } from 'src/utils/format-time';
 

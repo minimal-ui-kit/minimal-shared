@@ -16,8 +16,8 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Form, Field } from 'private-ui/components/hook-form';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Form, Field } from 'internal-ui/components/hook-form';
 
 import { today } from 'src/utils/format-time';
 

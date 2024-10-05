@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Navigate, useRoutes } from 'react-router-dom';
 
-import { SplashScreen } from 'private-ui/components/loading-screen';
+import { SplashScreen } from 'internal-ui/components/loading-screen';
 
 import { MainLayout } from 'src/layouts/main';
 

@@ -2,7 +2,7 @@ import Stack from '@mui/material/Stack';
 import LoadingButton from '@mui/lab/LoadingButton';
 import Button, { buttonClasses } from '@mui/material/Button';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { ComponentBlock } from '../../component-block';
 

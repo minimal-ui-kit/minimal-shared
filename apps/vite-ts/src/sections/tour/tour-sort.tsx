@@ -3,8 +3,8 @@ import Button from '@mui/material/Button';
 import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { Iconify } from 'internal-ui/components/iconify';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 // ----------------------------------------------------------------------
 

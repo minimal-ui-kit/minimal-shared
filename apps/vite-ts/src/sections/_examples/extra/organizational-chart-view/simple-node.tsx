@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha, stylesMode } from 'private-ui/theme/styles';
+import { varAlpha, stylesMode } from 'internal-ui/theme/styles';
 
 import type { NodeProps } from './data';
 

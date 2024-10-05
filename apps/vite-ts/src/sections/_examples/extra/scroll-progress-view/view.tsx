@@ -3,10 +3,10 @@ import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import CardContent from '@mui/material/CardContent';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
-import { ScrollProgress, useScrollProgress } from 'private-ui/components/animate/scroll-progress';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
+import { ScrollProgress, useScrollProgress } from 'internal-ui/components/animate/scroll-progress';
 
 import { paths } from 'src/routes/paths';
 

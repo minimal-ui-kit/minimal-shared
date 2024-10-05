@@ -7,10 +7,10 @@ import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { varAlpha, stylesMode } from 'private-ui/theme/styles';
-import { PlanFreeIcon, PlanStarterIcon, PlanPremiumIcon } from 'private-ui/assets/icons';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { varAlpha, stylesMode } from 'internal-ui/theme/styles';
+import { PlanFreeIcon, PlanStarterIcon, PlanPremiumIcon } from 'internal-ui/assets/icons';
 
 // ----------------------------------------------------------------------
 

@@ -6,10 +6,10 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ListItemText from '@mui/material/ListItemText';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Image } from 'private-ui/components/image';
-import { Iconify } from 'private-ui/components/iconify';
-import { Lightbox, useLightBox } from 'private-ui/components/lightbox';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Image } from 'internal-ui/components/image';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Lightbox, useLightBox } from 'internal-ui/components/lightbox';
 
 import { fDate } from 'src/utils/format-time';
 

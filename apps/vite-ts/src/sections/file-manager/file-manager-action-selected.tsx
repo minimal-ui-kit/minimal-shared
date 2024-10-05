@@ -5,8 +5,8 @@ import Portal from '@mui/material/Portal';
 import Checkbox from '@mui/material/Checkbox';
 import Typography from '@mui/material/Typography';
 
-import { stylesMode } from 'private-ui/theme/styles';
-import { Iconify } from 'private-ui/components/iconify';
+import { stylesMode } from 'internal-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
 
 // ----------------------------------------------------------------------
 

@@ -5,8 +5,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import Box from '@mui/material/Box';
 import LoadingButton from '@mui/lab/LoadingButton';
 
-import { EmailInboxIcon } from 'private-ui/assets/icons';
-import { Form, Field } from 'private-ui/components/hook-form';
+import { EmailInboxIcon } from 'internal-ui/assets/icons';
+import { Form, Field } from 'internal-ui/components/hook-form';
 
 import { paths } from 'src/routes/paths';
 

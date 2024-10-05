@@ -5,7 +5,7 @@ import Avatar from '@mui/material/Avatar';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { useMockedUser } from 'src/auth/hooks';
 

@@ -10,9 +10,9 @@ import InputAdornment from '@mui/material/InputAdornment';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { toast } from 'private-ui/components/snackbar';
-import { Iconify } from 'private-ui/components/iconify';
-import { Form, Field } from 'private-ui/components/hook-form';
+import { toast } from 'internal-ui/components/snackbar';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Form, Field } from 'internal-ui/components/hook-form';
 
 // ----------------------------------------------------------------------
 

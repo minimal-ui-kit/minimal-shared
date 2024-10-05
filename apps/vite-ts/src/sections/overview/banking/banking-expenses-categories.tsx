@@ -1,5 +1,5 @@
 import type { CardProps } from '@mui/material/Card';
-import type { ChartOptions } from 'private-ui/components/chart';
+import type { ChartOptions } from 'internal-ui/components/chart';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -7,7 +7,7 @@ import Divider from '@mui/material/Divider';
 import { useTheme } from '@mui/material/styles';
 import CardHeader from '@mui/material/CardHeader';
 
-import { Chart, useChart, ChartLegends } from 'private-ui/components/chart';
+import { Chart, useChart, ChartLegends } from 'internal-ui/components/chart';
 
 import { fCurrency } from 'src/utils/format-number';
 

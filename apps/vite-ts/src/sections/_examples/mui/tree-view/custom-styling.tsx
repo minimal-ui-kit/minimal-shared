@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 import { RichTreeView } from '@mui/x-tree-view/RichTreeView';
 import { TreeItem, treeItemClasses } from '@mui/x-tree-view/TreeItem';
 
-import { varAlpha, stylesMode } from 'private-ui/theme/styles';
+import { varAlpha, stylesMode } from 'internal-ui/theme/styles';
 
 // ----------------------------------------------------------------------
 

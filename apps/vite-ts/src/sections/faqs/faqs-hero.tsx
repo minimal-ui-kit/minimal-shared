@@ -9,14 +9,14 @@ import { useTheme } from '@mui/material/styles';
 import InputAdornment from '@mui/material/InputAdornment';
 import { outlinedInputClasses } from '@mui/material/OutlinedInput';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { varAlpha, bgGradient } from 'private-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
+import { varAlpha, bgGradient } from 'internal-ui/theme/styles';
 import {
   varFade,
   AnimateText,
   MotionContainer,
   animateTextClasses,
-} from 'private-ui/components/animate';
+} from 'internal-ui/components/animate';
 
 import { CONFIG } from 'src/config-global';
 

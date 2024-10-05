@@ -11,12 +11,12 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { useBoolean } from '@minimals/hooks/use-boolean';
 import { useSetState } from '@minimals/hooks/use-set-state';
 
-import { toast } from 'private-ui/components/snackbar';
-import { Iconify } from 'private-ui/components/iconify';
-import { fileFormat } from 'private-ui/components/file-thumbnail';
-import { EmptyContent } from 'private-ui/components/empty-content';
-import { ConfirmDialog } from 'private-ui/components/custom-dialog';
-import { useTable, rowInPage, getComparator } from 'private-ui/components/table';
+import { toast } from 'internal-ui/components/snackbar';
+import { Iconify } from 'internal-ui/components/iconify';
+import { fileFormat } from 'internal-ui/components/file-thumbnail';
+import { EmptyContent } from 'internal-ui/components/empty-content';
+import { ConfirmDialog } from 'internal-ui/components/custom-dialog';
+import { useTable, rowInPage, getComparator } from 'internal-ui/components/table';
 
 import { fIsAfter, fIsBetween } from 'src/utils/format-time';
 

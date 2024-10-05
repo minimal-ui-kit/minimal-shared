@@ -2,8 +2,8 @@ import Box from '@mui/material/Box';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemButton from '@mui/material/ListItemButton';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Label } from 'private-ui/components/label';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Label } from 'internal-ui/components/label';
 
 // ----------------------------------------------------------------------
 

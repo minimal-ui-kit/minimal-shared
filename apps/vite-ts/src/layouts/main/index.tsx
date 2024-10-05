@@ -1,5 +1,5 @@
 import type { Breakpoint } from '@mui/material/styles';
-import type { MainLayoutProps as LayoutProps } from 'private-ui/layouts/main';
+import type { MainLayoutProps as LayoutProps } from 'internal-ui/layouts/main';
 
 import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
@@ -8,8 +8,8 @@ import { useTheme } from '@mui/material/styles';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Logo } from 'private-ui/components/logo';
-import { MainLayout as Layout } from 'private-ui/layouts/main';
+import { Logo } from 'internal-ui/components/logo';
+import { MainLayout as Layout } from 'internal-ui/layouts/main';
 
 import { paths } from 'src/routes/paths';
 import { usePathname } from 'src/routes/hooks';

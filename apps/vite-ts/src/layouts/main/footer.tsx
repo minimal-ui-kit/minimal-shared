@@ -10,8 +10,8 @@ import Grid from '@mui/material/Unstable_Grid2';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
-import { Logo } from 'private-ui/components/logo';
-import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'private-ui/assets/icons';
+import { Logo } from 'internal-ui/components/logo';
+import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'internal-ui/assets/icons';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';

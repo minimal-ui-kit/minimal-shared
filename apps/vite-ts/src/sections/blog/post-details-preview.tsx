@@ -1,4 +1,4 @@
-import type { FileUploadType } from 'private-ui/components/upload';
+import type { FileUploadType } from 'internal-ui/components/upload';
 
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
@@ -9,9 +9,9 @@ import Typography from '@mui/material/Typography';
 import LoadingButton from '@mui/lab/LoadingButton';
 import DialogActions from '@mui/material/DialogActions';
 
-import { Markdown } from 'private-ui/components/markdown';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { EmptyContent } from 'private-ui/components/empty-content';
+import { Markdown } from 'internal-ui/components/markdown';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { EmptyContent } from 'internal-ui/components/empty-content';
 
 import { PostDetailsHero } from './post-details-hero';
 

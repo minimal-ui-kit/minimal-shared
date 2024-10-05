@@ -7,7 +7,7 @@ import Tabs from '@mui/material/Tabs';
 
 import { useTabs } from '@minimals/hooks/use-tabs';
 
-import { Label } from 'private-ui/components/label';
+import { Label } from 'internal-ui/components/label';
 
 import { paths } from 'src/routes/paths';
 

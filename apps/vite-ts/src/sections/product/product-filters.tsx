@@ -19,10 +19,10 @@ import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import InputBase, { inputBaseClasses } from '@mui/material/InputBase';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { ColorPicker } from 'private-ui/components/color-utils';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { ColorPicker } from 'internal-ui/components/color-utils';
 
 // ----------------------------------------------------------------------
 

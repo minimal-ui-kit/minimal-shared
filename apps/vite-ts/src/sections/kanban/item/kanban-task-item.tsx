@@ -7,8 +7,8 @@ import { useState, useEffect, useCallback } from 'react';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { toast } from 'private-ui/components/snackbar';
-import { imageClasses } from 'private-ui/components/image';
+import { toast } from 'internal-ui/components/snackbar';
+import { imageClasses } from 'internal-ui/components/image';
 
 import { deleteTask, updateTask } from 'src/actions/kanban';
 

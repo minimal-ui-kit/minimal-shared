@@ -5,7 +5,7 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import ListItemButton from '@mui/material/ListItemButton';
 
-import { SearchNotFound } from 'private-ui/components/search-not-found';
+import { SearchNotFound } from 'internal-ui/components/search-not-found';
 
 // ----------------------------------------------------------------------
 

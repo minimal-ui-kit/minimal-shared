@@ -6,7 +6,7 @@ import Badge from '@mui/material/Badge';
 import SvgIcon from '@mui/material/SvgIcon';
 import IconButton from '@mui/material/IconButton';
 
-import { useSettingsContext } from 'private-ui/components/settings/context';
+import { useSettingsContext } from 'internal-ui/components/settings';
 
 // ----------------------------------------------------------------------
 

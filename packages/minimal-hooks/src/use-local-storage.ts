@@ -11,13 +11,21 @@ export type UseLocalStorageReturn<T> = {
   setField: (name: keyof T, updateValue: T[keyof T]) => void;
 };
 
-export function useLocalStorage<T>(key: string, initialState: T): UseLocalStorageReturn<T> {
+export function useLocalStorage<T>(
+  key: string,
+  initialState: T,
+  options?: {
+    initOnload?: boolean;
+  }
+): UseLocalStorageReturn<T> {
   const [state, set] = useState(initialState);
 
   const multiValue = initialState && typeof initialState === 'object';
 
+  const { initOnload = false } = options || {};
+
   useEffect(() => {
-    const restoredValue: T = getStorage(key);
+    const restoredValue: T = getStorage(key) ?? initialState;
 
     if (restoredValue) {
       if (multiValue) {
@@ -25,8 +33,12 @@ export function useLocalStorage<T>(key: string, initialState: T): UseLocalStorag
       } else {
         set(restoredValue);
       }
+
+      if (initOnload) {
+        setStorage<T>(key, multiValue ? { ...restoredValue } : restoredValue);
+      }
     }
-  }, [key, multiValue]);
+  }, [initOnload, initialState, key, multiValue]);
 
   const setState = useCallback(
     (updateState: T | Partial<T>) => {

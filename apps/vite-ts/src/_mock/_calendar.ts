@@ -1,4 +1,4 @@
-import { info, error, primary, success, warning, secondary } from 'private-ui/theme/core';
+import { info, error, primary, success, warning, secondary } from 'internal-ui/theme/core';
 
 // ----------------------------------------------------------------------
 

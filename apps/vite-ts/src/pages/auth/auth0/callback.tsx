@@ -1,4 +1,4 @@
-import { SplashScreen } from 'private-ui/components/loading-screen';
+import { SplashScreen } from 'internal-ui/components/loading-screen';
 
 // ----------------------------------------------------------------------
 

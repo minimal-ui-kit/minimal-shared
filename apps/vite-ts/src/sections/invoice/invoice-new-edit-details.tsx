@@ -12,8 +12,8 @@ import Typography from '@mui/material/Typography';
 import InputAdornment from '@mui/material/InputAdornment';
 import { inputBaseClasses } from '@mui/material/InputBase';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Field } from 'private-ui/components/hook-form';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Field } from 'internal-ui/components/hook-form';
 
 import { fCurrency } from 'src/utils/format-number';
 

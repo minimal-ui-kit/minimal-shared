@@ -8,8 +8,8 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import ListItemText from '@mui/material/ListItemText';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { toast } from 'private-ui/components/snackbar';
-import { Form } from 'private-ui/components/hook-form';
+import { toast } from 'internal-ui/components/snackbar';
+import { Form } from 'internal-ui/components/hook-form';
 
 // ----------------------------------------------------------------------
 

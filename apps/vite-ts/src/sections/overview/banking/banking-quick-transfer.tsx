@@ -20,9 +20,9 @@ import Input, { inputClasses } from '@mui/material/Input';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { varAlpha, stylesMode } from 'private-ui/theme/styles';
-import { Carousel, useCarousel, CarouselArrowFloatButtons } from 'private-ui/components/carousel';
+import { Iconify } from 'internal-ui/components/iconify';
+import { varAlpha, stylesMode } from 'internal-ui/theme/styles';
+import { Carousel, useCarousel, CarouselArrowFloatButtons } from 'internal-ui/components/carousel';
 
 import { fCurrency } from 'src/utils/format-number';
 

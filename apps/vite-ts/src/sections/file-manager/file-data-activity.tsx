@@ -1,5 +1,5 @@
 import type { CardProps } from '@mui/material/Card';
-import type { ChartOptions } from 'private-ui/components/chart';
+import type { ChartOptions } from 'internal-ui/components/chart';
 
 import { useState, useCallback } from 'react';
 
@@ -7,7 +7,7 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import { useTheme, alpha as hexAlpha } from '@mui/material/styles';
 
-import { Chart, useChart, ChartSelect } from 'private-ui/components/chart';
+import { Chart, useChart, ChartSelect } from 'internal-ui/components/chart';
 
 import { fData } from 'src/utils/format-number';
 

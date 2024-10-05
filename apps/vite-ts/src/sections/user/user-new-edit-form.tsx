@@ -16,9 +16,9 @@ import Typography from '@mui/material/Typography';
 import LoadingButton from '@mui/lab/LoadingButton';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { Label } from 'private-ui/components/label';
-import { toast } from 'private-ui/components/snackbar';
-import { Form, Field, schemaHelper } from 'private-ui/components/hook-form';
+import { Label } from 'internal-ui/components/label';
+import { toast } from 'internal-ui/components/snackbar';
+import { Form, Field, schemaHelper } from 'internal-ui/components/hook-form';
 
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';

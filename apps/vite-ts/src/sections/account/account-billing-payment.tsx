@@ -12,7 +12,7 @@ import DialogActions from '@mui/material/DialogActions';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { PaymentCardItem } from '../payment/payment-card-item';
 import { PaymentNewCardForm } from '../payment/payment-new-card-form';

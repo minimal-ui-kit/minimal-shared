@@ -10,8 +10,8 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 
-import { Upload } from 'private-ui/components/upload';
-import { Iconify } from 'private-ui/components/iconify';
+import { Upload } from 'internal-ui/components/upload';
+import { Iconify } from 'internal-ui/components/iconify';
 
 // ----------------------------------------------------------------------
 

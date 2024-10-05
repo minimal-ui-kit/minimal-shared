@@ -6,8 +6,8 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import Typography from '@mui/material/Typography';
 
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { Iconify, FlagIcon } from 'private-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { Iconify, FlagIcon } from 'internal-ui/components/iconify';
 
 import { fShortenNumber } from 'src/utils/format-number';
 

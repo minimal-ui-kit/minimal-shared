@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles';
 
-import { bgBlur, varAlpha } from 'private-ui/theme/styles';
+import { bgBlur, varAlpha } from 'internal-ui/theme/styles';
 
 // ----------------------------------------------------------------------
 

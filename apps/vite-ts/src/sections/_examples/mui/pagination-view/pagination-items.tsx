@@ -11,7 +11,7 @@ import Pagination from '@mui/material/Pagination';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 
-import { varAlpha } from 'private-ui/theme/styles';
+import { varAlpha } from 'internal-ui/theme/styles';
 
 // ----------------------------------------------------------------------
 

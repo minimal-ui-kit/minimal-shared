@@ -10,9 +10,9 @@ import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { varHover } from 'private-ui/components/animate';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { Iconify } from 'internal-ui/components/iconify';
+import { varHover } from 'internal-ui/components/animate';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

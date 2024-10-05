@@ -5,8 +5,8 @@ import MuiStepper from '@mui/material/Stepper';
 import StepLabel from '@mui/material/StepLabel';
 import Typography from '@mui/material/Typography';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Field } from 'private-ui/components/hook-form';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Field } from 'internal-ui/components/hook-form';
 
 // ----------------------------------------------------------------------
 

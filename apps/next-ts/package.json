@@ -20,7 +20,7 @@
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@minimals/hooks": "workspace:*",
-    "private-ui": "workspace:*",
+    "internal-ui": "workspace:*",
     "@minimals/utils": "workspace:*",
     "@mui/lab": "5.0.0-alpha.173",
     "@mui/material": "^5.16.7",
@@ -34,8 +34,8 @@
     "sonner": "^1.5.0"
   },
   "devDependencies": {
-    "@minimals/eslint-config": "workspace:*",
-    "@minimals/ts-config": "workspace:*",
+    "internal-eslint-config": "workspace:*",
+    "internal-ts-config": "workspace:*",
     "@types/node": "^22.4.2",
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",

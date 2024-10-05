@@ -2,8 +2,8 @@ import Box from '@mui/material/Box';
 import Badge from '@mui/material/Badge';
 import Typography from '@mui/material/Typography';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { Iconify } from 'internal-ui/components/iconify';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

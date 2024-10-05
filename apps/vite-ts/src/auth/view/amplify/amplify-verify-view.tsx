@@ -8,8 +8,8 @@ import LoadingButton from '@mui/lab/LoadingButton';
 
 import { useCountdownSeconds } from '@minimals/hooks/use-countdown';
 
-import { EmailInboxIcon } from 'private-ui/assets/icons';
-import { Form, Field } from 'private-ui/components/hook-form';
+import { EmailInboxIcon } from 'internal-ui/assets/icons';
+import { Form, Field } from 'internal-ui/components/hook-form';
 
 import { paths } from 'src/routes/paths';
 import { useRouter, useSearchParams } from 'src/routes/hooks';

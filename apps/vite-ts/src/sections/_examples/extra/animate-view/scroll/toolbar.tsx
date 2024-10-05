@@ -3,7 +3,7 @@ import type { StackProps } from '@mui/material/Stack';
 import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 // ----------------------------------------------------------------------
 

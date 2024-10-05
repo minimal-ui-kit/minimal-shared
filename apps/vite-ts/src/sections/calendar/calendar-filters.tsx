@@ -16,9 +16,9 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemButton from '@mui/material/ListItemButton';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { ColorPicker } from 'private-ui/components/color-utils';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { ColorPicker } from 'internal-ui/components/color-utils';
 
 import { fDate, fDateTime } from 'src/utils/format-time';
 

@@ -2,7 +2,7 @@ import './globals.css';
 
 import type { Metadata } from 'next';
 
-import { ThemeProvider } from 'private-ui/theme';
+import { ThemeProvider } from 'internal-ui/theme';
 
 // ----------------------------------------------------------------------
 

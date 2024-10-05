@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 
-import { varAlpha, stylesMode } from 'private-ui/theme/styles';
+import { varAlpha, stylesMode } from 'internal-ui/theme/styles';
 
 import { kanbanClasses } from '../classes';
 

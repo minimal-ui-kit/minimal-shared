@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import { cardClasses } from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha } from 'private-ui/theme/styles';
+import { varAlpha } from 'internal-ui/theme/styles';
 
 import { CONFIG } from 'src/config-global';
 import { DashboardContent } from 'src/layouts/dashboard';

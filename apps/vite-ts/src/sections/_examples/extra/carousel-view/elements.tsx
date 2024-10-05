@@ -4,7 +4,7 @@ import type { ButtonProps } from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 // ----------------------------------------------------------------------
 

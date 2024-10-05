@@ -4,9 +4,9 @@ import { useMemo } from 'react';
 import Paper from '@mui/material/Paper';
 import Skeleton from '@mui/material/Skeleton';
 
-import { Label } from 'private-ui/components/label';
-import { SvgColor } from 'private-ui/components/svg-color';
-import { NavSectionVertical } from 'private-ui/components/nav-section';
+import { Label } from 'internal-ui/components/label';
+import { SvgColor } from 'internal-ui/components/svg-color';
+import { NavSectionVertical } from 'internal-ui/components/nav-section';
 
 import { fetcher } from 'src/lib/axios';
 import { CONFIG } from 'src/config-global';

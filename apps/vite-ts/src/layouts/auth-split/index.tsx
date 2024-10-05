@@ -1,16 +1,14 @@
-import type { AuthSplitLayoutProps as LayoutProps } from 'private-ui/layouts/auth-split';
+import type { AuthSplitLayoutProps as LayoutProps } from 'internal-ui/layouts/auth-split';
 
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Alert from '@mui/material/Alert';
 
-import { Logo } from 'private-ui/components/logo';
-import { AuthSplitLayout as Layout } from 'private-ui/layouts/auth-split';
+import { Logo } from 'internal-ui/components/logo';
+import { AuthSplitLayout as Layout } from 'internal-ui/layouts/auth-split';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
-
-import { SettingsButton } from '../components/settings-button';
 
 // ----------------------------------------------------------------------
 
@@ -45,7 +43,7 @@ export function AuthSplitLayout({ sx, section, children, header }: LayoutProps) 
                 Need help?
               </Link>
               {/* -- Settings button -- */}
-              <SettingsButton />
+              {/* <SettingsButton /> */}
             </Box>
           ),
         },

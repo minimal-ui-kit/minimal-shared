@@ -11,9 +11,9 @@ import Button from '@mui/material/Button';
 import { useDebounce } from '@minimals/hooks/use-debounce';
 import { useSetState } from '@minimals/hooks/use-set-state';
 
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';

@@ -1,5 +1,5 @@
-import { Label } from 'private-ui/components/label';
-import { SvgColor } from 'private-ui/components/svg-color';
+import { Label } from 'internal-ui/components/label';
+import { SvgColor } from 'internal-ui/components/svg-color';
 
 import { CONFIG } from 'src/config-global';
 

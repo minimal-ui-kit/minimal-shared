@@ -1,13 +1,13 @@
 import type { CardProps } from '@mui/material/Card';
-import type { ChartOptions } from 'private-ui/components/chart';
+import type { ChartOptions } from 'internal-ui/components/chart';
 
 import Card from '@mui/material/Card';
 import Divider from '@mui/material/Divider';
 import CardHeader from '@mui/material/CardHeader';
 import { useTheme, alpha as hexAlpha } from '@mui/material/styles';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Chart, useChart, ChartLegends } from 'private-ui/components/chart';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Chart, useChart, ChartLegends } from 'internal-ui/components/chart';
 
 import { fNumber } from 'src/utils/format-number';
 

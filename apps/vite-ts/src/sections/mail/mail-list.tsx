@@ -9,9 +9,9 @@ import InputAdornment from '@mui/material/InputAdornment';
 
 import { useResponsive } from '@minimals/hooks/use-responsive';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { EmptyContent } from 'private-ui/components/empty-content';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { EmptyContent } from 'internal-ui/components/empty-content';
 
 import { CONFIG } from 'src/config-global';
 

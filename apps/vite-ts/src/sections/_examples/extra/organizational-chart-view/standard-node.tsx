@@ -5,9 +5,9 @@ import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
-import { toast } from 'private-ui/components/snackbar';
-import { Iconify } from 'private-ui/components/iconify';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { toast } from 'internal-ui/components/snackbar';
+import { Iconify } from 'internal-ui/components/iconify';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 import type { NodeProps } from './data';
 

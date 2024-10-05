@@ -1,5 +1,5 @@
 import type { IFile } from 'src/types/file';
-import type { TableProps } from 'private-ui/components/table';
+import type { TableProps } from 'internal-ui/components/table';
 
 import { useRef, useState, useCallback } from 'react';
 
@@ -10,7 +10,7 @@ import Collapse from '@mui/material/Collapse';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { FileManagerPanel } from './file-manager-panel';
 import { FileManagerFileItem } from './file-manager-file-item';

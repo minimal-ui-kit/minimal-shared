@@ -9,9 +9,9 @@ import TableCell from '@mui/material/TableCell';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { ColorPreview } from 'private-ui/components/color-utils';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { ColorPreview } from 'internal-ui/components/color-utils';
 
 import { fCurrency } from 'src/utils/format-number';
 

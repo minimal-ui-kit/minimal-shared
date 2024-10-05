@@ -2,7 +2,7 @@ import AutoHeight from 'embla-carousel-auto-height';
 
 import Box from '@mui/material/Box';
 
-import { Carousel, useCarousel, CarouselArrowBasicButtons } from 'private-ui/components/carousel';
+import { Carousel, useCarousel, CarouselArrowBasicButtons } from 'internal-ui/components/carousel';
 
 import { IndexLabel } from './elements';
 

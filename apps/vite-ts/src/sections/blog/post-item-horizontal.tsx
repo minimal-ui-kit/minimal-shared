@@ -11,11 +11,11 @@ import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
-import { maxLine } from 'private-ui/theme/styles';
-import { Label } from 'private-ui/components/label';
-import { Image } from 'private-ui/components/image';
-import { Iconify } from 'private-ui/components/iconify';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { maxLine } from 'internal-ui/theme/styles';
+import { Label } from 'internal-ui/components/label';
+import { Image } from 'internal-ui/components/image';
+import { Iconify } from 'internal-ui/components/iconify';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';

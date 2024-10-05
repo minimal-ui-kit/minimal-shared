@@ -3,7 +3,7 @@ import type { IconButtonProps } from '@mui/material/IconButton';
 import SvgIcon from '@mui/material/SvgIcon';
 import IconButton from '@mui/material/IconButton';
 
-import { varAlpha } from 'private-ui/theme/styles';
+import { varAlpha } from 'internal-ui/theme/styles';
 
 // ----------------------------------------------------------------------
 

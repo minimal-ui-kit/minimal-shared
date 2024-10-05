@@ -7,8 +7,8 @@ import Dialog from '@mui/material/Dialog';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { OrderCompleteIllustration } from 'private-ui/assets/illustrations';
+import { Iconify } from 'internal-ui/components/iconify';
+import { OrderCompleteIllustration } from 'internal-ui/assets/illustrations';
 
 // ----------------------------------------------------------------------
 

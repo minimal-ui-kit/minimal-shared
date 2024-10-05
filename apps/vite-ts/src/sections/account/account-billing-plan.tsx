@@ -13,9 +13,9 @@ import CardHeader from '@mui/material/CardHeader';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { PlanFreeIcon, PlanStarterIcon, PlanPremiumIcon } from 'private-ui/assets/icons';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { PlanFreeIcon, PlanStarterIcon, PlanPremiumIcon } from 'internal-ui/assets/icons';
 
 import { AddressListDialog } from '../address';
 import { PaymentCardListDialog } from '../payment/payment-card-list-dialog';

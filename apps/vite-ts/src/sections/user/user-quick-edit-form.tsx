@@ -16,8 +16,8 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 
-import { toast } from 'private-ui/components/snackbar';
-import { Form, Field, schemaHelper } from 'private-ui/components/hook-form';
+import { toast } from 'internal-ui/components/snackbar';
+import { Form, Field, schemaHelper } from 'internal-ui/components/hook-form';
 
 import { USER_STATUS_OPTIONS } from 'src/_mock';
 

@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha, bgGradient } from 'private-ui/theme/styles';
+import { varAlpha, bgGradient } from 'internal-ui/theme/styles';
 
 import { CONFIG } from 'src/config-global';
 

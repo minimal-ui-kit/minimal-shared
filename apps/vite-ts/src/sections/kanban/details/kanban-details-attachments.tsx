@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 
-import { UploadBox, MultiFilePreview } from 'private-ui/components/upload';
+import { UploadBox, MultiFilePreview } from 'internal-ui/components/upload';
 
 // ----------------------------------------------------------------------
 

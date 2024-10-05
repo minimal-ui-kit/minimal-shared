@@ -17,7 +17,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';

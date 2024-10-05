@@ -1,12 +1,12 @@
 import type { Theme, CSSObject } from '@mui/material/styles';
-import type { SettingsState } from 'private-ui/components/settings';
+import type { SettingsState } from 'internal-ui/components/settings';
 
 import { useMemo } from 'react';
 
 import { styled } from '@mui/material/styles';
 
-import { varAlpha, stylesMode } from 'private-ui/theme/styles';
-import { bulletColor } from 'private-ui/components/nav-section';
+import { varAlpha, stylesMode } from 'internal-ui/theme/styles';
+import { bulletColor } from 'internal-ui/components/nav-section';
 
 // ----------------------------------------------------------------------
 

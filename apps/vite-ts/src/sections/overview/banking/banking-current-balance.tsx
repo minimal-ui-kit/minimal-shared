@@ -9,9 +9,9 @@ import IconButton from '@mui/material/IconButton';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
-import { Carousel, useCarousel, CarouselDotButtons } from 'private-ui/components/carousel';
+import { Iconify } from 'internal-ui/components/iconify';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
+import { Carousel, useCarousel, CarouselDotButtons } from 'internal-ui/components/carousel';
 
 import { fCurrency } from 'src/utils/format-number';
 

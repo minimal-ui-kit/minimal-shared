@@ -14,7 +14,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 
-import { Form, Field, schemaHelper } from 'private-ui/components/hook-form';
+import { Form, Field, schemaHelper } from 'internal-ui/components/hook-form';
 
 // ----------------------------------------------------------------------
 

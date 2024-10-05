@@ -14,9 +14,9 @@ import ToggleButton from '@mui/material/ToggleButton';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { SvgColor } from 'private-ui/components/svg-color';
-import { NavSectionVertical, NavSectionVerticalItem } from 'private-ui/components/nav-section';
+import { Iconify } from 'internal-ui/components/iconify';
+import { SvgColor } from 'internal-ui/components/svg-color';
+import { NavSectionVertical, NavSectionVerticalItem } from 'internal-ui/components/nav-section';
 
 import { CONFIG } from 'src/config-global';
 

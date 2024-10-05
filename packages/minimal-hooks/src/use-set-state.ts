@@ -4,6 +4,7 @@ import { useMemo, useState, useCallback } from 'react';
 
 export type UseSetStateReturn<T> = {
   state: T;
+
   onResetState: () => void;
   setState: (updateState: T | Partial<T>) => void;
   setField: (name: keyof T, updateValue: T[keyof T]) => void;

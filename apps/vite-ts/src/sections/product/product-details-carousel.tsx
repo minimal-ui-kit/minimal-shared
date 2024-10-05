@@ -4,15 +4,15 @@ import { useEffect } from 'react';
 
 import Box from '@mui/material/Box';
 
-import { Image } from 'private-ui/components/image';
-import { Lightbox, useLightBox } from 'private-ui/components/lightbox';
+import { Image } from 'internal-ui/components/image';
+import { Lightbox, useLightBox } from 'internal-ui/components/lightbox';
 import {
   Carousel,
   useCarousel,
   CarouselThumb,
   CarouselThumbs,
   CarouselArrowNumberButtons,
-} from 'private-ui/components/carousel';
+} from 'internal-ui/components/carousel';
 
 // ----------------------------------------------------------------------
 

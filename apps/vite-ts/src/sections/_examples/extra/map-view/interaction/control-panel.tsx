@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha } from 'private-ui/theme/styles';
+import { varAlpha } from 'internal-ui/theme/styles';
 
 import { StyledControlPanel } from '../styles';
 

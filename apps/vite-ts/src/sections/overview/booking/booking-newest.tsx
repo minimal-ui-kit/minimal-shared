@@ -6,10 +6,10 @@ import Avatar from '@mui/material/Avatar';
 import CardHeader from '@mui/material/CardHeader';
 import ListItemText from '@mui/material/ListItemText';
 
-import { Label } from 'private-ui/components/label';
-import { Image } from 'private-ui/components/image';
-import { Iconify } from 'private-ui/components/iconify';
-import { Carousel, useCarousel, CarouselArrowBasicButtons } from 'private-ui/components/carousel';
+import { Label } from 'internal-ui/components/label';
+import { Image } from 'internal-ui/components/image';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Carousel, useCarousel, CarouselArrowBasicButtons } from 'internal-ui/components/carousel';
 
 import { fDateTime } from 'src/utils/format-time';
 

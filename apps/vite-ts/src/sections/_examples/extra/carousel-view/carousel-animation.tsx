@@ -4,9 +4,9 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha, bgGradient } from 'private-ui/theme/styles';
-import { varFade, MotionContainer } from 'private-ui/components/animate';
-import { Carousel, useCarousel, CarouselArrowNumberButtons } from 'private-ui/components/carousel';
+import { varAlpha, bgGradient } from 'internal-ui/theme/styles';
+import { varFade, MotionContainer } from 'internal-ui/components/animate';
+import { Carousel, useCarousel, CarouselArrowNumberButtons } from 'internal-ui/components/carousel';
 
 import { IndexLabel } from './elements';
 

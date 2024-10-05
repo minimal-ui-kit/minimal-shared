@@ -1,4 +1,4 @@
-import type { ColorType } from 'private-ui/theme/core';
+import type { ColorType } from 'internal-ui/theme/core';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -10,11 +10,11 @@ import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 
-import { Label } from 'private-ui/components/label';
-import { toast } from 'private-ui/components/snackbar';
-import { Iconify } from 'private-ui/components/iconify';
-import { varAlpha, stylesMode } from 'private-ui/theme/styles';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { Label } from 'internal-ui/components/label';
+import { toast } from 'internal-ui/components/snackbar';
+import { Iconify } from 'internal-ui/components/iconify';
+import { varAlpha, stylesMode } from 'internal-ui/theme/styles';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 import type { NodeProps } from './data';
 

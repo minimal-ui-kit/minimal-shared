@@ -6,9 +6,9 @@ import Paper from '@mui/material/Paper';
 
 import { useTabs } from '@minimals/hooks/use-tabs';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { CustomTabs } from 'private-ui/components/custom-tabs';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { Iconify } from 'internal-ui/components/iconify';
+import { CustomTabs } from 'internal-ui/components/custom-tabs';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

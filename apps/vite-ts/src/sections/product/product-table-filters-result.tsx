@@ -8,7 +8,7 @@ import Chip from '@mui/material/Chip';
 
 import { sentenceCase } from '@minimals/utils/change-case';
 
-import { chipProps, FiltersBlock, FiltersResult } from 'private-ui/components/filters-result';
+import { chipProps, FiltersBlock, FiltersResult } from 'internal-ui/components/filters-result';
 
 // ----------------------------------------------------------------------
 

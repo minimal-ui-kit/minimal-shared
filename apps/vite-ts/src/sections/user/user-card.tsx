@@ -10,10 +10,10 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ListItemText from '@mui/material/ListItemText';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Image } from 'private-ui/components/image';
-import { AvatarShape } from 'private-ui/assets/illustrations';
-import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'private-ui/assets/icons';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Image } from 'internal-ui/components/image';
+import { AvatarShape } from 'internal-ui/assets/illustrations';
+import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'internal-ui/assets/icons';
 
 import { fShortenNumber } from 'src/utils/format-number';
 

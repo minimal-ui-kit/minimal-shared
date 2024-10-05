@@ -14,11 +14,15 @@
       "changeProcessCWD": true
     },
     {
-      "directory": "packages/eslint-config",
+      "directory": "packages/internal-eslint-config",
       "changeProcessCWD": true
     },
     {
-      "directory": "packages/ts-config",
+      "directory": "packages/internal-ts-config",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "packages/internal-ui",
       "changeProcessCWD": true
     },
     {
@@ -31,10 +35,6 @@
     },
     {
       "directory": "packages/minimal-utils",
-      "changeProcessCWD": true
-    },
-    {
-      "directory": "packages/private-ui",
       "changeProcessCWD": true
     }
   ],

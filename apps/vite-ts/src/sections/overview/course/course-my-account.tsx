@@ -6,9 +6,9 @@ import { useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Iconify } from 'private-ui/components/iconify';
-import { AnimateAvatar } from 'private-ui/components/animate';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
+import { AnimateAvatar } from 'internal-ui/components/animate';
 
 import { useMockedUser } from 'src/auth/hooks';
 

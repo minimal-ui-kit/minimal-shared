@@ -6,7 +6,7 @@ import Stack from '@mui/material/Stack';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';

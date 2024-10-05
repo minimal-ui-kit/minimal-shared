@@ -7,7 +7,7 @@ import Avatar from '@mui/material/Avatar';
 import ListItemText from '@mui/material/ListItemText';
 import LinearProgress from '@mui/material/LinearProgress';
 
-import { Label } from 'private-ui/components/label';
+import { Label } from 'internal-ui/components/label';
 
 import { fCurrency } from 'src/utils/format-number';
 import { fTime, fDate } from 'src/utils/format-time';

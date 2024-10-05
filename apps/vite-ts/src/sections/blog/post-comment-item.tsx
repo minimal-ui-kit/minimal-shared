@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { fDate } from 'src/utils/format-time';
 

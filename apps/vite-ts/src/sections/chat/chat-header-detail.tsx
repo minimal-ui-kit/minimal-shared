@@ -14,8 +14,8 @@ import AvatarGroup, { avatarGroupClasses } from '@mui/material/AvatarGroup';
 
 import { useResponsive } from '@minimals/hooks/use-responsive';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { Iconify } from 'internal-ui/components/iconify';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 import { fToNow } from 'src/utils/format-time';
 

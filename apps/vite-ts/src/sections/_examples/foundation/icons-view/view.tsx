@@ -2,11 +2,11 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Tooltip from '@mui/material/Tooltip';
 
-import { Logo } from 'private-ui/components/logo';
-import { countries } from 'private-ui/assets/data';
-import { SvgColor } from 'private-ui/components/svg-color';
-import { Iconify, FlagIcon } from 'private-ui/components/iconify';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { Logo } from 'internal-ui/components/logo';
+import { countries } from 'internal-ui/assets/data';
+import { SvgColor } from 'internal-ui/components/svg-color';
+import { Iconify, FlagIcon } from 'internal-ui/components/iconify';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 import {
   GithubIcon,
   GoogleIcon,
@@ -14,7 +14,7 @@ import {
   FacebookIcon,
   LinkedinIcon,
   InstagramIcon,
-} from 'private-ui/assets/icons';
+} from 'internal-ui/assets/icons';
 
 import { paths } from 'src/routes/paths';
 

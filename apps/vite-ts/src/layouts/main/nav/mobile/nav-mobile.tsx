@@ -4,9 +4,9 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 
-import { Logo } from 'private-ui/components/logo';
-import { NavUl } from 'private-ui/components/nav-section';
-import { Scrollbar } from 'private-ui/components/scrollbar';
+import { Logo } from 'internal-ui/components/logo';
+import { NavUl } from 'internal-ui/components/nav-section';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
 
 import { paths } from 'src/routes/paths';
 import { usePathname } from 'src/routes/hooks';

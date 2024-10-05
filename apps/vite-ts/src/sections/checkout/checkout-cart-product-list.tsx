@@ -3,8 +3,8 @@ import type { ICheckoutItem } from 'src/types/checkout';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { TableHeadCustom } from 'private-ui/components/table';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { TableHeadCustom } from 'internal-ui/components/table';
 
 import { CheckoutCartProduct } from './checkout-cart-product';
 

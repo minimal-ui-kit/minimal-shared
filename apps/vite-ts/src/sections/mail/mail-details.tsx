@@ -15,15 +15,15 @@ import { darken, lighten, alpha as hexAlpha } from '@mui/material/styles';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Label } from 'private-ui/components/label';
-import { Editor } from 'private-ui/components/editor';
-import { Iconify } from 'private-ui/components/iconify';
-import { Markdown } from 'private-ui/components/markdown';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { maxLine, stylesMode } from 'private-ui/theme/styles';
-import { EmptyContent } from 'private-ui/components/empty-content';
-import { FileThumbnail } from 'private-ui/components/file-thumbnail';
-import { LoadingScreen } from 'private-ui/components/loading-screen';
+import { Label } from 'internal-ui/components/label';
+import { Editor } from 'internal-ui/components/editor';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Markdown } from 'internal-ui/components/markdown';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { maxLine, stylesMode } from 'internal-ui/theme/styles';
+import { EmptyContent } from 'internal-ui/components/empty-content';
+import { FileThumbnail } from 'internal-ui/components/file-thumbnail';
+import { LoadingScreen } from 'internal-ui/components/loading-screen';
 
 import { fDateTime } from 'src/utils/format-time';
 

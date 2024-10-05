@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 
 import Typography from '@mui/material/Typography';
 
-import { EmptyContent } from 'private-ui/components/empty-content';
+import { EmptyContent } from 'internal-ui/components/empty-content';
 
 import { paths } from 'src/routes/paths';
 import { useRouter, useSearchParams } from 'src/routes/hooks';

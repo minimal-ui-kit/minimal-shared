@@ -13,9 +13,9 @@ import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import AvatarGroup, { avatarGroupClasses } from '@mui/material/AvatarGroup';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Markdown } from 'private-ui/components/markdown';
-import { EmptyContent } from 'private-ui/components/empty-content';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Markdown } from 'internal-ui/components/markdown';
+import { EmptyContent } from 'internal-ui/components/empty-content';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';

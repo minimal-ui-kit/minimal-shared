@@ -9,8 +9,8 @@ import InputAdornment from '@mui/material/InputAdornment';
 import { useDoubleClick } from '@minimals/hooks/use-double-click';
 import { useCopyToClipboard } from '@minimals/hooks/use-copy-to-clipboard';
 
-import { toast } from 'private-ui/components/snackbar';
-import { Iconify } from 'private-ui/components/iconify';
+import { toast } from 'internal-ui/components/snackbar';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { ComponentBlock, ComponentContainer } from '../../component-block';
 

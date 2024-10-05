@@ -6,7 +6,7 @@ import { useMemo, useState, useCallback } from 'react';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
-import { Map, MapPopup, MapControl } from 'private-ui/components/map';
+import { Map, MapPopup, MapControl } from 'internal-ui/components/map';
 
 // ----------------------------------------------------------------------
 

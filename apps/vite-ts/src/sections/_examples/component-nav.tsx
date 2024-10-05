@@ -6,7 +6,7 @@ import { useTheme } from '@mui/material/styles';
 import Link, { linkClasses } from '@mui/material/Link';
 import ListSubheader, { listSubheaderClasses } from '@mui/material/ListSubheader';
 
-import { hideScrollY } from 'private-ui/theme/styles';
+import { hideScrollY } from 'internal-ui/theme/styles';
 
 import { RouterLink } from 'src/routes/components';
 

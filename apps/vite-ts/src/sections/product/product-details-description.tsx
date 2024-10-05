@@ -1,6 +1,6 @@
 import type { Theme, SxProps } from '@mui/material/styles';
 
-import { Markdown } from 'private-ui/components/markdown';
+import { Markdown } from 'internal-ui/components/markdown';
 
 // ----------------------------------------------------------------------
 

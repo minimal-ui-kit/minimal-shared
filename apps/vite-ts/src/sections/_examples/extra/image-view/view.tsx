@@ -2,8 +2,8 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-import { Image } from 'private-ui/components/image';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { Image } from 'internal-ui/components/image';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

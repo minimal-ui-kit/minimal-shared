@@ -3,7 +3,7 @@ import type { MapProps } from 'react-map-gl';
 import { Layer, Source } from 'react-map-gl';
 import { useMemo, useState, useEffect } from 'react';
 
-import { Map } from 'private-ui/components/map';
+import { Map } from 'internal-ui/components/map';
 
 import { heatmapLayer } from './map-style';
 import { ControlPanel } from './control-panel';

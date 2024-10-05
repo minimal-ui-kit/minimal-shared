@@ -2,7 +2,7 @@ import type { LinkProps } from '@mui/material/Link';
 
 import Link from '@mui/material/Link';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { RouterLink } from 'src/routes/components';
 

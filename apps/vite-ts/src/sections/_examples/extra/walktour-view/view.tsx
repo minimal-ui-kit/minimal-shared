@@ -9,10 +9,10 @@ import Grid from '@mui/material/Unstable_Grid2';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Walktour, useWalktour } from 'private-ui/components/walktour';
-import { MotivationIllustration } from 'private-ui/assets/illustrations';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Walktour, useWalktour } from 'internal-ui/components/walktour';
+import { MotivationIllustration } from 'internal-ui/assets/illustrations';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';

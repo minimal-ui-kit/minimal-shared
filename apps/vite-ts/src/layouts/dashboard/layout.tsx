@@ -1,5 +1,5 @@
 import type { Theme, SxProps, Breakpoint } from '@mui/material/styles';
-import type { NavSectionProps } from 'private-ui/components/nav-section';
+import type { NavSectionProps } from 'internal-ui/components/nav-section';
 
 import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
@@ -8,8 +8,8 @@ import { iconButtonClasses } from '@mui/material/IconButton';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Logo } from 'private-ui/components/logo';
-import { useSettingsContext } from 'private-ui/components/settings';
+import { Logo } from 'internal-ui/components/logo';
+import { useSettingsContext } from 'internal-ui/components/settings';
 
 import { allLangs } from 'src/locales';
 import { _contacts, _notifications } from 'src/_mock';

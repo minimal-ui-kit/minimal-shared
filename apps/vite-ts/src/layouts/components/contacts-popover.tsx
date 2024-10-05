@@ -10,9 +10,9 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import ListItemText from '@mui/material/ListItemText';
 
-import { varHover } from 'private-ui/components/animate';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { varHover } from 'internal-ui/components/animate';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 import { fToNow } from 'src/utils/format-time';
 

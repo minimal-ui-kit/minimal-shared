@@ -1,4 +1,4 @@
-import { EmailInboxIcon } from 'private-ui/assets/icons';
+import { EmailInboxIcon } from 'internal-ui/assets/icons';
 
 import { paths } from 'src/routes/paths';
 

@@ -6,7 +6,7 @@ import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 
-import { Label } from 'private-ui/components/label';
+import { Label } from 'internal-ui/components/label';
 
 // ----------------------------------------------------------------------
 

@@ -10,9 +10,9 @@ import FormLabel from '@mui/material/FormLabel';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { Image } from 'private-ui/components/image';
-import { Lightbox, useLightBox } from 'private-ui/components/lightbox';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { Image } from 'internal-ui/components/image';
+import { Lightbox, useLightBox } from 'internal-ui/components/lightbox';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

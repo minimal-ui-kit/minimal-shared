@@ -9,11 +9,11 @@ import IconButton from '@mui/material/IconButton';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { ConfirmDialog } from 'private-ui/components/custom-dialog';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { ConfirmDialog } from 'internal-ui/components/custom-dialog';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 import { KanbanInputName } from '../components/kanban-input-name';
 

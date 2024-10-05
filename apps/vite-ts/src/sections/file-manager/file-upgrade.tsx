@@ -6,7 +6,7 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import { SvgColor } from 'private-ui/components/svg-color';
+import { SvgColor } from 'internal-ui/components/svg-color';
 
 import { CONFIG } from 'src/config-global';
 

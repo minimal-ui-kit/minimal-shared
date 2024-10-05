@@ -4,15 +4,15 @@
 
 import Box from '@mui/material/Box';
 
-import { toast, Snackbar } from 'private-ui/components/snackbar';
+import { toast, Snackbar } from 'internal-ui/components/snackbar';
 
-// import { FlagIcon, FlagIconProps } from 'private-ui/components/flag-icon';
-import { Iconify } from 'private-ui/components/iconify';
+// import { FlagIcon, FlagIconProps } from 'internal-ui/components/flag-icon';
+import { Iconify } from 'internal-ui/components/iconify';
 // import { add, subtract } from '@minimals/mock/test';
-import { primary, varAlpha } from 'private-ui/theme';
+import { primary, varAlpha } from 'internal-ui/theme';
 
-// import { useToggle } from 'private-ui/hooks/useToggle';
-// import { useBoolean } from 'private-ui/hooks/use-boolean';
+// import { useToggle } from 'internal-ui/hooks/useToggle';
+// import { useBoolean } from 'internal-ui/hooks/use-boolean';
 
 // import { useBoolean as useBoolean2 } from '@repo/sourcemap-ui/hooks/use-boolean';
 import Card from '@mui/material/Card';

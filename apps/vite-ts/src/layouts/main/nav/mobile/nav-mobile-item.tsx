@@ -4,9 +4,9 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import ButtonBase from '@mui/material/ButtonBase';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Iconify } from 'private-ui/components/iconify';
-import { useNavItem } from 'private-ui/components/nav-section';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
+import { useNavItem } from 'internal-ui/components/nav-section';
 
 import type { NavItemProps, NavItemStateProps } from '../types';
 

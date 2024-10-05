@@ -2,9 +2,9 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 
-import { Logo } from 'private-ui/components/logo';
-import { Iconify } from 'private-ui/components/iconify';
-import { MegaMenuMobile } from 'private-ui/components/mega-menu';
+import { Logo } from 'internal-ui/components/logo';
+import { Iconify } from 'internal-ui/components/iconify';
+import { MegaMenuMobile } from 'internal-ui/components/mega-menu';
 
 import { navItems1 } from './data';
 

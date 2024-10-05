@@ -14,9 +14,9 @@ import IconButton from '@mui/material/IconButton';
 import CardHeader from '@mui/material/CardHeader';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 // ----------------------------------------------------------------------
 

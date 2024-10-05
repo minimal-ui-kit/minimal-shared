@@ -1,4 +1,4 @@
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { paths } from 'src/routes/paths';
 

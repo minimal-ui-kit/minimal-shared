@@ -7,11 +7,11 @@ import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import { maxLine } from 'private-ui/theme/styles';
-import { Image } from 'private-ui/components/image';
-import { Iconify } from 'private-ui/components/iconify';
-import { Label, labelClasses } from 'private-ui/components/label';
-import { Carousel, useCarousel, CarouselArrowBasicButtons } from 'private-ui/components/carousel';
+import { maxLine } from 'internal-ui/theme/styles';
+import { Image } from 'internal-ui/components/image';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Label, labelClasses } from 'internal-ui/components/label';
+import { Carousel, useCarousel, CarouselArrowBasicButtons } from 'internal-ui/components/carousel';
 
 import { fCurrency, fShortenNumber } from 'src/utils/format-number';
 

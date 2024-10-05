@@ -11,7 +11,7 @@ import {
   AnimateText,
   MotionContainer,
   animateTextClasses,
-} from 'private-ui/components/animate';
+} from 'internal-ui/components/animate';
 
 import { CONFIG } from 'src/config-global';
 

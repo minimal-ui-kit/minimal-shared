@@ -10,7 +10,7 @@ import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-import { varFade, MotionContainer } from 'private-ui/components/animate';
+import { varFade, MotionContainer } from 'internal-ui/components/animate';
 
 import { ComponentNav } from './component-nav';
 import { ComponentCard } from './component-card';

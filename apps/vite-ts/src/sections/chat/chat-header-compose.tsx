@@ -10,9 +10,9 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Autocomplete from '@mui/material/Autocomplete';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Iconify } from 'private-ui/components/iconify';
-import { SearchNotFound } from 'private-ui/components/search-not-found';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
+import { SearchNotFound } from 'internal-ui/components/search-not-found';
 
 // ----------------------------------------------------------------------
 

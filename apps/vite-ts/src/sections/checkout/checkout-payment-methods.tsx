@@ -17,8 +17,8 @@ import FormHelperText from '@mui/material/FormHelperText';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Iconify } from 'private-ui/components/iconify';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { PaymentNewCardForm } from '../payment/payment-new-card-form';
 

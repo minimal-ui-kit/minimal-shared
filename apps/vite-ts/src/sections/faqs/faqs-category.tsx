@@ -8,8 +8,8 @@ import ListItemButton from '@mui/material/ListItemButton';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { maxLine } from 'private-ui/theme/styles';
-import { Iconify } from 'private-ui/components/iconify';
+import { maxLine } from 'internal-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { CONFIG } from 'src/config-global';
 

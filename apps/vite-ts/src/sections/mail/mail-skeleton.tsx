@@ -3,7 +3,7 @@ import type { StackProps } from '@mui/material/Stack';
 import Stack from '@mui/material/Stack';
 import Skeleton from '@mui/material/Skeleton';
 
-import { varAlpha } from 'private-ui/theme/styles';
+import { varAlpha } from 'internal-ui/theme/styles';
 
 // ----------------------------------------------------------------------
 

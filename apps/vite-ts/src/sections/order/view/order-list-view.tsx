@@ -15,13 +15,13 @@ import IconButton from '@mui/material/IconButton';
 import { useBoolean } from '@minimals/hooks/use-boolean';
 import { useSetState } from '@minimals/hooks/use-set-state';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Label } from 'private-ui/components/label';
-import { toast } from 'private-ui/components/snackbar';
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { ConfirmDialog } from 'private-ui/components/custom-dialog';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Label } from 'internal-ui/components/label';
+import { toast } from 'internal-ui/components/snackbar';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { ConfirmDialog } from 'internal-ui/components/custom-dialog';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 import {
   useTable,
   emptyRows,
@@ -32,7 +32,7 @@ import {
   TableHeadCustom,
   TableSelectedAction,
   TablePaginationCustom,
-} from 'private-ui/components/table';
+} from 'internal-ui/components/table';
 
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';

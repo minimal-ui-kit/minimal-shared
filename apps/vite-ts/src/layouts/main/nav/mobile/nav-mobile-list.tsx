@@ -4,8 +4,8 @@ import Collapse from '@mui/material/Collapse';
 
 import { isExternalLink } from '@minimals/utils/routes';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { NavLi, navSectionClasses, NavSectionVertical } from 'private-ui/components/nav-section';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { NavLi, navSectionClasses, NavSectionVertical } from 'internal-ui/components/nav-section';
 
 import { useActiveLink } from 'src/routes/hooks/use-active-link';
 

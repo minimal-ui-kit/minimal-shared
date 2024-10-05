@@ -4,7 +4,7 @@ import type { UseSetStateReturn } from '@minimals/hooks/use-set-state';
 
 import Chip from '@mui/material/Chip';
 
-import { chipProps, FiltersBlock, FiltersResult } from 'private-ui/components/filters-result';
+import { chipProps, FiltersBlock, FiltersResult } from 'internal-ui/components/filters-result';
 
 // ----------------------------------------------------------------------
 

@@ -5,8 +5,8 @@ import { m } from 'framer-motion';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-import { ForbiddenIllustration } from 'private-ui/assets/illustrations';
-import { varBounce, MotionContainer } from 'private-ui/components/animate';
+import { ForbiddenIllustration } from 'internal-ui/assets/illustrations';
+import { varBounce, MotionContainer } from 'internal-ui/components/animate';
 
 // ----------------------------------------------------------------------
 

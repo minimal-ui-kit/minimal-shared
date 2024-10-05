@@ -9,7 +9,7 @@ import {
   varRotate,
   varBgColor,
   varBgKenburns,
-} from 'private-ui/components/animate';
+} from 'internal-ui/components/animate';
 
 // ----------------------------------------------------------------------
 

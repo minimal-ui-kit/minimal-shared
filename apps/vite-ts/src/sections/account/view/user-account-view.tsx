@@ -3,8 +3,8 @@ import Tabs from '@mui/material/Tabs';
 
 import { useTabs } from '@minimals/hooks/use-tabs';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { Iconify } from 'internal-ui/components/iconify';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

@@ -9,10 +9,10 @@ import { useTheme } from '@mui/material/styles';
 
 import { useTabs } from '@minimals/hooks/use-tabs';
 
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { Chart, useChart } from 'private-ui/components/chart';
-import { CustomTabs } from 'private-ui/components/custom-tabs';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Chart, useChart } from 'internal-ui/components/chart';
+import { CustomTabs } from 'internal-ui/components/custom-tabs';
 
 import { fPercent, fCurrency } from 'src/utils/format-number';
 

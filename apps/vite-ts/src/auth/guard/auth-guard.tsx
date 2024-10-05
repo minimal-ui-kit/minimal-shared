@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-import { SplashScreen } from 'private-ui/components/loading-screen';
+import { SplashScreen } from 'internal-ui/components/loading-screen';
 
 import { paths } from 'src/routes/paths';
 import { useRouter, usePathname, useSearchParams } from 'src/routes/hooks';

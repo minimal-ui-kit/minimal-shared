@@ -9,10 +9,10 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 
-import { Image } from 'private-ui/components/image';
-import { Iconify } from 'private-ui/components/iconify';
-import { maxLine, varAlpha } from 'private-ui/theme/styles';
-import { AvatarShape } from 'private-ui/assets/illustrations';
+import { Image } from 'internal-ui/components/image';
+import { Iconify } from 'internal-ui/components/iconify';
+import { maxLine, varAlpha } from 'internal-ui/theme/styles';
+import { AvatarShape } from 'internal-ui/assets/illustrations';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';

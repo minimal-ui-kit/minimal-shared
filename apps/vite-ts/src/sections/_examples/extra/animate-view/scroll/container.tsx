@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-import { varContainer, MotionViewport } from 'private-ui/components/animate';
+import { varContainer, MotionViewport } from 'internal-ui/components/animate';
 
 import { getVariant } from '../get-variant';
 

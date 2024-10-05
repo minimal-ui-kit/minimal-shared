@@ -1,5 +1,5 @@
 import type { Theme, SxProps } from '@mui/material/styles';
-import type { OrgChartBaseNode } from 'private-ui/components/organizational-chart';
+import type { OrgChartBaseNode } from 'internal-ui/components/organizational-chart';
 
 import { _mock } from 'src/_mock';
 

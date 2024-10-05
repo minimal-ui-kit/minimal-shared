@@ -3,8 +3,8 @@ import type { IChatMessage, IChatParticipant } from 'src/types/chat';
 import Stack from '@mui/material/Stack';
 import LinearProgress from '@mui/material/LinearProgress';
 
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { Lightbox, useLightBox } from 'private-ui/components/lightbox';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { Lightbox, useLightBox } from 'internal-ui/components/lightbox';
 
 import { ChatMessageItem } from './chat-message-item';
 import { useMessagesScroll } from './hooks/use-messages-scroll';

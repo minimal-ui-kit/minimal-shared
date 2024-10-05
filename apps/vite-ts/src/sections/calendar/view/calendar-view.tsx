@@ -19,7 +19,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import { useBoolean } from '@minimals/hooks/use-boolean';
 import { useSetState } from '@minimals/hooks/use-set-state';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { fDate, fIsAfter, fIsBetween } from 'src/utils/format-time';
 

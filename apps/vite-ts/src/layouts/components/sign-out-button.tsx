@@ -6,7 +6,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 import Button from '@mui/material/Button';
 
-import { toast } from 'private-ui/components/snackbar';
+import { toast } from 'internal-ui/components/snackbar';
 
 import { useRouter } from 'src/routes/hooks';
 

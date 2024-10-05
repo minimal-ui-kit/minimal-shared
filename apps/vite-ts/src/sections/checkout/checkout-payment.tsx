@@ -12,8 +12,8 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Unstable_Grid2';
 import LoadingButton from '@mui/lab/LoadingButton';
 
-import { Form } from 'private-ui/components/hook-form';
-import { Iconify } from 'private-ui/components/iconify';
+import { Form } from 'internal-ui/components/hook-form';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { useCheckoutContext } from './context';
 import { CheckoutSummary } from './checkout-summary';

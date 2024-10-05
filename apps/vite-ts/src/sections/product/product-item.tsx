@@ -7,10 +7,10 @@ import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 import Tooltip from '@mui/material/Tooltip';
 
-import { Label } from 'private-ui/components/label';
-import { Image } from 'private-ui/components/image';
-import { Iconify } from 'private-ui/components/iconify';
-import { ColorPreview } from 'private-ui/components/color-utils';
+import { Label } from 'internal-ui/components/label';
+import { Image } from 'internal-ui/components/image';
+import { Iconify } from 'internal-ui/components/iconify';
+import { ColorPreview } from 'internal-ui/components/color-utils';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';

@@ -4,7 +4,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { _addressBooks } from 'src/_mock';
 

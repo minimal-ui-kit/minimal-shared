@@ -3,8 +3,8 @@ import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Unstable_Grid2';
 
-import { svgColorClasses } from 'private-ui/components/svg-color';
-import { SeoIllustration } from 'private-ui/assets/illustrations';
+import { svgColorClasses } from 'internal-ui/components/svg-color';
+import { SeoIllustration } from 'internal-ui/assets/illustrations';
 
 import { DashboardContent } from 'src/layouts/dashboard';
 import { _appAuthors, _appRelated, _appFeatured, _appInvoices, _appInstalled } from 'src/_mock';

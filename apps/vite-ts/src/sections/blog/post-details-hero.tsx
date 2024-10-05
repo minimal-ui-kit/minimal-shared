@@ -12,9 +12,9 @@ import SpeedDialAction from '@mui/material/SpeedDialAction';
 
 import { useResponsive } from '@minimals/hooks/use-responsive';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { varAlpha, bgGradient } from 'private-ui/theme/styles';
-import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'private-ui/assets/icons';
+import { Iconify } from 'internal-ui/components/iconify';
+import { varAlpha, bgGradient } from 'internal-ui/theme/styles';
+import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'internal-ui/assets/icons';
 
 import { fDate } from 'src/utils/format-time';
 

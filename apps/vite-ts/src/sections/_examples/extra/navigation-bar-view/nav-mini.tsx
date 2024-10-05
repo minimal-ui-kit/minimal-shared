@@ -1,6 +1,6 @@
 import Paper from '@mui/material/Paper';
 
-import { NavSectionMini } from 'private-ui/components/nav-section';
+import { NavSectionMini } from 'internal-ui/components/nav-section';
 
 import { NAV_ITEMS } from './data';
 

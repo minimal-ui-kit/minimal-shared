@@ -6,8 +6,8 @@ import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
 import LoadingButton from '@mui/lab/LoadingButton';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Form, Field } from 'private-ui/components/hook-form';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Form, Field } from 'internal-ui/components/hook-form';
 
 // ----------------------------------------------------------------------
 

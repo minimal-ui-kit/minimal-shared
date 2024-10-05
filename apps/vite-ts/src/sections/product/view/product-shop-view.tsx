@@ -11,7 +11,7 @@ import { useBoolean } from '@minimals/hooks/use-boolean';
 import { useDebounce } from '@minimals/hooks/use-debounce';
 import { useSetState } from '@minimals/hooks/use-set-state';
 
-import { EmptyContent } from 'private-ui/components/empty-content';
+import { EmptyContent } from 'internal-ui/components/empty-content';
 
 import { useSearchProducts } from 'src/actions/product';
 import {

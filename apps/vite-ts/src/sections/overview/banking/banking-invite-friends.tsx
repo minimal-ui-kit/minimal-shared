@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import InputBase from '@mui/material/InputBase';
 import { useTheme } from '@mui/material/styles';
 
-import { varAlpha, bgGradient } from 'private-ui/theme/styles';
+import { varAlpha, bgGradient } from 'internal-ui/theme/styles';
 
 // ----------------------------------------------------------------------
 

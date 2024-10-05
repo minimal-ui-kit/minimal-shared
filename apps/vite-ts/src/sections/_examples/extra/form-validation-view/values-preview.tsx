@@ -10,9 +10,9 @@ import Collapse from '@mui/material/Collapse';
 import { useTheme } from '@mui/material/styles';
 import ButtonBase from '@mui/material/ButtonBase';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { bgBlur, varAlpha } from 'private-ui/theme/styles';
-import { fileData } from 'private-ui/components/file-thumbnail';
+import { Iconify } from 'internal-ui/components/iconify';
+import { bgBlur, varAlpha } from 'internal-ui/theme/styles';
+import { fileData } from 'internal-ui/components/file-thumbnail';
 
 // ----------------------------------------------------------------------
 

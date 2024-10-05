@@ -4,8 +4,8 @@ import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

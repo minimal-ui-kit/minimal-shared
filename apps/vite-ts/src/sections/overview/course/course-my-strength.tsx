@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
-import { Chart, useChart } from 'private-ui/components/chart';
+import { Chart, useChart } from 'internal-ui/components/chart';
 
 // ----------------------------------------------------------------------
 

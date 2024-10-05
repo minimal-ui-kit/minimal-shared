@@ -9,11 +9,11 @@ import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
-import { Image } from 'private-ui/components/image';
-import { Iconify } from 'private-ui/components/iconify';
-import { varFade, MotionViewport } from 'private-ui/components/animate';
-import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'private-ui/assets/icons';
-import { Carousel, useCarousel, CarouselArrowFloatButtons } from 'private-ui/components/carousel';
+import { Image } from 'internal-ui/components/image';
+import { Iconify } from 'internal-ui/components/iconify';
+import { varFade, MotionViewport } from 'internal-ui/components/animate';
+import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'internal-ui/assets/icons';
+import { Carousel, useCarousel, CarouselArrowFloatButtons } from 'internal-ui/components/carousel';
 
 import { _socials, _carouselsMembers } from 'src/_mock';
 

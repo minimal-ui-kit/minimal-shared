@@ -13,9 +13,9 @@ import Typography from '@mui/material/Typography';
 import { useBoolean } from '@minimals/hooks/use-boolean';
 import { useResponsive } from '@minimals/hooks/use-responsive';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Editor } from 'private-ui/components/editor';
-import { Iconify } from 'private-ui/components/iconify';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Editor } from 'internal-ui/components/editor';
+import { Iconify } from 'internal-ui/components/iconify';
 
 // ----------------------------------------------------------------------
 

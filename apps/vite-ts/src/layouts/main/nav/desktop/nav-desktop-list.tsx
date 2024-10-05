@@ -9,8 +9,8 @@ import ListSubheader from '@mui/material/ListSubheader';
 
 import { isExternalLink, removeLastSlash } from '@minimals/utils/routes';
 
-import { paper } from 'private-ui/theme/styles';
-import { NavLi, NavUl } from 'private-ui/components/nav-section';
+import { paper } from 'internal-ui/theme/styles';
+import { NavLi, NavUl } from 'internal-ui/components/nav-section';
 
 import { usePathname } from 'src/routes/hooks';
 import { useActiveLink } from 'src/routes/hooks/use-active-link';

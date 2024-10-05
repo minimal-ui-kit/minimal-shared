@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 
-import { varAlpha, bgGradient, textGradient } from 'private-ui/theme/styles';
+import { varAlpha, bgGradient, textGradient } from 'internal-ui/theme/styles';
 
 import { CONFIG } from 'src/config-global';
 

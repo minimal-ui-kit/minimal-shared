@@ -14,10 +14,10 @@ import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import { formHelperTextClasses } from '@mui/material/FormHelperText';
 
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { Form, Field } from 'private-ui/components/hook-form';
-import { ColorPicker } from 'private-ui/components/color-utils';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Form, Field } from 'internal-ui/components/hook-form';
+import { ColorPicker } from 'internal-ui/components/color-utils';
 
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';

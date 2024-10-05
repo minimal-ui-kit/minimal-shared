@@ -12,7 +12,7 @@ import LinearProgress from '@mui/material/LinearProgress';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { fShortenNumber } from 'src/utils/format-number';
 

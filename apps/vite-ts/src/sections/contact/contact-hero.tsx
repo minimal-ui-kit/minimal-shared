@@ -7,13 +7,13 @@ import Container from '@mui/material/Container';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha, bgGradient } from 'private-ui/theme/styles';
+import { varAlpha, bgGradient } from 'internal-ui/theme/styles';
 import {
   varFade,
   AnimateText,
   MotionContainer,
   animateTextClasses,
-} from 'private-ui/components/animate';
+} from 'internal-ui/components/animate';
 
 import { CONFIG } from 'src/config-global';
 

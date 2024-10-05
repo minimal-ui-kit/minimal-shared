@@ -9,8 +9,8 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import ListItemText from '@mui/material/ListItemText';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Markdown } from 'private-ui/components/markdown';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Markdown } from 'internal-ui/components/markdown';
 
 import { fDate } from 'src/utils/format-time';
 import { fCurrency } from 'src/utils/format-number';

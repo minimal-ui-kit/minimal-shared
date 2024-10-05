@@ -6,9 +6,9 @@ import Typography from '@mui/material/Typography';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { UploadBox } from 'private-ui/components/upload';
-import { Scrollbar } from 'private-ui/components/scrollbar';
+import { Iconify } from 'internal-ui/components/iconify';
+import { UploadBox } from 'internal-ui/components/upload';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
 
 import { paths } from 'src/routes/paths';
 

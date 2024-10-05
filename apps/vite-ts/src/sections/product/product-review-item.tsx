@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
 import ListItemText from '@mui/material/ListItemText';
 
-import { Iconify } from 'private-ui/components/iconify';
+import { Iconify } from 'internal-ui/components/iconify';
 
 import { fDate } from 'src/utils/format-time';
 

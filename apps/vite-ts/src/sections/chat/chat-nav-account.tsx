@@ -16,8 +16,8 @@ import ListItemText from '@mui/material/ListItemText';
 import { svgIconClasses } from '@mui/material/SvgIcon';
 import Badge, { badgeClasses } from '@mui/material/Badge';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { Iconify } from 'internal-ui/components/iconify';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 import { useMockedUser } from 'src/auth/hooks';
 

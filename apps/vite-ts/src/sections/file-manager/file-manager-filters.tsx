@@ -11,12 +11,12 @@ import TextField from '@mui/material/TextField';
 import CardActionArea from '@mui/material/CardActionArea';
 import InputAdornment from '@mui/material/InputAdornment';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { FileThumbnail } from 'private-ui/components/file-thumbnail';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
-import { CustomDateRangePicker } from 'private-ui/components/custom-date-range-picker';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { FileThumbnail } from 'internal-ui/components/file-thumbnail';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
+import { CustomDateRangePicker } from 'internal-ui/components/custom-date-range-picker';
 
 import { fDateRangeShortLabel } from 'src/utils/format-time';
 

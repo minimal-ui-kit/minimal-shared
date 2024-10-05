@@ -20,19 +20,19 @@
 * Plugins
 *************************************** */
 /* scrollbar */
-@import '~private-ui/dist/components/scrollbar/styles.css';
+@import '~internal-ui/dist/components/scrollbar/styles.css';
 
 /* image */
-@import '~private-ui/dist/components/image/styles.css';
+@import '~internal-ui/dist/components/image/styles.css';
 
 /* map */
-@import '~private-ui/dist/components/map/styles.css';
+@import '~internal-ui/dist/components/map/styles.css';
 
 /* lightbox */
-@import '~private-ui/dist/components/lightbox/styles.css';
+@import '~internal-ui/dist/components/lightbox/styles.css';
 
 /* chart */
-@import '~private-ui/dist/components/chart/styles.css';
+@import '~internal-ui/dist/components/chart/styles.css';
 
 /* dist/components/chart/styles.css */
 

@@ -1,4 +1,4 @@
-import type { NavSectionProps, NavItemBaseProps } from 'private-ui/components/nav-section';
+import type { NavSectionProps, NavItemBaseProps } from 'internal-ui/components/nav-section';
 
 // ----------------------------------------------------------------------
 

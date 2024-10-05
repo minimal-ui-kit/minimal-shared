@@ -3,14 +3,14 @@ import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { maxLine, varAlpha, bgGradient } from 'private-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
+import { maxLine, varAlpha, bgGradient } from 'internal-ui/theme/styles';
 import {
   Carousel,
   useCarousel,
   CarouselDotButtons,
   CarouselArrowFloatButtons,
-} from 'private-ui/components/carousel';
+} from 'internal-ui/components/carousel';
 
 import { IndexLabel } from './elements';
 

@@ -15,11 +15,11 @@ import DialogActions from '@mui/material/DialogActions';
 
 import { uuidv4 } from '@minimals/utils/uuidv4';
 
-import { toast } from 'private-ui/components/snackbar';
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { Form, Field } from 'private-ui/components/hook-form';
-import { ColorPicker } from 'private-ui/components/color-utils';
+import { toast } from 'internal-ui/components/snackbar';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { Form, Field } from 'internal-ui/components/hook-form';
+import { ColorPicker } from 'internal-ui/components/color-utils';
 
 import { fIsAfter } from 'src/utils/format-time';
 

@@ -1,15 +1,15 @@
 import type { CardProps } from '@mui/material/Card';
-import type { ColorType } from 'private-ui/theme/core';
-import type { ChartOptions } from 'private-ui/components/chart';
+import type { ColorType } from 'internal-ui/theme/core';
+import type { ChartOptions } from 'internal-ui/components/chart';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import { useTheme } from '@mui/material/styles';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { SvgColor } from 'private-ui/components/svg-color';
-import { Chart, useChart } from 'private-ui/components/chart';
-import { varAlpha, bgGradient } from 'private-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
+import { SvgColor } from 'internal-ui/components/svg-color';
+import { Chart, useChart } from 'internal-ui/components/chart';
+import { varAlpha, bgGradient } from 'internal-ui/theme/styles';
 
 import { fNumber, fPercent, fShortenNumber } from 'src/utils/format-number';
 

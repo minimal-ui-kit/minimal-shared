@@ -1,8 +1,8 @@
 import Stack from '@mui/material/Stack';
 import ButtonBase from '@mui/material/ButtonBase';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Iconify } from 'private-ui/components/iconify';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
 
 // ----------------------------------------------------------------------
 

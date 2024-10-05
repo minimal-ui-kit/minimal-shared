@@ -9,9 +9,9 @@ import Button from '@mui/material/Button';
 import { useBoolean } from '@minimals/hooks/use-boolean';
 import { useSetState } from '@minimals/hooks/use-set-state';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { EmptyContent } from 'private-ui/components/empty-content';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { Iconify } from 'internal-ui/components/iconify';
+import { EmptyContent } from 'internal-ui/components/empty-content';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';

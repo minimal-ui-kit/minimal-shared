@@ -1,5 +1,5 @@
-import { Markdown } from 'private-ui/components/markdown';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { Markdown } from 'internal-ui/components/markdown';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

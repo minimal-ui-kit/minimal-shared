@@ -5,14 +5,19 @@ import type {} from 'embla-carousel-auto-scroll';
 
 // ----------------------------------------------------------------------
 
-import type { SettingsState } from 'private-ui/components/settings';
+import type { SettingsState } from 'internal-ui/components/settings';
 
 import { useScrollToTop } from '@minimals/hooks/use-scroll-to-top';
 
-import { Snackbar } from 'private-ui/components/snackbar';
-import { MotionLazy } from 'private-ui/components/animate';
-import { ProgressBar } from 'private-ui/components/progress-bar';
-import { SettingsDrawer, SettingsProvider } from 'private-ui/components/settings';
+import { colors } from 'internal-ui/theme/core';
+import { Snackbar } from 'internal-ui/components/snackbar';
+import { MotionLazy } from 'internal-ui/components/animate';
+import { ProgressBar } from 'internal-ui/components/progress-bar';
+import {
+  SettingsDrawer,
+  SettingsProvider,
+  SettingsConsumer,
+} from 'internal-ui/components/settings';
 
 import { Router } from 'src/routes/sections';
 
@@ -20,6 +25,7 @@ import { ThemeProvider } from 'src/theme';
 import { CONFIG } from 'src/config-global';
 import { LocalizationProvider } from 'src/locales';
 import { I18nProvider } from 'src/locales/i18n-provider';
+import { primaryPalette } from 'src/theme/primary-palette';
 
 import { CheckoutProvider } from 'src/sections/checkout/context';
 
@@ -57,16 +63,31 @@ export default function App() {
       <LocalizationProvider>
         <AuthProvider>
           <SettingsProvider settings={defaultSettings}>
-            <ThemeProvider>
-              <MotionLazy>
-                <CheckoutProvider>
-                  <Snackbar />
-                  <ProgressBar />
-                  <SettingsDrawer defaultSettings={defaultSettings} />
-                  <Router />
-                </CheckoutProvider>
-              </MotionLazy>
-            </ThemeProvider>
+            <SettingsConsumer>
+              {(settings) => (
+                <ThemeProvider defaultSettings={defaultSettings} settings={settings}>
+                  <MotionLazy>
+                    <CheckoutProvider>
+                      <Snackbar />
+                      <ProgressBar />
+                      <SettingsDrawer
+                        defaultSettings={defaultSettings}
+                        settings={settings}
+                        paletteOptions={[
+                          { name: 'default', value: colors.primary.main },
+                          { name: 'cyan', value: primaryPalette.cyan.main },
+                          { name: 'purple', value: primaryPalette.purple.main },
+                          { name: 'blue', value: primaryPalette.blue.main },
+                          { name: 'orange', value: primaryPalette.orange.main },
+                          { name: 'red', value: primaryPalette.red.main },
+                        ]}
+                      />
+                      <Router />
+                    </CheckoutProvider>
+                  </MotionLazy>
+                </ThemeProvider>
+              )}
+            </SettingsConsumer>
           </SettingsProvider>
         </AuthProvider>
       </LocalizationProvider>

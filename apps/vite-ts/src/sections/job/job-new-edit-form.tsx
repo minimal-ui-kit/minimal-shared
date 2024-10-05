@@ -19,9 +19,9 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { toast } from 'private-ui/components/snackbar';
-import { Iconify } from 'private-ui/components/iconify';
-import { Form, Field, schemaHelper } from 'private-ui/components/hook-form';
+import { toast } from 'internal-ui/components/snackbar';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Form, Field, schemaHelper } from 'internal-ui/components/hook-form';
 
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';

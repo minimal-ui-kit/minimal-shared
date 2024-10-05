@@ -12,8 +12,8 @@ import StepLabel from '@mui/material/StepLabel';
 import Typography from '@mui/material/Typography';
 import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { varAlpha, bgGradient, stylesMode } from 'private-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
+import { varAlpha, bgGradient, stylesMode } from 'internal-ui/theme/styles';
 
 // ----------------------------------------------------------------------
 

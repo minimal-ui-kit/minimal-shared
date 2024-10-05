@@ -12,10 +12,10 @@ import Typography from '@mui/material/Typography';
 import AvatarGroup from '@mui/material/AvatarGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Markdown } from 'private-ui/components/markdown';
-import { EmptyContent } from 'private-ui/components/empty-content';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Markdown } from 'internal-ui/components/markdown';
+import { EmptyContent } from 'internal-ui/components/empty-content';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';

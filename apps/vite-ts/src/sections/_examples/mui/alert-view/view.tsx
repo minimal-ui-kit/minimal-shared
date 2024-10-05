@@ -2,8 +2,8 @@ import Alert from '@mui/material/Alert';
 import Button from '@mui/material/Button';
 import AlertTitle from '@mui/material/AlertTitle';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

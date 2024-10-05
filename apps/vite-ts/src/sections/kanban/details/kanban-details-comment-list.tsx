@@ -4,8 +4,8 @@ import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 
-import { Image } from 'private-ui/components/image';
-import { Lightbox, useLightBox } from 'private-ui/components/lightbox';
+import { Image } from 'internal-ui/components/image';
+import { Lightbox, useLightBox } from 'internal-ui/components/lightbox';
 
 import { fToNow } from 'src/utils/format-time';
 

@@ -12,10 +12,10 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputAdornment from '@mui/material/InputAdornment';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { SearchNotFound } from 'private-ui/components/search-not-found';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
-import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'private-ui/assets/icons';
+import { Iconify } from 'internal-ui/components/iconify';
+import { SearchNotFound } from 'internal-ui/components/search-not-found';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
+import { TwitterIcon, FacebookIcon, LinkedinIcon, InstagramIcon } from 'internal-ui/assets/icons';
 
 import { _socials } from 'src/_mock';
 

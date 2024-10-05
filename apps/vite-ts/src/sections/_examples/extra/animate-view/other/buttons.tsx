@@ -3,8 +3,8 @@ import { m } from 'framer-motion';
 import Fab from '@mui/material/Fab';
 import IconButton from '@mui/material/IconButton';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { varHover } from 'private-ui/components/animate';
+import { Iconify } from 'internal-ui/components/iconify';
+import { varHover } from 'internal-ui/components/animate';
 
 // ----------------------------------------------------------------------
 

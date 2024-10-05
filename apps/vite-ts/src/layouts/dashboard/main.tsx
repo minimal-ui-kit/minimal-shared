@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 
-import { useSettingsContext } from 'private-ui/components/settings';
+import { useSettingsContext } from 'internal-ui/components/settings';
 
 import { layoutClasses } from 'src/layouts/classes';
 

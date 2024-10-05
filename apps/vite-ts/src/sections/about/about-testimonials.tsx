@@ -14,9 +14,9 @@ import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import ListItemText from '@mui/material/ListItemText';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { varFade, MotionViewport } from 'private-ui/components/animate';
-import { bgBlur, varAlpha, bgGradient, hideScrollY } from 'private-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
+import { varFade, MotionViewport } from 'internal-ui/components/animate';
+import { bgBlur, varAlpha, bgGradient, hideScrollY } from 'internal-ui/theme/styles';
 
 import { fDate } from 'src/utils/format-time';
 

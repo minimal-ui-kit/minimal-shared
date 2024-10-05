@@ -9,8 +9,8 @@ import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { varAlpha, stylesMode } from 'private-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
+import { varAlpha, stylesMode } from 'internal-ui/theme/styles';
 
 import { itemClasses } from './classes';
 

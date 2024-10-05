@@ -5,8 +5,8 @@ import { useTheme, hexToRgb } from '@mui/material/styles';
 
 import { useCopyToClipboard } from '@minimals/hooks/use-copy-to-clipboard';
 
-import { toast } from 'private-ui/components/snackbar';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { toast } from 'internal-ui/components/snackbar';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

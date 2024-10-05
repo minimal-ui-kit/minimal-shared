@@ -15,7 +15,7 @@ import CardHeader from '@mui/material/CardHeader';
 import Typography from '@mui/material/Typography';
 import ListItemText from '@mui/material/ListItemText';
 
-import { Carousel, useCarousel, CarouselArrowBasicButtons } from 'private-ui/components/carousel';
+import { Carousel, useCarousel, CarouselArrowBasicButtons } from 'internal-ui/components/carousel';
 
 import { fDateTime } from 'src/utils/format-time';
 

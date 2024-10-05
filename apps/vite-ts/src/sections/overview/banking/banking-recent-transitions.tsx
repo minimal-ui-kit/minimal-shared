@@ -1,6 +1,6 @@
 import type { IDateValue } from 'src/types/common';
 import type { CardProps } from '@mui/material/Card';
-import type { TableHeadCustomProps } from 'private-ui/components/table';
+import type { TableHeadCustomProps } from 'internal-ui/components/table';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -19,11 +19,11 @@ import CardHeader from '@mui/material/CardHeader';
 import ListItemText from '@mui/material/ListItemText';
 import Badge, { badgeClasses } from '@mui/material/Badge';
 
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { TableHeadCustom } from 'private-ui/components/table';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { TableHeadCustom } from 'internal-ui/components/table';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 import { fCurrency } from 'src/utils/format-number';
 import { fDate, fTime } from 'src/utils/format-time';

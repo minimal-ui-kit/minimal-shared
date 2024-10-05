@@ -13,9 +13,9 @@ import ListItemText from '@mui/material/ListItemText';
 import DialogContent from '@mui/material/DialogContent';
 import InputAdornment from '@mui/material/InputAdornment';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { SearchNotFound } from 'private-ui/components/search-not-found';
+import { Iconify } from 'internal-ui/components/iconify';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { SearchNotFound } from 'internal-ui/components/search-not-found';
 
 import { _contacts } from 'src/_mock';
 

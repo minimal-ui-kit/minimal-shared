@@ -8,14 +8,14 @@ import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Image } from 'private-ui/components/image';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Image } from 'internal-ui/components/image';
 import {
   Carousel,
   useCarousel,
   CarouselDotButtons,
   CarouselArrowBasicButtons,
-} from 'private-ui/components/carousel';
+} from 'internal-ui/components/carousel';
 
 // ----------------------------------------------------------------------
 

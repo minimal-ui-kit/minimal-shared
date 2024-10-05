@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import { LoadingScreen } from 'private-ui/components/loading-screen';
+import { LoadingScreen } from 'internal-ui/components/loading-screen';
 
 import { CONFIG } from 'src/config-global';
 import { DashboardLayout } from 'src/layouts/dashboard';

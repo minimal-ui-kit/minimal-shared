@@ -4,8 +4,8 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-import { varBounce, MotionContainer } from 'private-ui/components/animate';
-import { PageNotFoundIllustration } from 'private-ui/assets/illustrations';
+import { varBounce, MotionContainer } from 'internal-ui/components/animate';
+import { PageNotFoundIllustration } from 'internal-ui/assets/illustrations';
 
 import { RouterLink } from 'src/routes/components';
 

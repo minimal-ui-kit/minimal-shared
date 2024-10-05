@@ -7,9 +7,9 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
-import { Upload, UploadBox, UploadAvatar } from 'private-ui/components/upload';
+import { Iconify } from 'internal-ui/components/iconify';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
+import { Upload, UploadBox, UploadAvatar } from 'internal-ui/components/upload';
 
 import { paths } from 'src/routes/paths';
 

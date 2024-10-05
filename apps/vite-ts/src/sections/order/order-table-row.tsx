@@ -17,10 +17,10 @@ import ListItemText from '@mui/material/ListItemText';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { ConfirmDialog } from 'private-ui/components/custom-dialog';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { ConfirmDialog } from 'internal-ui/components/custom-dialog';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 import { fCurrency } from 'src/utils/format-number';
 import { fDate, fTime } from 'src/utils/format-time';

@@ -11,10 +11,10 @@ import Typography from '@mui/material/Typography';
 
 import { useTabs } from '@minimals/hooks/use-tabs';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Iconify } from 'private-ui/components/iconify';
-import { EmptyContent } from 'private-ui/components/empty-content';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
+import { EmptyContent } from 'internal-ui/components/empty-content';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';

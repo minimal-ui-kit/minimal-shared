@@ -3,7 +3,7 @@ import type { MapRef, MapProps, LngLatLike, MapLayerMouseEvent } from 'react-map
 import { useRef } from 'react';
 import { Layer, Source } from 'react-map-gl';
 
-import { Map } from 'private-ui/components/map';
+import { Map } from 'internal-ui/components/map';
 
 import { clusterLayer, clusterCountLayer, unclusteredPointLayer } from './layers';
 

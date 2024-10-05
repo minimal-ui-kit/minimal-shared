@@ -4,8 +4,8 @@ import TableHead from '@mui/material/TableHead';
 import TableCell from '@mui/material/TableCell';
 import TableBody from '@mui/material/TableBody';
 
-import { Scrollbar } from 'private-ui/components/scrollbar';
-import { useTable, TablePaginationCustom } from 'private-ui/components/table';
+import { Scrollbar } from 'internal-ui/components/scrollbar';
+import { useTable, TablePaginationCustom } from 'internal-ui/components/table';
 
 // ----------------------------------------------------------------------
 

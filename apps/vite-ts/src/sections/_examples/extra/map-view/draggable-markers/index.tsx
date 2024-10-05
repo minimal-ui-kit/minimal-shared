@@ -2,7 +2,7 @@ import type { MapProps, MarkerDragEvent } from 'react-map-gl';
 
 import { useState, useCallback } from 'react';
 
-import { Map, MapMarker, MapControl } from 'private-ui/components/map';
+import { Map, MapMarker, MapControl } from 'internal-ui/components/map';
 
 import { ControlPanel } from './control-panel';
 

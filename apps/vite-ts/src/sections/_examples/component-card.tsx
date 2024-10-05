@@ -4,10 +4,10 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Label } from 'private-ui/components/label';
-import { Image } from 'private-ui/components/image';
-import { varHover, varTranHover } from 'private-ui/components/animate';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Label } from 'internal-ui/components/label';
+import { Image } from 'internal-ui/components/image';
+import { varHover, varTranHover } from 'internal-ui/components/animate';
 
 import { RouterLink } from 'src/routes/components';
 

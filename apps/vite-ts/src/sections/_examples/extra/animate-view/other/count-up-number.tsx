@@ -1,4 +1,4 @@
-import { AnimateCountUp } from 'private-ui/components/animate';
+import { AnimateCountUp } from 'internal-ui/components/animate';
 
 // ----------------------------------------------------------------------
 

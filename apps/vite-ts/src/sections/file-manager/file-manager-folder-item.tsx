@@ -19,10 +19,10 @@ import AvatarGroup, { avatarGroupClasses } from '@mui/material/AvatarGroup';
 import { useBoolean } from '@minimals/hooks/use-boolean';
 import { useCopyToClipboard } from '@minimals/hooks/use-copy-to-clipboard';
 
-import { toast } from 'private-ui/components/snackbar';
-import { Iconify } from 'private-ui/components/iconify';
-import { ConfirmDialog } from 'private-ui/components/custom-dialog';
-import { usePopover, CustomPopover } from 'private-ui/components/custom-popover';
+import { toast } from 'internal-ui/components/snackbar';
+import { Iconify } from 'internal-ui/components/iconify';
+import { ConfirmDialog } from 'internal-ui/components/custom-dialog';
+import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
 
 import { fData } from 'src/utils/format-number';
 

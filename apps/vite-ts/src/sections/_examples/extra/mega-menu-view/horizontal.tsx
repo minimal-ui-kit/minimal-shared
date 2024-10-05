@@ -3,9 +3,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-import { Label } from 'private-ui/components/label';
-import { Iconify } from 'private-ui/components/iconify';
-import { MegaMenuHorizontal } from 'private-ui/components/mega-menu';
+import { Label } from 'internal-ui/components/label';
+import { Iconify } from 'internal-ui/components/iconify';
+import { MegaMenuHorizontal } from 'internal-ui/components/mega-menu';
 
 import { navItems2 } from './data';
 

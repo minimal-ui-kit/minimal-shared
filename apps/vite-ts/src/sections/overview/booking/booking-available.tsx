@@ -1,5 +1,5 @@
 import type { CardProps } from '@mui/material/Card';
-import type { ChartOptions } from 'private-ui/components/chart';
+import type { ChartOptions } from 'internal-ui/components/chart';
 
 import { sumBy } from 'es-toolkit';
 
@@ -8,8 +8,8 @@ import Card from '@mui/material/Card';
 import { useTheme } from '@mui/material/styles';
 import CardHeader from '@mui/material/CardHeader';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Chart, useChart } from 'private-ui/components/chart';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Chart, useChart } from 'internal-ui/components/chart';
 
 import { fNumber } from 'src/utils/format-number';
 

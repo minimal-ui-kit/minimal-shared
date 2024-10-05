@@ -1,5 +1,5 @@
 {
-  "extends": "@minimals/ts-config/vite.json",
+  "extends": "internal-ts-config/vite.json",
   "compilerOptions": {
     "baseUrl": ".",
     "moduleResolution": "Node"

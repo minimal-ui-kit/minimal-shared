@@ -5,9 +5,9 @@ import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-import { Image } from 'private-ui/components/image';
-import { FlagIcon } from 'private-ui/components/iconify';
-import { Map, MapPopup, MapMarker, MapControl } from 'private-ui/components/map';
+import { Image } from 'internal-ui/components/image';
+import { FlagIcon } from 'internal-ui/components/iconify';
+import { Map, MapPopup, MapMarker, MapControl } from 'internal-ui/components/map';
 
 // ----------------------------------------------------------------------
 

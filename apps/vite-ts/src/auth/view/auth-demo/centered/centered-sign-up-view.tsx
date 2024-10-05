@@ -10,9 +10,9 @@ import InputAdornment from '@mui/material/InputAdornment';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { AnimateLogo2 } from 'private-ui/components/animate';
-import { Form, Field } from 'private-ui/components/hook-form';
+import { Iconify } from 'internal-ui/components/iconify';
+import { AnimateLogo2 } from 'internal-ui/components/animate';
+import { Form, Field } from 'internal-ui/components/hook-form';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';

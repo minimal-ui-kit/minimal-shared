@@ -6,9 +6,9 @@ import Switch from '@mui/material/Switch';
 import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { Editor } from 'private-ui/components/editor';
-import { Markdown } from 'private-ui/components/markdown';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { Editor } from 'internal-ui/components/editor';
+import { Markdown } from 'internal-ui/components/markdown';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

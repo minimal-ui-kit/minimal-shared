@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Unstable_Grid2';
 
-import { MotivationIllustration } from 'private-ui/assets/illustrations';
+import { MotivationIllustration } from 'internal-ui/assets/illustrations';
 
 import { DashboardContent } from 'src/layouts/dashboard';
 import {

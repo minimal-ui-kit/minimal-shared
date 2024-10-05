@@ -7,10 +7,10 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Image } from 'private-ui/components/image';
-import { Iconify } from 'private-ui/components/iconify';
-import { varFade, MotionViewport } from 'private-ui/components/animate';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Image } from 'internal-ui/components/image';
+import { Iconify } from 'internal-ui/components/iconify';
+import { varFade, MotionViewport } from 'internal-ui/components/animate';
 
 import { CONFIG } from 'src/config-global';
 

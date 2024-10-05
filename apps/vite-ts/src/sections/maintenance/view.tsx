@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import { MaintenanceIllustration } from 'private-ui/assets/illustrations';
+import { MaintenanceIllustration } from 'internal-ui/assets/illustrations';
 
 import { RouterLink } from 'src/routes/components';
 

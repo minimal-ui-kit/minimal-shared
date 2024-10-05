@@ -1,5 +1,5 @@
 {
-  "extends": "@minimals/ts-config/react-lib.json",
+  "extends": "internal-ts-config/react-lib.json",
   "compilerOptions": {
     "baseUrl": "."
   },

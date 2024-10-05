@@ -4,8 +4,8 @@ import Grid from '@mui/material/Unstable_Grid2';
 import CardHeader from '@mui/material/CardHeader';
 import Typography from '@mui/material/Typography';
 
-import { Iconify } from 'private-ui/components/iconify';
-import { EmptyContent } from 'private-ui/components/empty-content';
+import { Iconify } from 'internal-ui/components/iconify';
+import { EmptyContent } from 'internal-ui/components/empty-content';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';

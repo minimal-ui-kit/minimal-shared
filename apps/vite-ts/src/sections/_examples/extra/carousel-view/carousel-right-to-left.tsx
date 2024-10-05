@@ -2,14 +2,14 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 
-import { varAlpha } from 'private-ui/theme/styles';
-import { Iconify } from 'private-ui/components/iconify';
+import { varAlpha } from 'internal-ui/theme/styles';
+import { Iconify } from 'internal-ui/components/iconify';
 import {
   Carousel,
   useCarousel,
   CarouselDotButtons,
   CarouselArrowFloatButtons,
-} from 'private-ui/components/carousel';
+} from 'internal-ui/components/carousel';
 
 import { IndexLabel } from './elements';
 

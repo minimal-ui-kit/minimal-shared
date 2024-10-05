@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import { SplashScreen } from 'private-ui/components/loading-screen';
+import { SplashScreen } from 'internal-ui/components/loading-screen';
 
 import { AuthSplitLayout } from 'src/layouts/auth-split';
 

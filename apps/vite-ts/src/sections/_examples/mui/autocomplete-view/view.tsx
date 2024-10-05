@@ -7,8 +7,8 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Autocomplete from '@mui/material/Autocomplete';
 
-import { CountrySelect } from 'private-ui/components/country-select';
-import { CustomBreadcrumbs } from 'private-ui/components/custom-breadcrumbs';
+import { CountrySelect } from 'internal-ui/components/country-select';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

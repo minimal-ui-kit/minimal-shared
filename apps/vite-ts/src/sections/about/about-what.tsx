@@ -9,10 +9,10 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import LinearProgress from '@mui/material/LinearProgress';
 
-import { Image } from 'private-ui/components/image';
-import { Iconify } from 'private-ui/components/iconify';
-import { varAlpha, stylesMode } from 'private-ui/theme/styles';
-import { varFade, MotionViewport } from 'private-ui/components/animate';
+import { Image } from 'internal-ui/components/image';
+import { Iconify } from 'internal-ui/components/iconify';
+import { varAlpha, stylesMode } from 'internal-ui/theme/styles';
+import { varFade, MotionViewport } from 'internal-ui/components/animate';
 
 import { fPercent } from 'src/utils/format-number';
 

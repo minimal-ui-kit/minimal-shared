@@ -7,7 +7,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import InputAdornment from '@mui/material/InputAdornment';
 
-import { useResponsive } from '@minimals/hooks/use-responsive';
+import { useResponsive } from 'src/hooks/use-responsive';
 
 import { Iconify } from 'internal-ui/components/iconify';
 import { Scrollbar } from 'internal-ui/components/scrollbar';

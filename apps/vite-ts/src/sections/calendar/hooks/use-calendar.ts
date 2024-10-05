@@ -5,7 +5,7 @@ import type { ICalendarView, ICalendarRange, ICalendarEvent } from 'src/types/ca
 
 import { useRef, useState, useCallback } from 'react';
 
-import { useResponsive } from '@minimals/hooks/use-responsive';
+import { useResponsive } from 'src/hooks/use-responsive';
 
 // ----------------------------------------------------------------------
 

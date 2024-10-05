@@ -7,7 +7,7 @@ import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import { useTheme } from '@mui/material/styles';
 
-import { useResponsive } from '@minimals/hooks/use-responsive';
+import { useResponsive } from 'src/hooks/use-responsive';
 
 import { Chart, useChart } from 'internal-ui/components/chart';
 

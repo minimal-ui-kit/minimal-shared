@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import ListItemText from '@mui/material/ListItemText';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 
-import { useResponsive } from '@minimals/hooks/use-responsive';
+import { useResponsive } from 'src/hooks/use-responsive';
 
 import { Iconify } from 'internal-ui/components/iconify';
 import { varAlpha, bgGradient } from 'internal-ui/theme/styles';

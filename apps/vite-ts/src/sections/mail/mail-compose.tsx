@@ -11,7 +11,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
-import { useResponsive } from '@minimals/hooks/use-responsive';
+import { useResponsive } from 'src/hooks/use-responsive';
 
 import { varAlpha } from 'internal-ui/theme/styles';
 import { Editor } from 'internal-ui/components/editor';

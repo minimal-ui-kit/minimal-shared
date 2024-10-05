@@ -3,7 +3,7 @@ import { useEffect, useCallback } from 'react';
 import Typography from '@mui/material/Typography';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
-import { useResponsive } from '@minimals/hooks/use-responsive';
+import { useResponsive } from 'src/hooks/use-responsive';
 
 import { paths } from 'src/routes/paths';
 import { useRouter, useSearchParams } from 'src/routes/hooks';

@@ -12,7 +12,7 @@ import IconButton from '@mui/material/IconButton';
 import ListItemText from '@mui/material/ListItemText';
 import AvatarGroup, { avatarGroupClasses } from '@mui/material/AvatarGroup';
 
-import { useResponsive } from '@minimals/hooks/use-responsive';
+import { useResponsive } from 'src/hooks/use-responsive';
 
 import { Iconify } from 'internal-ui/components/iconify';
 import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';

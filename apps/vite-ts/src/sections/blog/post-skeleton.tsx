@@ -3,7 +3,7 @@ import type { StackProps } from '@mui/material/Stack';
 import Stack from '@mui/material/Stack';
 import Skeleton from '@mui/material/Skeleton';
 
-import { useResponsive } from '@minimals/hooks/use-responsive';
+import { useResponsive } from 'src/hooks/use-responsive';
 
 // ----------------------------------------------------------------------
 

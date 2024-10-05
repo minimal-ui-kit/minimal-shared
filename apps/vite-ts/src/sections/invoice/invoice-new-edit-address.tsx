@@ -7,9 +7,10 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
-import { useResponsive } from 'src/hooks/use-responsive';
 
 import { Iconify } from 'internal-ui/components/iconify';
+
+import { useResponsive } from 'src/hooks/use-responsive';
 
 import { _addressBooks } from 'src/_mock';
 

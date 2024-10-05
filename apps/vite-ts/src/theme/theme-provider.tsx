@@ -1,4 +1,3 @@
-/* eslint-disable import/no-duplicates */
 import type { SettingsState, SettingsContextValue } from 'internal-ui/components/settings';
 
 import { createPaletteChannel } from 'internal-ui/theme/styles';
@@ -23,7 +22,7 @@ export function ThemeProvider({ children, defaultSettings, settings }: Props) {
     <Provider
       settings={settings}
       defaultSettings={defaultSettings}
-      localeComponents={currentLang?.systemValue}
+      // localeComponents={currentLang?.systemValue}
       primaryPalette={primaryPalette}
       overridesTheme={{
         colorSchemes: {

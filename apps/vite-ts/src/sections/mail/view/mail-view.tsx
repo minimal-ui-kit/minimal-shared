@@ -3,10 +3,11 @@ import { useEffect, useCallback } from 'react';
 import Typography from '@mui/material/Typography';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
-import { useResponsive } from 'src/hooks/use-responsive';
 
 import { paths } from 'src/routes/paths';
 import { useRouter, useSearchParams } from 'src/routes/hooks';
+
+import { useResponsive } from 'src/hooks/use-responsive';
 
 import { DashboardContent } from 'src/layouts/dashboard';
 import { useGetMail, useGetMails, useGetLabels } from 'src/actions/mail';

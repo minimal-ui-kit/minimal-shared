@@ -7,9 +7,9 @@ import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import { useTheme } from '@mui/material/styles';
 
-import { useResponsive } from 'src/hooks/use-responsive';
-
 import { Chart, useChart } from 'internal-ui/components/chart';
+
+import { useResponsive } from 'src/hooks/use-responsive';
 
 import { fNumber } from 'src/utils/format-number';
 

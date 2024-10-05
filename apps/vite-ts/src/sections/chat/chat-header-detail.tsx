@@ -12,10 +12,10 @@ import IconButton from '@mui/material/IconButton';
 import ListItemText from '@mui/material/ListItemText';
 import AvatarGroup, { avatarGroupClasses } from '@mui/material/AvatarGroup';
 
-import { useResponsive } from 'src/hooks/use-responsive';
-
 import { Iconify } from 'internal-ui/components/iconify';
 import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
+
+import { useResponsive } from 'src/hooks/use-responsive';
 
 import { fToNow } from 'src/utils/format-time';
 

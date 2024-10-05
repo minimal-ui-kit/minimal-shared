@@ -1,14 +1,14 @@
 import type { MediaFontSize } from 'internal-ui/theme/styles';
 import type { Variant } from '@mui/material/styles/createTypography';
 
-import { remToPx } from 'internal-ui/theme/styles';
-import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
-
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+
+import { remToPx } from 'internal-ui/theme/styles';
+import { CustomBreadcrumbs } from 'internal-ui/components/custom-breadcrumbs';
 
 import { paths } from 'src/routes/paths';
 

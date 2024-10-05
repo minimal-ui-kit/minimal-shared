@@ -8,11 +8,12 @@ import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
-import { useResponsive } from 'src/hooks/use-responsive';
 
 import { Iconify } from 'internal-ui/components/iconify';
 import { ConfirmDialog } from 'internal-ui/components/custom-dialog';
 import { usePopover, CustomPopover } from 'internal-ui/components/custom-popover';
+
+import { useResponsive } from 'src/hooks/use-responsive';
 
 // ----------------------------------------------------------------------
 

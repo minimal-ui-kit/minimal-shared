@@ -11,11 +11,12 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
 import { useBoolean } from '@minimals/hooks/use-boolean';
-import { useResponsive } from 'src/hooks/use-responsive';
 
 import { varAlpha } from 'internal-ui/theme/styles';
 import { Editor } from 'internal-ui/components/editor';
 import { Iconify } from 'internal-ui/components/iconify';
+
+import { useResponsive } from 'src/hooks/use-responsive';
 
 // ----------------------------------------------------------------------
 

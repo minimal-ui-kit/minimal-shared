@@ -10,13 +10,13 @@ import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 
-import { useResponsive } from 'src/hooks/use-responsive';
-
 import { Iconify } from 'internal-ui/components/iconify';
 import { Scrollbar } from 'internal-ui/components/scrollbar';
 
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';
+
+import { useResponsive } from 'src/hooks/use-responsive';
 
 import { today } from 'src/utils/format-time';
 

@@ -18,7 +18,6 @@ const rules = {
     'default-case-last': 2,
     'consistent-return': 2,
     'no-constant-condition': 1,
-    'import/newline-after-import': 2,
     'default-case': [2, { commentPattern: '^no default$' }],
     'lines-around-directive': [2, { before: 'always', after: 'always' }],
     'arrow-body-style': ['error', 'as-needed', { requireReturnForObjectLiteral: false }],
@@ -39,9 +38,11 @@ const rules = {
   },
   importPlugin: {
     ...importPlugin.configs.recommended.rules,
+    'import/named': 0,
     'import/default': 0,
     'import/namespace': 0,
     'import/no-named-as-default': 0,
+    'import/newline-after-import': 2,
     'import/no-named-as-default-member': 0,
     'import/no-cycle': [
       2,

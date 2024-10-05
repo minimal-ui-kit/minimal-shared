@@ -1,6 +1,8 @@
 {
-  "name": "minimal-turborepo",
+  "name": "@minimals/monorepo",
+  "author": "Minimals",
   "version": "1.0.0",
+  "description": "Vite Starter & TypeScript",
   "packageManager": "pnpm@9.10.0",
   "engines": {
     "node": "20.x"

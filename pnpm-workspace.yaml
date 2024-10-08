@@ -1,3 +1,7 @@
 packages:
-  - 'apps/*'
-  - 'packages/*'
+  # - 'apps/*'
+  # - 'packages/minimal-mock'
+  - 'packages/internal-eslint-config'
+  - 'packages/internal-ts-config'
+  - 'packages/minimal-hooks'
+  - 'packages/minimal-utils'

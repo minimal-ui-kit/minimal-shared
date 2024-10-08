@@ -1,13 +1,31 @@
-import { useRef, useMemo, useCallback } from 'react';
+import { useRef, useCallback } from 'react';
 
 // ----------------------------------------------------------------------
+
+/**
+ * Custom hook to handle single and double click events on an element.
+ *
+ * @param {UseDoubleClickProps} props - The properties for the hook.
+ * @param {number} [props.timeout=250] - The timeout in milliseconds to differentiate between single and double clicks.
+ * @param {function} [props.click] - The function to call on a single click.
+ * @param {function} props.doubleClick - The function to call on a double click.
+ *
+ * @returns {UseDoubleClickReturn} - A function to handle the click events.
+ *
+ * @example
+ * const handleClick = (event) => console.log('Single Click', event);
+ * const handleDoubleClick = (event) => console.log('Double Click', event);
+ * const handleEvent = useDoubleClick({ click: handleClick, doubleClick: handleDoubleClick });
+ *
+ * return <div onClick={handleEvent}>Click Me</div>;
+ */
 
 export type UseDoubleClickReturn = (event: React.MouseEvent<HTMLElement>) => void;
 
 type UseDoubleClickProps = {
   timeout?: number;
-  click?: (e: React.SyntheticEvent) => void;
-  doubleClick: (e: React.SyntheticEvent) => void;
+  click?: (event: React.SyntheticEvent) => void;
+  doubleClick: (event: React.SyntheticEvent) => void;
 };
 
 export function useDoubleClick({
@@ -39,7 +57,5 @@ export function useDoubleClick({
     [click, doubleClick, timeout, clearClickTimeout]
   );
 
-  const memoizedValue = useMemo(() => handleEvent, [handleEvent]);
-
-  return memoizedValue;
+  return handleEvent;
 }

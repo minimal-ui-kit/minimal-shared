@@ -1,6 +1,24 @@
-import { useMemo, useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 
 // ----------------------------------------------------------------------
+
+/**
+ * Custom hook to copy text to the clipboard.
+ *
+ * @returns {UseCopyToClipboardReturn} - An object containing:
+ * - `copy`: A function to copy text to the clipboard.
+ * - `copiedText`: The last copied text or null if nothing has been copied.
+ *
+ * @example
+ * const { copy, copiedText } = useCopyToClipboard();
+ *
+ * return (
+ *   <div>
+ *     <button onClick={() => copy('Hello, World!')}>Copy Text</button>
+ *     {copiedText && <p>Copied: {copiedText}</p>}
+ *   </div>
+ * );
+ */
 
 export type UseCopyToClipboardReturn = {
   copy: CopyFn;
@@ -34,7 +52,5 @@ export function useCopyToClipboard(): UseCopyToClipboardReturn {
     [setCopiedText]
   );
 
-  const memoizedValue = useMemo(() => ({ copy, copiedText }), [copy, copiedText]);
-
-  return memoizedValue;
+  return { copy, copiedText };
 }

@@ -9,89 +9,19 @@ import unusedImportsPlugin from 'eslint-plugin-unused-imports';
 
 // ----------------------------------------------------------------------
 
-export default [
-  {
-    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
-  },
-  {
-    ignores: [
-      /* build */
-      '**/build/*',
-      '**/dist/*',
-      '**/public/*',
-      '**/out/*',
-      '**/.next/*',
-      '**/node_modules/*',
-      /* src */
-      '**/setupTests.*',
-      '**/jsconfig.json',
-      '**/service-worker.*',
-      '**/reportWebVitals.*',
-      '**/serviceWorkerRegistration.*',
-      /* prettier */
-      '**/.prettier.*',
-      '**/prettier.config.*',
-      /* next */
-      '**/next.config.*',
-      /* vite */
-      '**/vite.config.*',
-      /* tailwind */
-      '**/postcss.config.*',
-      '**/tailwind.config.*',
-      /* craco */
-      '**/craco.config.*',
-    ],
-  },
-  {
-    languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
-    },
-    settings: { react: { version: 'detect' } },
-  },
-  eslintJs.configs.recommended,
-  ...eslintTs.configs.recommended,
-  reactPlugin.configs.flat.recommended,
-  customConfig,
-];
-
-// ----------------------------------------------------------------------
-
-export const customConfig = {
-  plugins: {
-    'react-hooks': reactHooksPlugin,
-    'unused-imports': unusedImportsPlugin,
-    perfectionist: perfectionistPlugin,
-    import: importPlugin,
-  },
-  settings: {
-    react: { version: 'detect' },
-    // https://www.npmjs.com/package/eslint-import-resolver-typescript
-    ...importPlugin.configs.typescript.settings,
-    'import/resolver': {
-      ...importPlugin.configs.typescript.settings['import/resolver'],
-      typescript: {
-        project: './tsconfig.json',
-      },
-    },
-  },
-  rules: {
-    ...customRules.common,
-    ...customRules.importPlugin,
-    ...customRules.unusedImportsPlugin,
-    ...customRules.sortImportsPlugin(),
-  },
-};
-
+/**
+ * Custom ESLint rules configuration.
+ */
 const customRules = {
   /**
-   * @rule Common
-   * Rules from 'react', 'typescript and 'eslint-plugin-react-hooks
+   * Common rules from 'react', 'typescript' and 'eslint-plugin-react-hooks'.
    */
   common: {
     ...reactHooksPlugin.configs.recommended.rules,
     'func-names': 1,
     'no-bitwise': 2,
     'object-shorthand': 1,
+    'no-useless-rename': 1,
     'default-case-last': 2,
     'consistent-return': 2,
     'no-constant-condition': 1,
@@ -114,8 +44,7 @@ const customRules = {
     '@typescript-eslint/no-unused-vars': [1, { args: 'none' }],
   },
   /**
-   * @rule Import
-   * Rules from 'eslint-plugin-import'
+   * Import rules from 'eslint-plugin-import'.
    */
   importPlugin: {
     ...importPlugin.configs.recommended.rules,
@@ -131,8 +60,7 @@ const customRules = {
     ],
   },
   /**
-   * @rule Unused imports
-   * Rules from 'eslint-plugin-unused-imports'
+   * Unused imports rules from 'eslint-plugin-unused-imports'.
    */
   unusedImportsPlugin: {
     'unused-imports/no-unused-imports': 1,
@@ -142,8 +70,7 @@ const customRules = {
     ],
   },
   /**
-   * @rule Sort imports/exports
-   * Rules from 'eslint-plugin-perfectionist
+   * Sort imports/exports rules from 'eslint-plugin-perfectionist'.
    */
   sortImportsPlugin: () => {
     const customGroups = {
@@ -213,3 +140,79 @@ const customRules = {
     };
   },
 };
+
+/**
+ * Custom ESLint configuration.
+ */
+export const customConfig = {
+  plugins: {
+    'react-hooks': reactHooksPlugin,
+    'unused-imports': unusedImportsPlugin,
+    perfectionist: perfectionistPlugin,
+    import: importPlugin,
+  },
+  settings: {
+    react: { version: 'detect' },
+    // https://www.npmjs.com/package/eslint-import-resolver-typescript
+    ...importPlugin.configs.typescript.settings,
+    'import/resolver': {
+      ...importPlugin.configs.typescript.settings['import/resolver'],
+      typescript: {
+        project: './tsconfig.json',
+      },
+    },
+  },
+  rules: {
+    ...customRules.common,
+    ...customRules.importPlugin,
+    ...customRules.unusedImportsPlugin,
+    ...customRules.sortImportsPlugin(),
+  },
+};
+
+// ----------------------------------------------------------------------
+
+export default [
+  {
+    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+  },
+  {
+    ignores: [
+      // build
+      '**/build/*',
+      '**/dist/*',
+      '**/public/*',
+      '**/out/*',
+      '**/.next/*',
+      '**/node_modules/*',
+      // src
+      '**/setupTests.*',
+      '**/jsconfig.json',
+      '**/service-worker.*',
+      '**/reportWebVitals.*',
+      '**/serviceWorkerRegistration.*',
+      // prettier
+      '**/.prettier.*',
+      '**/prettier.config.*',
+      // next
+      '**/next.config.*',
+      // vite
+      '**/vite.config.*',
+      // tailwind
+      '**/postcss.config.*',
+      '**/tailwind.config.*',
+      // craco
+      '**/craco.config.*',
+    ],
+  },
+  {
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.node },
+    },
+    settings: { react: { version: 'detect' } },
+  },
+  eslintJs.configs.recommended,
+  ...eslintTs.configs.recommended,
+  reactPlugin.configs.flat.recommended,
+  customConfig,
+];

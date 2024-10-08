@@ -1,30 +1,53 @@
-import { useRef, useMemo, useState, useCallback, useLayoutEffect } from 'react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 
 // ----------------------------------------------------------------------
 
-export type UseScrollOffsetTopReturn = {
+/**
+ * Custom hook to manage the offset top state based on scroll position.
+ *
+ * @param {number} [defaultValue=0] - The offset value at which the state changes.
+ *
+ * @returns {UseScrollOffsetTopReturn<T>} - An object containing:
+ * - `offsetTop`: A boolean indicating whether the scroll position is past the offset.
+ * - `elementRef`: A ref object to attach to the element to track its offset.
+ *
+ * @example
+ * 1.Applies to top <header/>
+ * const { offsetTop } = useScrollOffsetTop(80);
+ *
+ * Or
+ *
+ * 2.Applies to element
+ * const { offsetTop, elementRef } = useScrollOffsetTop(80);
+ * <div ref={elementRef} />
+ */
+
+export type UseScrollOffsetTopReturn<T> = {
   offsetTop: boolean;
-  elementRef: React.RefObject<HTMLDivElement>;
+  elementRef: React.RefObject<T>;
 };
 
-export function useScrollOffsetTop(defaultValue: number = 0): UseScrollOffsetTopReturn {
-  const elementRef = useRef<HTMLDivElement>(null);
-  const [offsetTop, setOffsetTop] = useState(false);
+export function useScrollOffsetTop<T extends HTMLElement>(
+  defaultValue: number = 0
+): UseScrollOffsetTopReturn<T> {
+  const elementRef = useRef<T | null>(null);
 
-  console.log('offsetTop', offsetTop);
+  const [offsetTop, setOffsetTop] = useState<boolean>(false);
 
   const handleScroll = useCallback(() => {
     const windowScrollY = window.scrollY;
 
     if (elementRef.current) {
       const elementOffsetTop = elementRef.current.offsetTop;
+      // Track element offset top
       setOffsetTop(windowScrollY > elementOffsetTop - defaultValue);
     } else {
-      setOffsetTop(windowScrollY > defaultValue * 2);
+      // Track window offset top
+      setOffsetTop(windowScrollY > defaultValue);
     }
   }, [defaultValue]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
     return () => {
@@ -32,19 +55,8 @@ export function useScrollOffsetTop(defaultValue: number = 0): UseScrollOffsetTop
     };
   }, [handleScroll]);
 
-  const memoizedValue = useMemo(() => ({ elementRef, offsetTop }), [offsetTop]);
-
-  return memoizedValue;
+  return {
+    elementRef,
+    offsetTop,
+  };
 }
-
-/*
- * 1: Applies to top <header/>
- * const { offsetTop } = useScrollOffsetTop(80);
- *
- * Or
- *
- * 2: Applies to element
- * const { offsetTop, elementRef } = useScrollOffsetTop(80);
- * <div ref={elementRef} />
- *
- */

@@ -1,11 +1,34 @@
-import { useMemo, useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 
 // ----------------------------------------------------------------------
 
+/**
+ * Custom hook to manage state with utility functions to set state, set a specific field, and reset state.
+ *
+ * @param {T} initialState - The initial state value.
+ *
+ * @returns {UseSetStateReturn<T>} - An object containing:
+ * - `state`: The current state.
+ * - `onReset`: A function to reset the state to the initial value.
+ * - `setState`: A function to update the state.
+ * - `setField`: A function to update a specific field in the state.
+ *
+ * @example
+ * const { state, setState, setField, onReset } = useSetState({ name: '', age: 0 });
+ *
+ * return (
+ *   <div>
+ *     <p>Name: {state.name}</p>
+ *     <p>Age: {state.age}</p>
+ *     <button onClick={() => setField('name', 'John')}>Set Name</button>
+ *     <button onClick={onReset}>Reset</button>
+ *   </div>
+ * );
+ */
+
 export type UseSetStateReturn<T> = {
   state: T;
-
-  onResetState: () => void;
+  onReset: () => void;
   setState: (updateState: T | Partial<T>) => void;
   setField: (name: keyof T, updateValue: T[keyof T]) => void;
 };
@@ -24,19 +47,14 @@ export function useSetState<T>(initialState: T): UseSetStateReturn<T> {
     [setState]
   );
 
-  const onResetState = useCallback(() => {
+  const onReset = useCallback(() => {
     set(initialState);
   }, [initialState]);
 
-  const memoizedValue = useMemo(
-    () => ({
-      state,
-      setState,
-      setField,
-      onResetState,
-    }),
-    [onResetState, setField, setState, state]
-  );
-
-  return memoizedValue;
+  return {
+    state,
+    setState,
+    setField,
+    onReset,
+  };
 }

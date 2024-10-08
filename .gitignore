@@ -40,4 +40,5 @@ yarn-error.log*
 # Project
 README.LOCK.md
 packages/internal-ui
-apps
+packages/minimal-mock
+apps/*

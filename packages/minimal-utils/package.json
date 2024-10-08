@@ -47,23 +47,15 @@
     "ts:print": "npx tsc --showConfig"
   },
   "dependencies": {
-    "dayjs": "^1.11.13",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
-    "glob": "^11.0.0",
-    "react": "^18.3.1",
-    "react-router-dom": "^6.26.1"
+    "glob": "^11.0.0"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^22.4.2",
-    "@types/react": "18.3.4",
     "internal-eslint-config": "workspace:*",
     "internal-ts-config": "workspace:*",
     "tsup": "^8.3.0",
     "typescript": "^5.5.4"
-  },
-  "peerDependencies": {
-    "react": "^17 || ^18"
   }
 }

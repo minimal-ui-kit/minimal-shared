@@ -1,12 +1,38 @@
 import { useMemo, useState, useEffect, useCallback } from 'react';
 
-import { localStorageGetItem } from '@minimals/utils/storage-available';
+import { setStorage, getStorage, removeStorage } from '@minimals/utils/local-storage';
 
 // ----------------------------------------------------------------------
 
+/**
+ * Custom hook to manage state with local storage.
+ *
+ * @param {string} key - The key for the local storage.
+ * @param {T} initialState - The initial state value.
+ * @param {Object} [options] - Optional settings.
+ * @param {boolean} [options.initOnload=false] - Whether to initialize the local storage on load.
+ *
+ * @returns {UseLocalStorageReturn<T>} - An object containing:
+ * - `state`: The current state.
+ * - `onReset`: A function to reset the state to the initial value and remove it from local storage.
+ * - `setState`: A function to update the state and save it to local storage.
+ * - `setField`: A function to update a specific field in the state and save it to local storage.
+ *
+ * @example
+ * const { state, onReset, setState, setField } = useLocalStorage('settings', initialState);
+ *
+ * return (
+ *   <div>
+ *     <p>State: {JSON.stringify(state)}</p>
+ *     <button onClick={() => setField('name', 'John')}>Set Name</button>
+ *     <button onClick={onReset}>Reset</button>
+ *   </div>
+ * );
+ */
+
 export type UseLocalStorageReturn<T> = {
   state: T;
-  resetState: () => void;
+  onReset: () => void;
   setState: (updateState: T | Partial<T>) => void;
   setField: (name: keyof T, updateValue: T[keyof T]) => void;
 };
@@ -64,7 +90,7 @@ export function useLocalStorage<T>(
     [multiValue, setState]
   );
 
-  const resetState = useCallback(() => {
+  const onReset = useCallback(() => {
     set(initialState);
     removeStorage(key);
   }, [initialState, key]);
@@ -74,43 +100,18 @@ export function useLocalStorage<T>(
       state,
       setState,
       setField,
-      resetState,
+      onReset,
     }),
-    [resetState, setField, setState, state]
+    [onReset, setField, setState, state]
   );
 
   return memoizedValue;
 }
 
-// ----------------------------------------------------------------------
-
-export function getStorage(key: string) {
-  try {
-    const result = localStorageGetItem(key);
-
-    if (result) {
-      return JSON.parse(result);
-    }
-  } catch (error) {
-    console.error('Error while getting from storage:', error);
-  }
-
-  return null;
-}
-
-export function setStorage<T>(key: string, value: T) {
-  try {
-    const serializedValue = JSON.stringify(value);
-    window.localStorage.setItem(key, serializedValue);
-  } catch (error) {
-    console.error('Error while setting storage:', error);
-  }
-}
-
-export function removeStorage(key: string) {
-  try {
-    window.localStorage.removeItem(key);
-  } catch (error) {
-    console.error('Error while removing from storage:', error);
-  }
-}
+/**
+ * @usage
+ * const { state, onReset, setState, setField } = useLocalStorage<SettingsState>(
+ *  storageKey,
+ *  initialState
+ * );
+ */

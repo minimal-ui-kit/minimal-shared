@@ -1,6 +1,27 @@
-import { useMemo, useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 
 // ----------------------------------------------------------------------
+
+/**
+ * Custom hook to manage the state of tabs.
+ *
+ * @param {string} defaultValue - The initial value of the tab.
+ *
+ * @returns {UseTabsReturn} - An object containing:
+ * - `value`: The current value of the tab.
+ * - `setValue`: A function to manually set the value of the tab.
+ * - `onChange`: A function to handle the change event when a new tab is selected.
+ *
+ * @example
+ * const { value, onChange } = useTabs('tab1');
+ *
+ * return (
+ *   <Tabs value={value} onChange={onChange}>
+ *     <Tab label="Tab 1" value="tab1" />
+ *     <Tab label="Tab 2" value="tab2" />
+ *   </Tabs>
+ * );
+ */
 
 export type UseTabsReturn = {
   value: string;
@@ -15,7 +36,9 @@ export function useTabs(defaultValue: string): UseTabsReturn {
     setValue(newValue);
   }, []);
 
-  const memoizedValue = useMemo(() => ({ value, setValue, onChange }), [onChange, value]);
-
-  return memoizedValue;
+  return {
+    value,
+    setValue,
+    onChange,
+  };
 }

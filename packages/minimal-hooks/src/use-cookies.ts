@@ -1,6 +1,36 @@
 import { useMemo, useState, useEffect, useCallback } from 'react';
 
+import { getCookie, setCookie, removeCookie } from '@minimals/utils/cookies';
+
 // ----------------------------------------------------------------------
+
+/**
+ * Custom hook to manage state with cookies.
+ *
+ * @param {string} key - The key for the cookie.
+ * @param {T} initialState - The initial state value.
+ * @param {T} defaultValues - The default values to reset to.
+ * @param {Object} [options] - Optional settings.
+ * @param {number} [options.daysUntilExpiration] - Number of days until the cookie expires.
+ *
+ * @returns {UseCookiesReturn<T>} - An object containing:
+ * - `state`: The current state.
+ * - `resetState`: A function to reset the state to default values.
+ * - `setState`: A function to update the state.
+ * - `setField`: A function to update a specific field in the state.
+ *
+ * @example
+ * const { state, setState, setField, resetState } = useCookies('user', { name: '', age: 0 }, { name: '', age: 0 });
+ *
+ * return (
+ *   <div>
+ *     <p>Name: {state.name}</p>
+ *     <p>Age: {state.age}</p>
+ *     <button onClick={() => setField('name', 'John')}>Set Name</button>
+ *     <button onClick={resetState}>Reset</button>
+ *   </div>
+ * );
+ */
 
 export type UseCookiesReturn<T> = {
   state: T;
@@ -22,7 +52,7 @@ export function useCookies<T>(
   const multiValue = initialState && typeof initialState === 'object';
 
   useEffect(() => {
-    const restoredValue: T = getStorage(key);
+    const restoredValue: T = getCookie(key);
 
     if (restoredValue) {
       if (multiValue) {
@@ -37,11 +67,11 @@ export function useCookies<T>(
     (updateState: T | Partial<T>) => {
       if (multiValue) {
         set((prevValue) => {
-          setStorage<T>(key, { ...prevValue, ...updateState }, options?.daysUntilExpiration);
+          setCookie<T>(key, { ...prevValue, ...updateState }, options?.daysUntilExpiration);
           return { ...prevValue, ...updateState };
         });
       } else {
-        setStorage<T>(key, updateState as T, options?.daysUntilExpiration);
+        setCookie<T>(key, updateState as T, options?.daysUntilExpiration);
         set(updateState as T);
       }
     },
@@ -59,7 +89,7 @@ export function useCookies<T>(
   );
 
   const resetState = useCallback(() => {
-    removeStorage(key);
+    removeCookie(key);
     set(defaultValues);
   }, [defaultValues, key]);
 
@@ -74,58 +104,4 @@ export function useCookies<T>(
   );
 
   return memoizedValue;
-}
-
-// ----------------------------------------------------------------------
-
-function getStorage(key: string) {
-  try {
-    const keyName = `${key}=`;
-
-    const cDecoded = decodeURIComponent(document.cookie);
-
-    const cArr = cDecoded.split('; ');
-
-    let res;
-
-    cArr.forEach((val) => {
-      if (val.indexOf(keyName) === 0) res = val.substring(keyName.length);
-    });
-
-    if (res) {
-      return JSON.parse(res);
-    }
-  } catch (error) {
-    console.error('Error while getting from cookies:', error);
-  }
-
-  return null;
-}
-
-// ----------------------------------------------------------------------
-
-function setStorage<T>(key: string, value: T, daysUntilExpiration: number = 0) {
-  try {
-    const serializedValue = encodeURIComponent(JSON.stringify(value));
-    let cookieOptions = `${key}=${serializedValue}; path=/`;
-
-    if (daysUntilExpiration > 0) {
-      const expirationDate = new Date(Date.now() + daysUntilExpiration * 24 * 60 * 60 * 1000);
-      cookieOptions += `; expires=${expirationDate.toUTCString()}`;
-    }
-
-    document.cookie = cookieOptions;
-  } catch (error) {
-    console.error('Error while setting cookie:', error);
-  }
-}
-
-// ----------------------------------------------------------------------
-
-function removeStorage(key: string) {
-  try {
-    document.cookie = `${key}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-  } catch (error) {
-    console.error('Error while removing cookie:', error);
-  }
 }

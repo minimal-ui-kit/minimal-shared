@@ -1,8 +1,0 @@
-{
-  "extends": "internal-ts-config/react-lib.json",
-  "compilerOptions": {
-    "baseUrl": "."
-  },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
-}

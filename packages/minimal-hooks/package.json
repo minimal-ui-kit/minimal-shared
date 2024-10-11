@@ -1,7 +1,7 @@
 {
   "name": "@minimals/hooks",
   "author": "Minimals",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shared hooks used by Mnimal UI and Zone UI.",
   "keywords": [
     "typescript",

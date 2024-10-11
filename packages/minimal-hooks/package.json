@@ -31,14 +31,16 @@
       "default": "./dist/index.js"
     },
     "./*": {
-      "types": "./src/*.ts",
-      "default": "./dist/*.js"
+      "types": "./src/*/index.ts",
+      "default": "./dist/*/index.js"
     }
   },
   "sideEffects": false,
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint --fix \"**/*.{js,jsx,ts,tsx}\"",
     "lint:print": "npx eslint --print-config eslint.config.mjs > eslint-show-config.json",
@@ -47,21 +49,25 @@
     "ts:print": "npx tsc --showConfig"
   },
   "dependencies": {
-    "@minimals/utils": "workspace:*",
-    "fast-glob": "^3.3.2",
-    "fs-extra": "^11.2.0",
-    "glob": "^11.0.0",
-    "react": "^18.3.1",
-    "react-router-dom": "^6.26.1"
+    "@minimals/utils": "workspace:*"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.4.2",
     "@types/react": "18.3.4",
+    "chalk": "^5.3.0",
+    "fast-glob": "^3.3.2",
+    "fs-extra": "^11.2.0",
+    "glob": "^11.0.0",
     "internal-eslint-config": "workspace:*",
     "internal-ts-config": "workspace:*",
+    "jsdom": "^25.0.1",
+    "react": "^18.3.1",
     "tsup": "^8.3.0",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "vitest": "^2.1.2"
   },
   "peerDependencies": {
     "react": "^17 || ^18"

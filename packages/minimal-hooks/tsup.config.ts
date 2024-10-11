@@ -5,7 +5,7 @@ import { defineConfig } from 'tsup';
 
 // ----------------------------------------------------------------------
 
-const excludedFiles = ['!src/**/*.d.ts'];
+const excludedFiles = ['!src/**/*.d.ts', '!src/**/*.test.ts'];
 const copyFiles = ['src/**/index.ts'];
 
 export default defineConfig((options) => ({

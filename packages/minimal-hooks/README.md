@@ -1,4 +1,6 @@
-# Some common hooks used for Minimal UI and Zone UI
+# @minimals/hooks
+
+Shared hooks used by Mnimal UI and Zone UI.
 
 - useBoolean
 - useClientRect

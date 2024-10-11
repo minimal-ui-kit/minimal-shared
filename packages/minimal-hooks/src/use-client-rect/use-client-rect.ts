@@ -1,3 +1,5 @@
+import type { RefObject } from 'react';
+
 import { useRef, useMemo, useState, useEffect, useCallback, useLayoutEffect } from 'react';
 
 // ----------------------------------------------------------------------
@@ -20,11 +22,11 @@ type DOMRectValue = {
 
 export type UseClientRectReturn = DOMRectValue &
   ScrollElValue & {
-    elementRef: React.RefObject<HTMLDivElement>;
+    elementRef: RefObject<HTMLDivElement>;
   };
 
 export function useClientRect(
-  inputRef?: React.RefObject<HTMLDivElement>,
+  inputRef?: RefObject<HTMLDivElement>,
   eventType?: string
 ): UseClientRectReturn {
   const initialRef = useRef<HTMLDivElement>(null);

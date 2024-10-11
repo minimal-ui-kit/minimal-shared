@@ -1,12 +1,12 @@
 {
-  "name": "@minimals/monorepo",
+  "name": "@minimals/shared",
   "author": "Minimals",
   "version": "1.0.0",
-  "description": "Vite Starter & TypeScript",
-  "packageManager": "pnpm@9.10.0",
+  "description": "Shared packages for Minimal UI and Zone UI",
   "engines": {
     "node": "20.x"
   },
+  "packageManager": "pnpm@9.10.0",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "turbo dev",

@@ -1,3 +1,5 @@
+import type { SyntheticEvent } from 'react';
+
 import { act, renderHook } from '@testing-library/react';
 
 import { useTabs } from './use-tabs';
@@ -25,7 +27,7 @@ describe('useTabs', () => {
     const { result } = renderHook(() => useTabs('tab1'));
 
     act(() => {
-      result.current.onChange({} as React.SyntheticEvent, 'tab2');
+      result.current.onChange({} as SyntheticEvent, 'tab2');
     });
 
     expect(result.current.value).toBe('tab2');

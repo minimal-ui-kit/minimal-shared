@@ -1,3 +1,5 @@
+import type { MutableRefObject } from 'react';
+
 import { act, renderHook } from '@testing-library/react';
 
 import { useScrollOffsetTop } from './use-scroll-offset-top';
@@ -45,7 +47,7 @@ describe('useScrollOffsetTop()', () => {
     const { result } = renderHook(() => useScrollOffsetTop<HTMLDivElement>(0));
 
     act(() => {
-      (result.current.elementRef as React.MutableRefObject<HTMLDivElement>).current = mockElement;
+      (result.current.elementRef as MutableRefObject<HTMLDivElement>).current = mockElement;
     });
 
     setScrollY(elementOffsetTop - 1);

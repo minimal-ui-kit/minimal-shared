@@ -1,3 +1,5 @@
+import type { MouseEvent } from 'react';
+
 import { act, renderHook } from '@testing-library/react';
 
 import { useDoubleClick } from './use-double-click';
@@ -21,7 +23,7 @@ describe('useDoubleClick()', () => {
     const { result } = renderHook(() => useDoubleClick({ click, doubleClick }));
 
     act(() => {
-      result.current({ detail: 1 } as React.MouseEvent<HTMLElement>);
+      result.current({ detail: 1 } as MouseEvent<HTMLElement>);
     });
 
     act(() => {
@@ -38,7 +40,7 @@ describe('useDoubleClick()', () => {
     const { result } = renderHook(() => useDoubleClick({ click, doubleClick }));
 
     act(() => {
-      result.current({ detail: 2 } as React.MouseEvent<HTMLElement>);
+      result.current({ detail: 2 } as MouseEvent<HTMLElement>);
     });
 
     expect(click).not.toHaveBeenCalled();
@@ -51,7 +53,7 @@ describe('useDoubleClick()', () => {
     const { result } = renderHook(() => useDoubleClick({ click, doubleClick, timeout: 250 }));
 
     act(() => {
-      result.current({ detail: 1 } as React.MouseEvent<HTMLElement>);
+      result.current({ detail: 1 } as MouseEvent<HTMLElement>);
     });
 
     act(() => {
@@ -59,7 +61,7 @@ describe('useDoubleClick()', () => {
     });
 
     act(() => {
-      result.current({ detail: 2 } as React.MouseEvent<HTMLElement>);
+      result.current({ detail: 2 } as MouseEvent<HTMLElement>);
     });
 
     act(() => {
@@ -76,7 +78,7 @@ describe('useDoubleClick()', () => {
     const { result } = renderHook(() => useDoubleClick({ click, doubleClick, timeout: 250 }));
 
     act(() => {
-      result.current({ detail: 1 } as React.MouseEvent<HTMLElement>);
+      result.current({ detail: 1 } as MouseEvent<HTMLElement>);
     });
 
     act(() => {

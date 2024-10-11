@@ -5,7 +5,7 @@ import { defineConfig } from 'tsup';
 
 // ----------------------------------------------------------------------
 
-const excludedFiles = ['!src/**/*.d.ts', '!src/**/*.test.ts'];
+const excludedFiles = ['!src/**/*.d.ts', '!src/**/*.test.*'];
 const copyFiles = ['src/**/index.ts'];
 
 export default defineConfig((options) => ({
@@ -19,7 +19,6 @@ export default defineConfig((options) => ({
   entry: ['src/**/*', ...excludedFiles],
   onSuccess: async () => {
     try {
-      // Copy all index.ts files from src to dist
       const srcIndexTsFiles: string[] = glob.sync(copyFiles);
 
       await Promise.all(

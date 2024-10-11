@@ -1,3 +1,5 @@
+import type { Dispatch, SetStateAction } from 'react';
+
 import { useState, useCallback } from 'react';
 
 // ----------------------------------------------------------------------
@@ -25,7 +27,7 @@ export type UseBooleanReturn = {
   onTrue: () => void;
   onFalse: () => void;
   onToggle: () => void;
-  setValue: React.Dispatch<React.SetStateAction<boolean>>;
+  setValue: Dispatch<SetStateAction<boolean>>;
 };
 
 export function useBoolean(defaultValue: boolean = false): UseBooleanReturn {

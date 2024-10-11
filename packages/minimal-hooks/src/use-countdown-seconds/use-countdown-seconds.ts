@@ -1,3 +1,5 @@
+import type { Dispatch, SetStateAction } from 'react';
+
 import { useState, useEffect, useCallback } from 'react';
 
 // ----------------------------------------------------------------------
@@ -31,7 +33,7 @@ export type UseCountdownSecondsReturn = {
   start: () => void;
   reset: () => void;
   isCounting: boolean;
-  setValue: React.Dispatch<React.SetStateAction<number>>;
+  setValue: Dispatch<SetStateAction<number>>;
 };
 
 export function useCountdownSeconds(defaultValue: number): UseCountdownSecondsReturn {

@@ -1,3 +1,5 @@
+import type { Dispatch, MouseEvent, SetStateAction } from 'react';
+
 import { useState, useCallback } from 'react';
 
 // ----------------------------------------------------------------------
@@ -30,14 +32,14 @@ export type UsePopoverReturn<T> = {
   open: boolean;
   anchorEl: T | null;
   onClose: () => void;
-  onOpen: (event: React.MouseEvent<HTMLElement>) => void;
-  setAnchorEl: React.Dispatch<React.SetStateAction<T | null>>;
+  onOpen: (event: MouseEvent<HTMLElement>) => void;
+  setAnchorEl: Dispatch<SetStateAction<T | null>>;
 };
 
 export function usePopover<T extends HTMLElement>(): UsePopoverReturn<T> {
   const [anchorEl, setAnchorEl] = useState<T | null>(null);
 
-  const onOpen = useCallback((event: React.MouseEvent<HTMLElement>) => {
+  const onOpen = useCallback((event: MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget as T);
   }, []);
 

@@ -1,3 +1,5 @@
+import type { Dispatch, SetStateAction } from 'react';
+
 import { useMemo, useState, useCallback } from 'react';
 
 // ----------------------------------------------------------------------
@@ -8,7 +10,7 @@ import { useMemo, useState, useCallback } from 'react';
  * @param {string[]} itemIds - The list of item IDs to manage.
  * @param {string[]} [defaultSelected=[]] - The list of default selected item IDs.
  *
- * @returns {UseSelectedReturn} - An object containing:
+ * @returns {UseMultiSelectReturn} - An object containing:
  * - `values`: The current list of selected item IDs.
  * - `status`: The current selection status ('checked', 'unchecked', 'indeterminate').
  * - `setValues`: A function to manually set the selected item IDs.
@@ -17,7 +19,7 @@ import { useMemo, useState, useCallback } from 'react';
  * - `onToggleSelectItem`: A function to toggle the selection of a specific item.
  *
  * @example
- * const { values, status, onSelectAllItems, onDeSelectAllItems, onToggleSelectItem } = useSelected(['item1', 'item2', 'item3'], ['item1']);
+ * const { values, status, onSelectAllItems, onDeSelectAllItems, onToggleSelectItem } = useMultiSelect(['item1', 'item2', 'item3'], ['item1']);
  *
  * return (
  *   <div>
@@ -37,19 +39,19 @@ import { useMemo, useState, useCallback } from 'react';
  * );
  */
 
-export type UseSelectedReturn = {
+export type UseMultiSelectReturn = {
   values: string[];
   status: 'checked' | 'unchecked' | 'indeterminate';
-  setValues: React.Dispatch<React.SetStateAction<string[]>>;
+  setValues: Dispatch<SetStateAction<string[]>>;
   onSelectAllItems: () => void;
   onDeSelectAllItems: () => void;
   onToggleSelectItem: (inputValue: string) => void;
 };
 
-export function useSelected(
+export function useMultiSelect(
   listItems: string[],
   defaultSelectedItems?: string[]
-): UseSelectedReturn {
+): UseMultiSelectReturn {
   const [values, setValues] = useState<string[]>(defaultSelectedItems ?? []);
 
   const onToggleSelectItem = useCallback((newItem: string) => {

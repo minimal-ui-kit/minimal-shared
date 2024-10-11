@@ -1,3 +1,5 @@
+import type { Dispatch, RefObject, SetStateAction } from 'react';
+
 import { useRef, useState, useCallback } from 'react';
 
 // ----------------------------------------------------------------------
@@ -5,7 +7,7 @@ import { useRef, useState, useCallback } from 'react';
 /**
  * Custom hook to manage the state of a popover that opens on hover.
  *
- * @param {React.RefObject<T>} [inputRef] - An optional ref object to use for the popover element.
+ * @param {RefObject<T>} [inputRef] - An optional ref object to use for the popover element.
  *
  * @returns {UsePopoverHoverReturn<T>} - An object containing:
  * - `open`: A boolean indicating whether the popover is open.
@@ -36,12 +38,12 @@ type UsePopoverHoverReturn<T> = {
   onOpen: () => void;
   anchorEl: T | null;
   onClose: () => void;
-  elementRef: React.RefObject<T>;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  elementRef: RefObject<T>;
+  setOpen: Dispatch<SetStateAction<boolean>>;
 };
 
 export function usePopoverHover<T extends HTMLElement>(
-  inputRef?: React.RefObject<T>
+  inputRef?: RefObject<T>
 ): UsePopoverHoverReturn<T> {
   const initialRef = useRef<T | null>(null);
   const elementRef = inputRef || initialRef;

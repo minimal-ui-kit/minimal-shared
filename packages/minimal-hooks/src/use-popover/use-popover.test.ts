@@ -1,3 +1,5 @@
+import type { MouseEvent } from 'react';
+
 import { act, renderHook } from '@testing-library/react';
 
 import { usePopover } from './use-popover';
@@ -19,7 +21,7 @@ describe('usePopover', () => {
     act(() => {
       result.current.onOpen({
         currentTarget: document.createElement('button'),
-      } as React.MouseEvent<HTMLButtonElement>);
+      } as MouseEvent<HTMLButtonElement>);
     });
 
     expect(result.current.open).toBe(true);
@@ -32,7 +34,7 @@ describe('usePopover', () => {
     act(() => {
       result.current.onOpen({
         currentTarget: document.createElement('button'),
-      } as React.MouseEvent<HTMLButtonElement>);
+      } as MouseEvent<HTMLButtonElement>);
     });
 
     act(() => {

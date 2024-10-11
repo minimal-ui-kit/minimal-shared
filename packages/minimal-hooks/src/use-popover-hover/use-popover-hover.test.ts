@@ -1,3 +1,5 @@
+import type { RefObject } from 'react';
+
 import { act, renderHook } from '@testing-library/react';
 
 import { usePopoverHover } from './use-popover-hover';
@@ -6,7 +8,7 @@ import { highlightText } from '../../tests/highlight-text';
 // ----------------------------------------------------------------------
 
 describe('usePopoverHover', () => {
-  const setup = (ref?: React.RefObject<HTMLButtonElement>) =>
+  const setup = (ref?: RefObject<HTMLButtonElement>) =>
     renderHook(() => usePopoverHover<HTMLButtonElement>(ref));
 
   it(`1. Should initialize with closed popover`, () => {

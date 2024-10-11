@@ -1,4 +1,4 @@
-import { hasParams, removeParams, isExternalLink, removeLastSlash } from '../url/url';
+import { hasParams, removeParams, isExternalLink, removeLastSlash } from '../url';
 
 // ----------------------------------------------------------------------
 

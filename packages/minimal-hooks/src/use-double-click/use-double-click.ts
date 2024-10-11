@@ -1,3 +1,5 @@
+import type { MouseEvent, SyntheticEvent } from 'react';
+
 import { useRef, useCallback } from 'react';
 
 // ----------------------------------------------------------------------
@@ -20,12 +22,12 @@ import { useRef, useCallback } from 'react';
  * return <div onClick={handleEvent}>Click Me</div>;
  */
 
-export type UseDoubleClickReturn = (event: React.MouseEvent<HTMLElement>) => void;
+export type UseDoubleClickReturn = (event: MouseEvent<HTMLElement>) => void;
 
 type UseDoubleClickProps = {
   timeout?: number;
-  click?: (event: React.SyntheticEvent) => void;
-  doubleClick: (event: React.SyntheticEvent) => void;
+  click?: (event: SyntheticEvent) => void;
+  doubleClick: (event: SyntheticEvent) => void;
 };
 
 export function useDoubleClick({
@@ -43,7 +45,7 @@ export function useDoubleClick({
   }, []);
 
   const handleEvent = useCallback(
-    (event: React.MouseEvent<HTMLElement>) => {
+    (event: MouseEvent<HTMLElement>) => {
       clearClickTimeout();
       if (click && event.detail === 1) {
         clickTimeout.current = setTimeout(() => {

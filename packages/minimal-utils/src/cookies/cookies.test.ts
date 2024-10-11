@@ -2,6 +2,8 @@ import { getCookie, setCookie, removeCookie } from './cookies';
 
 let cookieStore: Record<string, string> = {};
 
+// ----------------------------------------------------------------------
+
 beforeEach(() => {
   cookieStore = {};
 

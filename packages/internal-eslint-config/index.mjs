@@ -87,9 +87,16 @@ const customRules = {
     };
 
     return {
-      'perfectionist/sort-named-imports': [1, { order: 'asc', type: 'line-length' }],
-      'perfectionist/sort-named-exports': [1, { order: 'asc', type: 'line-length' }],
-      'perfectionist/sort-exports': [1, { order: 'asc', type: 'line-length' }],
+      'perfectionist/sort-named-imports': [1, { type: 'line-length', order: 'asc' }],
+      'perfectionist/sort-named-exports': [1, { type: 'line-length', order: 'asc' }],
+      'perfectionist/sort-exports': [
+        1,
+        {
+          order: 'asc',
+          type: 'line-length',
+          groupKind: 'values-first',
+        },
+      ],
       'perfectionist/sort-imports': [
         2,
         {

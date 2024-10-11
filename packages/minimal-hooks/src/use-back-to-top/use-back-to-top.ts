@@ -1,3 +1,5 @@
+import type { Dispatch, SetStateAction } from 'react';
+
 import { useMemo, useState, useEffect, useCallback } from 'react';
 
 // ----------------------------------------------------------------------
@@ -29,7 +31,7 @@ import { useMemo, useState, useEffect, useCallback } from 'react';
 export type UseBackToTopReturn = {
   isVisible: boolean;
   onBackToTop: () => void;
-  setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsVisible: Dispatch<SetStateAction<boolean>>;
 };
 
 export function useBackToTop(

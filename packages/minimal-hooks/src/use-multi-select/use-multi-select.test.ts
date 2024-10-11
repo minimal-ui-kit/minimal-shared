@@ -1,18 +1,18 @@
 import { act, renderHook } from '@testing-library/react';
 
-import { useSelected, updateSelectedItems } from './use-selected';
+import { useMultiSelect, updateSelectedItems } from './use-multi-select';
 
 // ----------------------------------------------------------------------
 
-describe('useSelected', () => {
+describe('useMultiSelect()', () => {
   it(`1. Should initialize with default selected items`, () => {
-    const { result } = renderHook(() => useSelected(['item1', 'item2', 'item3'], ['item1']));
+    const { result } = renderHook(() => useMultiSelect(['item1', 'item2', 'item3'], ['item1']));
     expect(result.current.values).toEqual(['item1']);
     expect(result.current.status).toBe('indeterminate');
   });
 
   it(`2. Should toggle select item`, () => {
-    const { result } = renderHook(() => useSelected(['item1', 'item2', 'item3'], ['item1']));
+    const { result } = renderHook(() => useMultiSelect(['item1', 'item2', 'item3'], ['item1']));
 
     act(() => {
       result.current.onToggleSelectItem('item2');
@@ -30,7 +30,7 @@ describe('useSelected', () => {
   });
 
   it(`3. Should select all items`, () => {
-    const { result } = renderHook(() => useSelected(['item1', 'item2', 'item3']));
+    const { result } = renderHook(() => useMultiSelect(['item1', 'item2', 'item3']));
 
     act(() => {
       result.current.onSelectAllItems();
@@ -49,7 +49,7 @@ describe('useSelected', () => {
 
   it(`4. Should deselect all items`, () => {
     const { result } = renderHook(() =>
-      useSelected(['item1', 'item2', 'item3'], ['item1', 'item2'])
+      useMultiSelect(['item1', 'item2', 'item3'], ['item1', 'item2'])
     );
 
     act(() => {
@@ -61,7 +61,7 @@ describe('useSelected', () => {
   });
 
   it(`5. Should update status correctly`, () => {
-    const { result } = renderHook(() => useSelected(['item1', 'item2', 'item3'], ['item1']));
+    const { result } = renderHook(() => useMultiSelect(['item1', 'item2', 'item3'], ['item1']));
 
     expect(result.current.status).toBe('indeterminate');
 

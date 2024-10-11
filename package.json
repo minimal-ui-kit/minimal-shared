@@ -10,7 +10,6 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "turbo dev",
-    "dev:packages": "turbo dev",
     "build": "turbo build",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
@@ -19,17 +18,14 @@
     "fm:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "re:dev": "pnpm clean && pnpm install && pnpm dev",
     "re:build": "pnpm clean && pnpm install && pnpm build",
-    "build:release": "turbo build",
     "check:update": "pnpm update --interactive --recursive --latest",
+    "build:release": "turbo build",
     "pre:release": "pnpm build:release && changeset version",
-    "release": "pnpm build:release && changeset version && changeset publish",
-    "syncpack": "npx syncpack list-mismatches --types 'prod,dev'"
+    "release": "pnpm build:release && changeset version && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.9",
-    "@types/fs-extra": "^11.0.4",
     "prettier": "^3.3.3",
-    "syncpack": "^13.0.0",
     "turbo": "^2.1.3",
     "typescript": "^5.5.4"
   }

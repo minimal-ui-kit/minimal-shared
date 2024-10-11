@@ -6,8 +6,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "lint:print": "npx eslint --print-config eslint.config.mjs > eslint-show-config.json",
-    "clean": "rm -rf node_modules .turbo .next out dist build"
+    "clean": "rm -rf node_modules .turbo .next out dist build",
+    "lint:print": "npx eslint --print-config eslint.config.mjs > eslint-current-config.json",
+    "ts:print": "npx tsc --showConfig"
   },
   "devDependencies": {
     "@eslint/js": "^9.12.0",
@@ -18,8 +19,8 @@
     "eslint-plugin-react": "^7.37.1",
     "eslint-plugin-react-hooks": "5.1.0-rc-778e1ed2-20240926",
     "eslint-plugin-unused-imports": "^4.1.4",
-    "globals": "^15.10.0",
+    "globals": "^15.11.0",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.8.0"
+    "typescript-eslint": "^8.8.1"
   }
 }

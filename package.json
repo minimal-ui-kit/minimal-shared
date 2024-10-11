@@ -11,6 +11,8 @@
     "preinstall": "npx only-allow pnpm",
     "dev": "turbo dev",
     "build": "turbo build",
+    "test": "turbo test",
+    "test:watch": "turbo test:watch",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
     "clean": "turbo clean && rm -rf .turbo node_modules",

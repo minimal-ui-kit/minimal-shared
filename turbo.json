@@ -20,6 +20,12 @@
     },
     "clean": {
       "cache": false
+    },
+    "test": {
+      "cache": false
+    },
+    "test:watch": {
+      "cache": false
     }
   }
 }

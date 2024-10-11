@@ -38,6 +38,7 @@ yarn-error.log*
 *.pem
 
 # Project
+plugins/*
 README.LOCK.md
 packages/internal-ui
 packages/minimal-mock

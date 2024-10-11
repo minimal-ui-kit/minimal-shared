@@ -19,8 +19,6 @@ pnpm dev
 pnpm build
 # clean
 pnpm clean
-# lint
-pnpm lint
 ```
 
 ## What's inside?

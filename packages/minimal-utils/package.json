@@ -1,7 +1,7 @@
 {
   "name": "@minimals/utils",
   "author": "Minimals",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Shared utilities used by Mnimal UI and Zone UI.",
   "keywords": [
     "typescript",
@@ -27,11 +27,11 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": "./src/index.ts",
+      "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
     "./*": {
-      "types": "./src/*/index.ts",
+      "types": "./dist/*/index.d.ts",
       "default": "./dist/*/index.js"
     }
   },

@@ -1,3 +1,3 @@
-# eslint-config
+# internal-eslint-config
 
 Collection of internal eslint configurations.

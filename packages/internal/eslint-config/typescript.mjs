@@ -132,7 +132,7 @@ const customRules = {
             value: {
               [customGroups.mui]: '@mui/**',
               [customGroups.minimals]: '@minimals/**',
-              [customGroups.private]: 'internal-ui/**',
+              [customGroups.private]: 'dev-ui/**',
               [customGroups.auth]: 'src/auth/**',
               [customGroups.hooks]: 'src/hooks/**',
               [customGroups.utils]: 'src/utils/**',

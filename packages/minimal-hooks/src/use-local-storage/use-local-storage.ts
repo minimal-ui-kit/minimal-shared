@@ -10,7 +10,7 @@ import { setStorage, getStorage, removeStorage } from '@minimals/utils/local-sto
  * @param {string} key - The key for the local storage.
  * @param {T} initialState - The initial state value.
  * @param {Object} [options] - Optional settings.
- * @param {boolean} [options.initOnload=false] - Whether to initialize the local storage on load.
+ * @param {boolean} [options.initOnLoad=false] - Whether to initialize the local storage on load.
  *
  * @returns {UseLocalStorageReturn<T>} - An object containing:
  * - `state`: The current state.
@@ -33,25 +33,25 @@ import { setStorage, getStorage, removeStorage } from '@minimals/utils/local-sto
 
 export type UseLocalStorageReturn<T> = {
   state: T;
-  resetState: () => void;
-  updateState: (updateState: T | Partial<T>) => void;
-  updateField: (name: keyof T, updateValue: T[keyof T]) => void;
+  resetState: (defaultState?: T) => void;
+  setState: (updateState: T | Partial<T>) => void;
+  setField: (name: keyof T, updateValue: T[keyof T]) => void;
 };
 
 export function useLocalStorage<T>(
   key: string,
   initialState?: T,
   options?: {
-    initOnload?: boolean;
+    initOnLoad?: boolean;
   }
 ): UseLocalStorageReturn<T> {
+  const isValuePresent = !!getStorage(key);
   const storedValue: T = getStorage(key) ?? initialState;
 
   const [state, set] = useState<T>(storedValue);
 
+  const { initOnLoad = true } = options ?? {};
   const hasMultipleValues = state && typeof state === 'object';
-
-  const { initOnload = false } = options ?? {};
 
   useEffect(() => {
     if (storedValue) {
@@ -61,18 +61,19 @@ export function useLocalStorage<T>(
         set(storedValue);
       }
 
-      if (initOnload) {
-        setStorage<T>(key, hasMultipleValues ? { ...storedValue } : storedValue);
+      if (!isValuePresent && initOnLoad) {
+        setStorage<T>(key, storedValue);
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initOnload, key, hasMultipleValues]);
+  }, []);
 
-  const updateState = useCallback(
+  const setState = useCallback(
     (newState: T | Partial<T>) => {
       if (hasMultipleValues) {
         set((prevValue) => {
           const updatedState = { ...prevValue, ...newState } as T;
+
           setStorage<T>(key, updatedState);
           return updatedState;
         });
@@ -84,28 +85,33 @@ export function useLocalStorage<T>(
     [key, hasMultipleValues]
   );
 
-  const updateField = useCallback(
+  const setField = useCallback(
     (name: keyof T, updateValue: T[keyof T]) => {
       if (hasMultipleValues) {
-        updateState({ [name]: updateValue } as Partial<T>);
+        setState({ [name]: updateValue } as Partial<T>);
       }
     },
-    [hasMultipleValues, updateState]
+    [hasMultipleValues, setState]
   );
 
-  const resetState = useCallback(() => {
-    set(initialState as T);
-    removeStorage(key);
-  }, [initialState, key]);
+  const resetState = useCallback(
+    (defaultState?: T) => {
+      if (defaultState) {
+        set(defaultState);
+      }
+      removeStorage(key);
+    },
+    [key]
+  );
 
   const memoizedValue = useMemo(
     () => ({
       state,
-      updateState,
-      updateField,
+      setState,
+      setField,
       resetState,
     }),
-    [resetState, updateField, updateState, state]
+    [resetState, setField, setState, state]
   );
 
   return memoizedValue;

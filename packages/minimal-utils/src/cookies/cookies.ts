@@ -16,7 +16,7 @@ export function getCookie(key: string): any | null {
     const cArr = cDecoded.split('; ');
 
     for (const val of cArr) {
-      if (val.indexOf(keyName) === 0) {
+      if (val.startsWith(keyName)) {
         const cookieValue = val.substring(keyName.length);
         try {
           return JSON.parse(cookieValue);
@@ -25,8 +25,8 @@ export function getCookie(key: string): any | null {
         }
       }
     }
-  } catch (error) {
-    console.error('Error while getting from cookies:', error);
+  } catch {
+    return null;
   }
 
   return null;

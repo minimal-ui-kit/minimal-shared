@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react';
 
-import { getCookie, setCookie, removeCookie } from '@minimals/utils/cookies';
+import { setCookie, getCookie, removeCookie } from '@minimals/utils/cookies';
 
 import { useCookies } from './use-cookies';
 
@@ -21,7 +21,7 @@ describe('useCookies()', () => {
     vi.clearAllMocks();
   });
 
-  it('1.Should initialize state with cookie value if available', () => {
+  it(`1. Should initialize state with cookie value if available`, () => {
     (getCookie as ReturnType<typeof vi.fn>).mockReturnValue(initialState);
     const { result } = renderHook(() => useCookies(key, initialState));
 
@@ -29,7 +29,7 @@ describe('useCookies()', () => {
     expect(getCookie).toHaveBeenCalledWith(key);
   });
 
-  it('2.Should initialize state with initial state if cookie is not available', () => {
+  it(`2. Should initialize state with initial state if cookie is not available`, () => {
     (getCookie as ReturnType<typeof vi.fn>).mockReturnValue(undefined);
     const { result } = renderHook(() => useCookies(key, initialState));
 
@@ -37,7 +37,7 @@ describe('useCookies()', () => {
     expect(getCookie).toHaveBeenCalledWith(key);
   });
 
-  it('3.Should update state and set cookie when setState is called', () => {
+  it(`3. Should update state and set cookie when setState is called`, () => {
     (getCookie as ReturnType<typeof vi.fn>).mockReturnValue(initialState);
     const { result } = renderHook(() => useCookies(key, initialState));
 
@@ -47,7 +47,7 @@ describe('useCookies()', () => {
     expect(setCookie).toHaveBeenCalledWith(key, updatedState, undefined);
   });
 
-  it('4.Should update specific field and set cookie when setField is called', () => {
+  it(`4. Should update specific field and set cookie when setField is called`, () => {
     (getCookie as ReturnType<typeof vi.fn>).mockReturnValue(initialState);
     const { result } = renderHook(() => useCookies(key, initialState));
 
@@ -57,16 +57,16 @@ describe('useCookies()', () => {
     expect(setCookie).toHaveBeenCalledWith(key, { ...initialState, name: 'Jane' }, undefined);
   });
 
-  it('5.Should remove cookie when resetState is called', () => {
+  it(`5. Should remove cookie when resetState is called`, () => {
     (getCookie as ReturnType<typeof vi.fn>).mockReturnValue(initialState);
     const { result } = renderHook(() => useCookies(key, initialState));
 
-    act(() => result.current.resetState());
+    act(() => result.current.resetState(initialState));
 
     expect(removeCookie).toHaveBeenCalledWith(key);
   });
 
-  it('6.Should initialize state with cookie value if available when only key is provided', () => {
+  it('6. Should initialize state with cookie value if available when only key is provided', () => {
     (getCookie as ReturnType<typeof vi.fn>).mockReturnValue(initialState);
     const { result } = renderHook(() => useCookies(key));
 
@@ -74,7 +74,7 @@ describe('useCookies()', () => {
     expect(getCookie).toHaveBeenCalledWith(key);
   });
 
-  it('7.Should initialize state with undefined if cookie is not available when only key is provided', () => {
+  it(`7. Should initialize state with undefined if cookie is not available when only key is provided`, () => {
     (getCookie as ReturnType<typeof vi.fn>).mockReturnValue(undefined);
     const { result } = renderHook(() => useCookies(key));
     expect(result.current.state).toBe(undefined);

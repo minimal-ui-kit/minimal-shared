@@ -61,28 +61,28 @@ describe('localStorageGetItem()', () => {
 });
 
 describe('getStorage()', () => {
-  it(`1.Should return the parsed value from local storage`, () => {
+  it(`1. Should return the parsed value from local storage`, () => {
     window.localStorage.setItem('user', JSON.stringify({ name: 'John', age: 30 }));
     expect(getStorage('user')).toEqual({ name: 'John', age: 30 });
   });
 
-  it(`2.Should return the raw value if parsing fails`, () => {
+  it(`2. Should return the raw value if parsing fails`, () => {
     window.localStorage.setItem('user', 'John');
     expect(getStorage('user')).toBe('John');
   });
 
-  it(`3.Should return null if the item is not found`, () => {
+  it(`3. Should return null if the item is not found`, () => {
     expect(getStorage('nonexistent')).toBeNull();
   });
 });
 
 describe('setStorage()', () => {
-  it(`1.Should set the value in local storage`, () => {
+  it(`1. Should set the value in local storage`, () => {
     setStorage('user', { name: 'John', age: 30 });
     expect(window.localStorage.getItem('user')).toBe(JSON.stringify({ name: 'John', age: 30 }));
   });
 
-  it(`2.Should log an error if setting the value fails`, () => {
+  it(`2. Should log an error if setting the value fails`, () => {
     const consoleErrorSpy = vi.spyOn(console, 'error');
     const originalLocalStorage = window.localStorage;
     Object.defineProperty(window, 'localStorage', {

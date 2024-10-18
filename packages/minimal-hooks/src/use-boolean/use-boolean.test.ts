@@ -8,17 +8,17 @@ import { highlightText } from '../../tests/highlight-text';
 describe('useBoolean()', () => {
   const setup = (initialValue?: boolean) => renderHook(() => useBoolean(initialValue));
 
-  it('1.Should initialize with the default value', () => {
+  it('1. Should initialize with the default value', () => {
     const { result } = setup();
     expect(result.current.value).toBe(false);
   });
 
-  it('2.Should initialize with the provided value', () => {
+  it('2. Should initialize with the provided value', () => {
     const { result } = setup(true);
     expect(result.current.value).toBe(true);
   });
 
-  it(`3.Should set value to ${highlightText.value('true')} when ${highlightText.fn('onTrue')} is called`, () => {
+  it(`3. Should set value to ${highlightText.value('true')} when ${highlightText.fn('onTrue')} is called`, () => {
     const { result } = renderHook(() => useBoolean(false));
 
     act(() => {
@@ -28,7 +28,7 @@ describe('useBoolean()', () => {
     expect(result.current.value).toBe(true);
   });
 
-  it(`4.Should set value to ${highlightText.value('false')} when ${highlightText.fn('onFalse')} is called`, () => {
+  it(`4. Should set value to ${highlightText.value('false')} when ${highlightText.fn('onFalse')} is called`, () => {
     const { result } = setup(true);
 
     act(() => {
@@ -38,7 +38,7 @@ describe('useBoolean()', () => {
     expect(result.current.value).toBe(false);
   });
 
-  it(`5.Should toggle value when ${highlightText.fn('onToggle')} is called`, () => {
+  it(`5. Should toggle value when ${highlightText.fn('onToggle')} is called`, () => {
     const { result } = setup(false);
 
     act(() => {
@@ -54,7 +54,7 @@ describe('useBoolean()', () => {
     expect(result.current.value).toBe(false);
   });
 
-  it('6.Should allow manual setting of value', () => {
+  it('6. Should allow manual setting of value', () => {
     const { result } = setup(false);
 
     act(() => {

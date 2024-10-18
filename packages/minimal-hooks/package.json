@@ -1,7 +1,7 @@
 {
   "name": "@minimals/hooks",
   "author": "Minimals",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Shared hooks used by Mnimal UI and Zone UI.",
   "keywords": [
     "typescript",
@@ -49,7 +49,8 @@
     "ts:print": "npx tsc --showConfig"
   },
   "dependencies": {
-    "@minimals/utils": "workspace:*"
+    "@minimals/utils": "latest",
+    "es-toolkit": "^1.24.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.5.0",
@@ -63,6 +64,7 @@
     "glob": "^11.0.0",
     "internal-eslint-config": "workspace:*",
     "internal-ts-config": "workspace:*",
+    "@minimals/utils": "workspace:*",
     "jsdom": "^25.0.1",
     "react": "^18.3.1",
     "tsup": "^8.3.0",

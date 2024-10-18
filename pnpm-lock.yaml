@@ -42,8 +42,8 @@ importers:
         specifier: ^7.37.1
         version: 7.37.1(eslint@9.12.0)
       eslint-plugin-react-hooks:
-        specifier: 5.1.0-rc-778e1ed2-20240926
-        version: 5.1.0-rc-778e1ed2-20240926(eslint@9.12.0)
+        specifier: 5.0.0
+        version: 5.0.0(eslint@9.12.0)
       eslint-plugin-unused-imports:
         specifier: ^4.1.4
         version: 4.1.4(@typescript-eslint/eslint-plugin@8.8.1(@typescript-eslint/parser@8.8.1(eslint@9.12.0)(typescript@5.5.4))(eslint@9.12.0)(typescript@5.5.4))(eslint@9.12.0)
@@ -64,6 +64,9 @@ importers:
       '@minimals/utils':
         specifier: workspace:*
         version: link:../minimal-utils
+      es-toolkit:
+        specifier: ^1.24.0
+        version: 1.24.0
     devDependencies:
       '@testing-library/jest-dom':
         specifier: ^6.5.0
@@ -1391,8 +1394,8 @@ packages:
       vue-eslint-parser:
         optional: true
 
-  eslint-plugin-react-hooks@5.1.0-rc-778e1ed2-20240926:
-    resolution: {integrity: sha512-posq8PeGnHrUF3gKGScUi2tk1+6dXdJO9523lJ5yPR3XcqbKi/de/9GiXHw4mmS4s/UOJDeHLZwVVnwu1jsaVw==}
+  eslint-plugin-react-hooks@5.0.0:
+    resolution: {integrity: sha512-hIOwI+5hYGpJEc4uPRmz2ulCjAGD/N13Lukkh8cLV0i2IRk/bdZDYjgLVHj+U9Z704kLIdIO6iueGvxNur0sgw==}
     engines: {node: '>=10'}
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
@@ -4101,7 +4104,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-react-hooks@5.1.0-rc-778e1ed2-20240926(eslint@9.12.0):
+  eslint-plugin-react-hooks@5.0.0(eslint@9.12.0):
     dependencies:
       eslint: 9.12.0
 

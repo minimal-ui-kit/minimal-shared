@@ -4,6 +4,14 @@ import { useRef, useMemo, useState, useEffect, useCallback, useLayoutEffect } fr
 
 // ----------------------------------------------------------------------
 
+/**
+ * Custom hook to get the bounding client rect and scroll dimensions of a DOM element.
+ *
+ * @param {RefObject<HTMLDivElement>} [inputRef] - Optional ref object to the target element.
+ * @param {string} [eventType] - Optional event type to trigger updates (e.g., 'scroll', 'resize').
+ * @returns {UseClientRectReturn} - Object containing the bounding rect, scroll dimensions, and ref to the element.
+ */
+
 type ScrollElValue = {
   scrollWidth: number;
   scrollHeight: number;
@@ -53,16 +61,11 @@ export function useClientRect(
   }, [handleBoundingClientRect]);
 
   useEffect(() => {
-    if (eventType) {
-      window.addEventListener(eventType, handleBoundingClientRect);
-      return () => {
-        window.removeEventListener(eventType, handleBoundingClientRect);
-      };
-    }
+    const event = eventType || 'resize';
 
-    window.addEventListener('resize', handleBoundingClientRect);
+    window.addEventListener(event, handleBoundingClientRect);
     return () => {
-      window.removeEventListener('resize', handleBoundingClientRect);
+      window.removeEventListener(event, handleBoundingClientRect);
     };
   }, [eventType, handleBoundingClientRect]);
 

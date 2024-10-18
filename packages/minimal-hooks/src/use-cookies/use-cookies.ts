@@ -1,6 +1,6 @@
 import { useMemo, useState, useEffect, useCallback } from 'react';
 
-import { getCookie, setCookie, removeCookie } from '@minimals/utils/cookies';
+import { setCookie, getCookie, removeCookie } from '@minimals/utils/cookies';
 
 // ----------------------------------------------------------------------
 
@@ -34,7 +34,7 @@ import { getCookie, setCookie, removeCookie } from '@minimals/utils/cookies';
 
 export type UseCookiesReturn<T> = {
   state: T;
-  resetState: () => void;
+  resetState: (defaultState?: T) => void;
   setState: (updateState: T | Partial<T>) => void;
   setField: (name: keyof T, updateValue: T[keyof T]) => void;
 };
@@ -43,13 +43,16 @@ export function useCookies<T>(
   key: string,
   initialState?: T,
   options?: {
+    initOnLoad?: boolean;
     daysUntilExpiration?: number;
   }
 ): UseCookiesReturn<T> {
+  const isValuePresent = !!getCookie(key);
   const storedValue: T = getCookie(key) ?? initialState;
 
   const [state, set] = useState(storedValue);
 
+  const { initOnLoad = true, daysUntilExpiration } = options ?? {};
   const hasMultipleValues = state && typeof state === 'object';
 
   useEffect(() => {
@@ -59,27 +62,29 @@ export function useCookies<T>(
       } else {
         set(storedValue);
       }
-    }
 
-    setCookie<T>(key, hasMultipleValues ? { ...storedValue } : storedValue);
+      if (!isValuePresent && initOnLoad) {
+        setCookie<T>(key, storedValue, daysUntilExpiration);
+      }
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [key, hasMultipleValues]);
+  }, []);
 
   const setState = useCallback(
     (updateState: T | Partial<T>) => {
       if (hasMultipleValues) {
         set((prevValue) => {
           const updatedState = { ...prevValue, ...updateState } as T;
-          setCookie<T>(key, updatedState, options?.daysUntilExpiration);
+
+          setCookie<T>(key, updatedState, daysUntilExpiration);
           return updatedState;
         });
       } else {
-        setCookie<T>(key, updateState as T, options?.daysUntilExpiration);
+        setCookie<T>(key, updateState as T, daysUntilExpiration);
         set(updateState as T);
       }
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [key, hasMultipleValues]
+    [hasMultipleValues, key, daysUntilExpiration]
   );
 
   const setField = useCallback(
@@ -91,9 +96,15 @@ export function useCookies<T>(
     [hasMultipleValues, setState]
   );
 
-  const resetState = useCallback(() => {
-    removeCookie(key);
-  }, [key]);
+  const resetState = useCallback(
+    (defaultState?: T) => {
+      if (defaultState) {
+        set(defaultState);
+      }
+      removeCookie(key);
+    },
+    [key]
+  );
 
   const memoizedValue = useMemo(
     () => ({

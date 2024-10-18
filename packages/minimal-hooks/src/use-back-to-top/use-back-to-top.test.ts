@@ -29,55 +29,55 @@ describe('useBackToTop()', () => {
     Object.defineProperty(document.body, 'offsetHeight', { value: BODY_HEIGHT });
   });
 
-  it(`1.Should initialize with the initial state`, () => {
+  it(`1. Should initialize with the initial state`, () => {
     const { result } = renderHook(() => useBackToTop(SCROLL_THRESHOLD_PERCENTAGE));
 
     expect(result.current.isVisible).toBe(false);
   });
 
-  it(`2.Should ${highlightText.value('show')} button when scroll position = ${SCROLL_THRESHOLD_PERCENTAGE} threshold (from top)`, () => {
+  it(`2. Should ${highlightText.value('show')} button when scroll position = ${SCROLL_THRESHOLD_PERCENTAGE} threshold (from top)`, () => {
     const { result } = renderHook(() => useBackToTop(SCROLL_THRESHOLD_PERCENTAGE));
 
     setScrollY(WINDOW_HEIGHT / 2); // 50%
     expect(result.current.isVisible).toBe(true);
   });
 
-  it(`3.Should ${highlightText.value('show')} button when scroll position > ${SCROLL_THRESHOLD_PERCENTAGE} threshold (from top)`, () => {
+  it(`3. Should ${highlightText.value('show')} button when scroll position > ${SCROLL_THRESHOLD_PERCENTAGE} threshold (from top)`, () => {
     const { result } = renderHook(() => useBackToTop(SCROLL_THRESHOLD_PERCENTAGE));
 
     setScrollY(WINDOW_HEIGHT / 2 + 10); // 51%
     expect(result.current.isVisible).toBe(true);
   });
 
-  it(`4.Should ${highlightText.value('hide')} button when scroll position < ${SCROLL_THRESHOLD_PERCENTAGE} threshold (from top)`, () => {
+  it(`4. Should ${highlightText.value('hide')} button when scroll position < ${SCROLL_THRESHOLD_PERCENTAGE} threshold (from top)`, () => {
     const { result } = renderHook(() => useBackToTop(SCROLL_THRESHOLD_PERCENTAGE));
 
     setScrollY(WINDOW_HEIGHT / 2 - 10); // 49%
     expect(result.current.isVisible).toBe(false);
   });
 
-  it(`5.Should ${highlightText.value('show')} button when scroll position = ${SCROLL_THRESHOLD_PIXELS}px threshold (from bottom)`, () => {
+  it(`5. Should ${highlightText.value('show')} button when scroll position = ${SCROLL_THRESHOLD_PIXELS}px threshold (from bottom)`, () => {
     const { result } = renderHook(() => useBackToTop(SCROLL_THRESHOLD_PIXELS));
 
     setScrollY(WINDOW_HEIGHT - SCROLL_THRESHOLD_PIXELS); // 80px
     expect(result.current.isVisible).toBe(true);
   });
 
-  it(`6.Should ${highlightText.value('hide')} button when scroll position > ${SCROLL_THRESHOLD_PIXELS}px threshold (from bottom)`, () => {
+  it(`6. Should ${highlightText.value('hide')} button when scroll position > ${SCROLL_THRESHOLD_PIXELS}px threshold (from bottom)`, () => {
     const { result } = renderHook(() => useBackToTop(SCROLL_THRESHOLD_PIXELS));
 
     setScrollY(WINDOW_HEIGHT - SCROLL_THRESHOLD_PIXELS - 1); // 81px
     expect(result.current.isVisible).toBe(false);
   });
 
-  it(`7.Should ${highlightText.value('show')} button when scroll position < ${SCROLL_THRESHOLD_PIXELS}px threshold (from bottom)`, () => {
+  it(`7. Should ${highlightText.value('show')} button when scroll position < ${SCROLL_THRESHOLD_PIXELS}px threshold (from bottom)`, () => {
     const { result } = renderHook(() => useBackToTop(SCROLL_THRESHOLD_PIXELS));
 
     setScrollY(WINDOW_HEIGHT - SCROLL_THRESHOLD_PIXELS + 1); // 79px
     expect(result.current.isVisible).toBe(true);
   });
 
-  it(`1.Should debounce scroll events when ${highlightText.value('isDebounce')} is true`, async () => {
+  it(`1. Should debounce scroll events when ${highlightText.value('isDebounce')} is true`, async () => {
     const { result } = renderHook(() => useBackToTop(SCROLL_THRESHOLD_PERCENTAGE, true));
 
     setScrollY(WINDOW_HEIGHT / 2 + 10); // 51%

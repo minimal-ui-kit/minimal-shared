@@ -1,7 +1,7 @@
 import { act, renderHook } from '@testing-library/react';
 
-import { highlightText } from '../../../tests/highlight-text';
 import { useCopyToClipboard } from './use-copy-to-clipboard';
+import { highlightText } from '../../../tests/highlight-text';
 
 // ----------------------------------------------------------------------
 

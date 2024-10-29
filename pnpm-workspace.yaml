@@ -1,8 +1,8 @@
 packages:
   # - 'apps/*'
   # - 'packages/**'
-  - 'apps/next-ts'
-  - 'apps/next-ts-internal'
-  - 'packages/internal/*'
-  - 'packages/minimal-hooks'
-  - 'packages/minimal-utils'
+  # - 'apps/next-ts'
+  # - 'apps/next-ts-internal'
+  - 'packages/internal-eslint-config'
+  - 'packages/internal-ts-config'
+  - 'packages/minimal-shared'

@@ -33,6 +33,79 @@ importers:
         specifier: ^11.13.0
         version: 11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1)
       '@minimals/hooks':
+        specifier: ^1.0.72
+        version: 1.0.72(react@18.3.1)
+      '@minimals/utils':
+        specifier: ^1.0.72
+        version: 1.0.72
+      '@mui/lab':
+        specifier: 5.0.0-alpha.173
+        version: 5.0.0-alpha.173(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@mui/material@5.16.7(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@mui/material':
+        specifier: ^5.16.7
+        version: 5.16.7(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@mui/material-nextjs':
+        specifier: ^5.16.6
+        version: 5.16.6(@emotion/cache@11.13.1)(@mui/material@5.16.7(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/react@18.3.11)(next@14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      '@mui/x-data-grid':
+        specifier: ^7.18.0
+        version: 7.21.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@mui/material@5.16.7(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mui/system@5.16.7(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@mui/x-date-pickers':
+        specifier: ^7.18.0
+        version: 7.21.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@mui/material@5.16.7(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mui/system@5.16.7(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(dayjs@1.11.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@mui/x-tree-view':
+        specifier: ^7.18.0
+        version: 7.21.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@mui/material@5.16.7(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mui/system@5.16.7(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next:
+        specifier: 14.2.13
+        version: 14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: 18.3.1
+        version: 18.3.1(react@18.3.1)
+      sonner:
+        specifier: ^1.5.0
+        version: 1.5.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      usehooks-ts:
+        specifier: ^3.1.0
+        version: 3.1.0(react@18.3.1)
+    devDependencies:
+      '@types/node':
+        specifier: ^22.4.2
+        version: 22.7.5
+      '@types/react':
+        specifier: ^18.3.4
+        version: 18.3.11
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.1
+      internal-eslint-config:
+        specifier: workspace:*
+        version: link:../../packages/internal/eslint-config
+      internal-ts-config:
+        specifier: workspace:*
+        version: link:../../packages/internal/ts-config
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
+      typescript:
+        specifier: ^5.5.4
+        version: 5.5.4
+
+  apps/next-ts-internal:
+    dependencies:
+      '@emotion/cache':
+        specifier: ^11.13.1
+        version: 11.13.1
+      '@emotion/react':
+        specifier: ^11.13.0
+        version: 11.13.3(@types/react@18.3.11)(react@18.3.1)
+      '@emotion/styled':
+        specifier: ^11.13.0
+        version: 11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1)
+      '@minimals/hooks':
         specifier: workspace:*
         version: link:../../packages/minimal-hooks
       '@minimals/utils':
@@ -133,7 +206,7 @@ importers:
     dependencies:
       '@minimals/utils':
         specifier: latest
-        version: 1.0.4
+        version: 1.0.72
       es-toolkit:
         specifier: ^1.24.0
         version: 1.24.0
@@ -767,8 +840,13 @@ packages:
   '@manypkg/get-packages@1.1.3':
     resolution: {integrity: sha512-fo+QhuU3qE/2TQMQmbVMqaQ6EWbMhi4ABWP+O4AM1NqPBuy0OrApV5LO6BrrgnhtAHS2NH6RrVk9OL181tTi8A==}
 
-  '@minimals/utils@1.0.4':
-    resolution: {integrity: sha512-l8Pv3BuDVqXwAdhU2O/UNvOdU+zhTNQX5tpgdX25NcFtZpyF3Pao5zOIq7uestsoCZKLf1IzllQm8B/awrqFAQ==}
+  '@minimals/hooks@1.0.72':
+    resolution: {integrity: sha512-NfP9iIZUJeef+2ML/GAFxQ7P4Yu+2ehJI5K7GBTaMngo7CEhseIppiLcBzSSgfNCFPlFiPF70nVYjW2A301J2g==}
+    peerDependencies:
+      react: ^17 || ^18
+
+  '@minimals/utils@1.0.72':
+    resolution: {integrity: sha512-24a5L7uRoA7ZE1dcCJOG0q8OKITRYS1jp6dzpPajtjSc8b3GyzmtjkbYYieQZ7w67Q/smqfJcQ24+avEFTaxAg==}
 
   '@mui/base@5.0.0-beta.40':
     resolution: {integrity: sha512-I/lGHztkCzvwlXpjD2+SNmvNQvB4227xBXhISPjEaJUXGImOQ9f3D2Yj/T3KasSI/h0MLWy74X0J6clhPmsRbQ==}
@@ -1769,6 +1847,9 @@ packages:
   es-toolkit@1.24.0:
     resolution: {integrity: sha512-nZM+MRSGhKjCdjvqWEFr5Jns6vxoXtBcsl4/cEsGMgsMx8Z2ato4vBTGMUSIQBZJgEdKyNcgGh42yu9xiuNYtQ==}
 
+  es-toolkit@1.25.2:
+    resolution: {integrity: sha512-zEh2aJUwnlDwashas6JN+oFVN08F2s2qBaEwTo6EOACjO9PdPH4eGRBZC2JP/3SDLeANiMTEtVnOGhoG7GwZcA==}
+
   esbuild@0.21.5:
     resolution: {integrity: sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE3+NK93JYxc8VMSep+lOUSC/RVKaBqw==}
     engines: {node: '>=12'}
@@ -2386,6 +2467,9 @@ packages:
   locate-path@6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
+
+  lodash.debounce@4.0.8:
+    resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
 
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
@@ -3082,9 +3166,6 @@ packages:
   tsconfig-paths@3.15.0:
     resolution: {integrity: sha512-2Ac2RgzDe/cn48GvOe3M+o82pEFewD3UPbyoUHHdKasHwJKjds4fLXWf/Ux5kATBKN20oaFGu+jbElp1pos0mg==}
 
-  tslib@2.7.0:
-    resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
-
   tslib@2.8.0:
     resolution: {integrity: sha512-jWVzBLplnCmoaTr13V9dYbiQ99wvZRd0vNWaDRg+aVYRcjDF3nDksxFDE/+fkXnKhpnUUkmx5pK/v8mCtLVqZA==}
 
@@ -3191,6 +3272,12 @@ packages:
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
+
+  usehooks-ts@3.1.0:
+    resolution: {integrity: sha512-bBIa7yUyPhE1BCc0GmR96VU/15l/9gP1Ch5mYdLcFBaFGQsdmXkvjV0TtOqW1yUd6VjIwDunm+flSciCQXujiw==}
+    engines: {node: '>=16.15.0'}
+    peerDependencies:
+      react: ^16.8.0  || ^17 || ^18
 
   vite-node@2.1.2:
     resolution: {integrity: sha512-HPcGNN5g/7I2OtPjLqgOtCRu/qhVvBxTUD3qzitmL0SrG1cWFzxzhMDWussxSbrRYWqnKf8P2jiNhPMSN+ymsQ==}
@@ -3891,9 +3978,15 @@ snapshots:
       globby: 11.1.0
       read-yaml-file: 1.1.0
 
-  '@minimals/utils@1.0.4':
+  '@minimals/hooks@1.0.72(react@18.3.1)':
     dependencies:
-      es-toolkit: 1.24.0
+      '@minimals/utils': link:packages/minimal-utils
+      es-toolkit: 1.25.2
+      react: 18.3.1
+
+  '@minimals/utils@1.0.72':
+    dependencies:
+      es-toolkit: 1.25.2
 
   '@mui/base@5.0.0-beta.40(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -4244,7 +4337,7 @@ snapshots:
   '@swc/helpers@0.5.5':
     dependencies:
       '@swc/counter': 0.1.3
-      tslib: 2.7.0
+      tslib: 2.8.0
 
   '@swc/types@0.1.13':
     dependencies:
@@ -4914,6 +5007,8 @@ snapshots:
       is-symbol: 1.0.4
 
   es-toolkit@1.24.0: {}
+
+  es-toolkit@1.25.2: {}
 
   esbuild@0.21.5:
     optionalDependencies:
@@ -5647,6 +5742,8 @@ snapshots:
     dependencies:
       p-locate: 5.0.0
 
+  lodash.debounce@4.0.8: {}
+
   lodash.merge@4.6.2: {}
 
   lodash.sortby@4.7.0: {}
@@ -6312,10 +6409,7 @@ snapshots:
       minimist: 1.2.8
       strip-bom: 3.0.0
 
-  tslib@2.7.0: {}
-
-  tslib@2.8.0:
-    optional: true
+  tslib@2.8.0: {}
 
   tsup@8.3.0(@swc/core@1.7.35(@swc/helpers@0.5.13))(postcss@8.4.47)(typescript@5.5.4):
     dependencies:
@@ -6437,6 +6531,11 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
+
+  usehooks-ts@3.1.0(react@18.3.1):
+    dependencies:
+      lodash.debounce: 4.0.8
+      react: 18.3.1
 
   vite-node@2.1.2(@types/node@22.7.5):
     dependencies:

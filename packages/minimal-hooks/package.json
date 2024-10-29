@@ -1,7 +1,7 @@
 {
   "name": "@minimals/hooks",
   "author": "Minimals",
-  "version": "1.0.5",
+  "version": "1.0.74",
   "description": "Shared hooks used by Mnimal UI and Zone UI.",
   "keywords": [
     "typescript",
@@ -10,17 +10,18 @@
     "minimals hooks"
   ],
   "license": "MIT",
+  "sideEffects": false,
   "type": "module",
+  "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
-  "types": "./src/index.ts",
   "files": [
     "dist"
   ],
   "typesVersions": {
     "*": {
       "*": [
-        "src/*",
-        "src/*/index"
+        "./dist/*",
+        "./dist/*/index"
       ]
     }
   },
@@ -35,7 +36,6 @@
       "default": "./dist/*/index.js"
     }
   },
-  "sideEffects": false,
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
@@ -46,11 +46,13 @@
     "lint:print": "npx eslint --print-config eslint.config.mjs > eslint-current-config.json",
     "clean": "rm -rf node_modules .turbo .next out dist build",
     "re:build": "pnpm clean && pnpm install && pnpm build",
-    "ts:print": "npx tsc --showConfig"
+    "tsc:print": "npx tsc --showConfig",
+    "deps:update": "node updateDeps.js",
+    "deps:reset": "node resetDeps.js"
   },
   "dependencies": {
-    "@minimals/utils": "latest",
-    "es-toolkit": "^1.24.0"
+    "es-toolkit": "^1.24.0",
+    "@minimals/utils": "latest"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.5.0",
@@ -64,7 +66,6 @@
     "glob": "^11.0.0",
     "internal-eslint-config": "workspace:*",
     "internal-ts-config": "workspace:*",
-    "@minimals/utils": "workspace:*",
     "jsdom": "^25.0.1",
     "react": "^18.3.1",
     "tsup": "^8.3.0",

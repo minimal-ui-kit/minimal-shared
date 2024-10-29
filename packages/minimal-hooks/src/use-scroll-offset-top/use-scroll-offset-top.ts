@@ -50,6 +50,8 @@ export function useScrollOffsetTop<T extends HTMLElement>(
   }, [defaultValue]);
 
   useEffect(() => {
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
 
     return () => {

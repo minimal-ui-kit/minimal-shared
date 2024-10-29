@@ -8,7 +8,7 @@
   "scripts": {
     "clean": "rm -rf node_modules .turbo .next out dist build",
     "lint:print": "npx eslint --print-config eslint.config.mjs > eslint-current-config.json",
-    "ts:print": "npx tsc --showConfig"
+    "tsc:print": "npx tsc --showConfig"
   },
   "devDependencies": {
     "@eslint/js": "^9.12.0",

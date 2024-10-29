@@ -4,6 +4,7 @@ export * from './use-popover';
 export * from './use-cookies';
 export * from './use-debounce';
 export * from './use-set-state';
+export * from './use-is-client';
 export * from './use-text-input';
 export * from './use-back-to-top';
 export * from './use-client-rect';

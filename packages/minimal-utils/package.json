@@ -1,7 +1,7 @@
 {
   "name": "@minimals/utils",
   "author": "Minimals",
-  "version": "1.0.5",
+  "version": "1.0.74",
   "description": "Shared utilities used by Mnimal UI and Zone UI.",
   "keywords": [
     "typescript",
@@ -10,17 +10,18 @@
     "minimals utils"
   ],
   "license": "MIT",
+  "sideEffects": false,
   "type": "module",
+  "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
-  "types": "./src/index.ts",
   "files": [
     "dist"
   ],
   "typesVersions": {
     "*": {
       "*": [
-        "src/*",
-        "src/*/index"
+        "./dist/*",
+        "./dist/*/index"
       ]
     }
   },
@@ -35,7 +36,6 @@
       "default": "./dist/*/index.js"
     }
   },
-  "sideEffects": false,
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
@@ -46,7 +46,7 @@
     "lint:print": "npx eslint --print-config eslint.config.mjs > eslint-current-config.json",
     "clean": "rm -rf node_modules .turbo .next out dist build",
     "re:build": "pnpm clean && pnpm install && pnpm build",
-    "ts:print": "npx tsc --showConfig"
+    "tsc:print": "npx tsc --showConfig"
   },
   "dependencies": {
     "es-toolkit": "^1.24.0"

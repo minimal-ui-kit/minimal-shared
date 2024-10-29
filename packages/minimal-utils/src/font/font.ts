@@ -32,10 +32,6 @@ export function setFont(fontName?: string) {
 export function remToPx(value: string): number {
   const remValue = parseFloat(value);
 
-  if (isNaN(remValue)) {
-    throw new Error(`Invalid rem value: ${value}`);
-  }
-
   return Math.round(remValue * 16);
 }
 

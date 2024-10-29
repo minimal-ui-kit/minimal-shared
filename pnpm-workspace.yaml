@@ -2,6 +2,7 @@ packages:
   # - 'apps/*'
   # - 'packages/**'
   - 'apps/next-ts'
+  - 'apps/next-ts-internal'
   - 'packages/internal/*'
   - 'packages/minimal-hooks'
   - 'packages/minimal-utils'

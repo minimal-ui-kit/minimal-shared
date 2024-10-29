@@ -1,5 +1,5 @@
 {
-  "name": "@minimals/shared",
+  "name": "@minimals/turborepo",
   "author": "Minimals",
   "version": "1.0.0",
   "description": "Shared packages for Minimal UI and Zone UI",

@@ -32,6 +32,7 @@ const customRules = {
     'react/jsx-key': 0,
     'react/display-name': 0,
     'react/no-children-prop': 0,
+    'react/jsx-boolean-value': 2,
     'react/self-closing-comp': 2,
     'react/react-in-jsx-scope': 0,
     'react/jsx-no-useless-fragment': [1, { allowExpressions: true }],
@@ -131,8 +132,8 @@ const customRules = {
           customGroups: {
             value: {
               [customGroups.mui]: '@mui/**',
-              [customGroups.minimals]: '@minimals/**',
-              [customGroups.private]: 'dev-ui/**',
+              [customGroups.minimals]: 'minimal-shared/**',
+              [customGroups.private]: 'internal-ui/**',
               [customGroups.auth]: 'src/auth/**',
               [customGroups.hooks]: 'src/hooks/**',
               [customGroups.utils]: 'src/utils/**',
@@ -210,6 +211,8 @@ export default [
       '**/tailwind.config.*',
       // craco
       '**/craco.config.*',
+      // eslint
+      '**/eslint.config.*',
     ],
   },
   {

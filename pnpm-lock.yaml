@@ -260,6 +260,61 @@ importers:
         specifier: ^2.1.2
         version: 2.1.2(@types/node@22.7.5)(jsdom@25.0.1)
 
+  packages/minimal-shared:
+    dependencies:
+      es-toolkit:
+        specifier: ^1.24.0
+        version: 1.25.2
+    devDependencies:
+      '@testing-library/jest-dom':
+        specifier: ^6.5.0
+        version: 6.5.0
+      '@testing-library/react':
+        specifier: ^16.0.1
+        version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.1)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/fs-extra':
+        specifier: ^11.0.4
+        version: 11.0.4
+      '@types/node':
+        specifier: ^22.7.5
+        version: 22.7.5
+      '@types/react':
+        specifier: 18.3.11
+        version: 18.3.11
+      chalk:
+        specifier: ^5.3.0
+        version: 5.3.0
+      fast-glob:
+        specifier: ^3.3.2
+        version: 3.3.2
+      fs-extra:
+        specifier: ^11.2.0
+        version: 11.2.0
+      glob:
+        specifier: ^11.0.0
+        version: 11.0.0
+      internal-eslint-config:
+        specifier: workspace:*
+        version: link:../internal/eslint-config
+      internal-ts-config:
+        specifier: workspace:*
+        version: link:../internal/ts-config
+      jsdom:
+        specifier: ^25.0.1
+        version: 25.0.1
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      tsup:
+        specifier: ^8.3.0
+        version: 8.3.0(@swc/core@1.7.35(@swc/helpers@0.5.13))(postcss@8.4.47)(typescript@5.5.4)
+      typescript:
+        specifier: ^5.5.4
+        version: 5.5.4
+      vitest:
+        specifier: ^2.1.2
+        version: 2.1.2(@types/node@22.7.5)(jsdom@25.0.1)
+
   packages/minimal-utils:
     dependencies:
       es-toolkit:
@@ -2676,9 +2731,6 @@ packages:
   p-try@2.2.0:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
     engines: {node: '>=6'}
-
-  package-json-from-dist@1.0.0:
-    resolution: {integrity: sha512-dATvCeZN/8wQsGywez1mzHtTlP22H8OEfPrVMLNr4/eGa+ijtLn/6M5f0dY8UKNrC2O9UCU6SSoG3qRKnt7STw==}
 
   package-json-from-dist@1.0.1:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
@@ -5409,7 +5461,7 @@ snapshots:
       jackspeak: 4.0.2
       minimatch: 10.0.1
       minipass: 7.1.2
-      package-json-from-dist: 1.0.0
+      package-json-from-dist: 1.0.1
       path-scurry: 2.0.0
 
   globals@11.12.0: {}
@@ -5935,8 +5987,6 @@ snapshots:
   p-map@2.1.0: {}
 
   p-try@2.2.0: {}
-
-  package-json-from-dist@1.0.0: {}
 
   package-json-from-dist@1.0.1: {}
 

@@ -49,8 +49,8 @@
     }
   },
   "scripts": {
-    "dev": "tsup --watch",
-    "build": "tsup",
+    "dev": "NODE_OPTIONS='--max-old-space-size=16384' tsup --watch",
+    "build": "NODE_OPTIONS='--max-old-space-size=16384' tsup",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",

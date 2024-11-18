@@ -1,7 +1,7 @@
 {
   "name": "minimal-shared",
   "author": "Minimals",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Shared hooks and utils used by Mnimal UI and Zone UI.",
   "keywords": [
     "typescript",
@@ -9,6 +9,10 @@
     "hooks",
     "utils"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minimal-ui-kit/minimal-shared"
+  },
   "license": "MIT",
   "sideEffects": false,
   "type": "module",
@@ -50,7 +54,7 @@
   },
   "scripts": {
     "dev": "NODE_OPTIONS='--max-old-space-size=16384' tsup --watch",
-    "build": "NODE_OPTIONS='--max-old-space-size=16384' tsup",
+    "build": "pnpm test && NODE_OPTIONS='--max-old-space-size=16384' tsup",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",

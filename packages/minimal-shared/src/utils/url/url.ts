@@ -26,7 +26,6 @@ export const hasParams = (url: string): boolean => {
  * const cleanPathname = removeLastSlash('/dashboard/calendar/');
  * console.log(cleanPathname); // '/dashboard/calendar'
  */
-
 export function removeLastSlash(pathname: string): string {
   /**
    * Remove last slash
@@ -42,6 +41,19 @@ export function removeLastSlash(pathname: string): string {
   }
 
   return pathname;
+}
+
+// ----------------------------------------------------------------------
+
+/**
+ * Checks if two URLs have the same path.
+ *
+ * @param {string} targetUrl - The target URL to compare.
+ * @param {string} pathname - The pathname to compare.
+ * @returns {boolean} - True if the paths are equal, false otherwise.
+ */
+export function isEqualPath(targetUrl: string, pathname: string): boolean {
+  return removeLastSlash(targetUrl) === removeLastSlash(pathname);
 }
 
 // ----------------------------------------------------------------------

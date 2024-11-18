@@ -1,5 +1,5 @@
 import { highlightText } from '../../../tests/highlight-text';
-import { hasParams, removeParams, isExternalLink, removeLastSlash } from './url';
+import { hasParams, isEqualPath, removeParams, isExternalLink, removeLastSlash } from './url';
 
 // ----------------------------------------------------------------------
 
@@ -28,6 +28,16 @@ describe('removeLastSlash()', () => {
 
   it(`3. Should not remove the slash if pathname is just "/"`, () => {
     expect(removeLastSlash('/')).toBe('/');
+  });
+});
+
+describe('isEqualPath()', () => {
+  it('should return true if both paths are equal after removing trailing slashes', () => {
+    expect(isEqualPath('/dashboard/calendar/', '/dashboard/calendar/')).toBe(true);
+  });
+
+  it('should return true if both paths are equal after removing trailing slashes', () => {
+    expect(isEqualPath('/dashboard/calendar', '/dashboard/calendar/')).toBe(true);
   });
 });
 

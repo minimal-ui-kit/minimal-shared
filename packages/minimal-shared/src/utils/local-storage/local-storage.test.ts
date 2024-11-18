@@ -1,133 +1,115 @@
-import { highlightText } from '../../../tests/highlight-text';
-import {
-  getStorage,
-  setStorage,
-  removeStorage,
-  localStorageGetItem,
-  localStorageAvailable,
-} from './local-storage';
+import { mockLocalStorage } from '../../../tests/mocks';
+import { getStorage, setStorage, removeStorage, localStorageAvailable } from './local-storage';
 
 // ----------------------------------------------------------------------
 
-describe('localStorageAvailable()', () => {
-  it(`1. Should return ${highlightText.value('true')} if local storage is available`, () => {
-    expect(localStorageAvailable()).toBe(true);
+describe('Local Storage Utils', () => {
+  beforeEach(() => {
+    localStorage.clear();
+    vi.clearAllMocks();
   });
 
-  it(`2. Should return ${highlightText.value('false')} if local storage is not available`, () => {
-    const originalLocalStorage = window.localStorage;
+  describe('localStorageAvailable()', () => {
+    it(`1. Should return true if local storage is available`, () => {
+      expect(localStorageAvailable()).toBe(true);
+    });
 
-    Object.defineProperty(window, 'localStorage', {
-      value: {
+    it(`2. Should return false if local storage is not available`, () => {
+      const restore = mockLocalStorage({
         setItem: () => {
           throw new Error('Local storage is not available');
         },
-        removeItem: () => {},
-      },
-      configurable: true,
+        removeItem: vi.fn(),
+      });
+      expect(localStorageAvailable()).toBe(false);
+      restore();
+    });
+  });
+
+  describe('getStorage()', () => {
+    it(`1. Should return parsed object value`, () => {
+      const testData = { name: 'John', age: 30 };
+      localStorage.setItem('user', JSON.stringify(testData));
+      expect(getStorage('user')).toEqual(testData);
     });
 
-    expect(localStorageAvailable()).toBe(false);
+    it(`2. Should return primitive values`, () => {
+      localStorage.setItem('string', '"hello"');
+      localStorage.setItem('number', '123');
+      localStorage.setItem('boolean', 'true');
+      localStorage.setItem('undefined', 'undefined');
+      localStorage.setItem('null', 'null');
 
-    Object.defineProperty(window, 'localStorage', { value: originalLocalStorage });
-  });
-});
-
-describe('localStorageGetItem()', () => {
-  it(`1. Should return the value from local storage`, () => {
-    window.localStorage.setItem('theme', 'dark');
-    expect(localStorageGetItem('theme', 'light')).toBe('dark');
-  });
-
-  it(`2. Should return the default value if the item is not found`, () => {
-    expect(localStorageGetItem('nonexistent', 'default')).toBe('default');
-  });
-
-  it(`3. Should return the default value if local storage is not available`, () => {
-    const originalLocalStorage = window.localStorage;
-    Object.defineProperty(window, 'localStorage', {
-      value: {
-        getItem: () => {
-          throw new Error('Local storage is not available');
-        },
-      },
-      configurable: true,
+      expect(getStorage('string')).toBe('hello');
+      expect(getStorage('number')).toBe(123);
+      expect(getStorage('boolean')).toBe(true);
+      expect(getStorage('undefined')).toBeUndefined();
+      expect(getStorage('null')).toBeNull();
     });
 
-    expect(localStorageGetItem('theme', 'light')).toBe('light');
+    it(`3. Should return default value if key not found`, () => {
+      const defaultValue = { default: true };
+      expect(getStorage('nonexistent', defaultValue)).toEqual(defaultValue);
+    });
 
-    Object.defineProperty(window, 'localStorage', { value: originalLocalStorage });
-  });
-});
+    it(`4. Should handle invalid JSON gracefully`, () => {
+      localStorage.setItem('invalid', '{invalid json}');
+      expect(getStorage('invalid')).toBe('{invalid json}');
+    });
 
-describe('getStorage()', () => {
-  it(`1. Should return the parsed value from local storage`, () => {
-    window.localStorage.setItem('user', JSON.stringify({ name: 'John', age: 30 }));
-    expect(getStorage('user')).toEqual({ name: 'John', age: 30 });
-  });
-
-  it(`2. Should return the raw value if parsing fails`, () => {
-    window.localStorage.setItem('user', 'John');
-    expect(getStorage('user')).toBe('John');
+    it(`5. Should return null if the item is not found and no default value is provided`, () => {
+      expect(getStorage('nonexistent')).toBeNull();
+    });
   });
 
-  it(`3. Should return null if the item is not found`, () => {
-    expect(getStorage('nonexistent')).toBeNull();
-  });
-});
+  describe('setStorage()', () => {
+    it(`1. Should set the value in local storage`, () => {
+      setStorage('user', { name: 'John', age: 30 });
+      expect(window.localStorage.getItem('user')).toBe(JSON.stringify({ name: 'John', age: 30 }));
+    });
 
-describe('setStorage()', () => {
-  it(`1. Should set the value in local storage`, () => {
-    setStorage('user', { name: 'John', age: 30 });
-    expect(window.localStorage.getItem('user')).toBe(JSON.stringify({ name: 'John', age: 30 }));
-  });
-
-  it(`2. Should log an error if setting the value fails`, () => {
-    const consoleErrorSpy = vi.spyOn(console, 'error');
-    const originalLocalStorage = window.localStorage;
-    Object.defineProperty(window, 'localStorage', {
-      value: {
+    it(`2. Should log an error if setting the value fails`, () => {
+      const consoleErrorSpy = vi.spyOn(console, 'error');
+      const restore = mockLocalStorage({
         setItem: () => {
-          throw new Error('Local storage is not available');
+          throw new Error('[setStorage]: Local storage is not available');
         },
-      },
-      configurable: true,
+      });
+
+      setStorage('user', { name: 'John', age: 30 });
+      expect(consoleErrorSpy).toHaveBeenCalledWith(
+        'Error while setting storage:',
+        expect.any(Error)
+      );
+
+      restore();
+      consoleErrorSpy.mockRestore();
+    });
+  });
+
+  describe('removeStorage()', () => {
+    it(`1. Should remove the item from local storage`, () => {
+      window.localStorage.setItem('user', JSON.stringify({ name: 'John', age: 30 }));
+      removeStorage('user');
+      expect(window.localStorage.getItem('user')).toBeNull();
     });
 
-    setStorage('user', { name: 'John', age: 30 });
-    expect(consoleErrorSpy).toHaveBeenCalledWith('Error while setting storage:', expect.any(Error));
-
-    Object.defineProperty(window, 'localStorage', { value: originalLocalStorage });
-    consoleErrorSpy.mockRestore();
-  });
-});
-
-describe('removeStorage()', () => {
-  it(`1. Should remove the item from local storage`, () => {
-    window.localStorage.setItem('user', JSON.stringify({ name: 'John', age: 30 }));
-    removeStorage('user');
-    expect(window.localStorage.getItem('user')).toBeNull();
-  });
-
-  it(`2. Should log an error if removing the item fails`, () => {
-    const consoleErrorSpy = vi.spyOn(console, 'error');
-    const originalLocalStorage = window.localStorage;
-    Object.defineProperty(window, 'localStorage', {
-      value: {
+    it(`2. Should log an error if removing the item fails`, () => {
+      const consoleErrorSpy = vi.spyOn(console, 'error');
+      const restore = mockLocalStorage({
         removeItem: () => {
-          throw new Error('Local storage is not available');
+          throw new Error('[removeStorage]: Local storage is not available');
         },
-      },
-      configurable: true,
+      });
+
+      removeStorage('user');
+      expect(consoleErrorSpy).toHaveBeenCalledWith(
+        'Error while removing from storage:',
+        expect.any(Error)
+      );
+
+      restore();
+      consoleErrorSpy.mockRestore();
     });
-
-    removeStorage('user');
-    expect(consoleErrorSpy).toHaveBeenCalledWith(
-      'Error while removing from storage:',
-      expect.any(Error)
-    );
-
-    Object.defineProperty(window, 'localStorage', { value: originalLocalStorage });
-    consoleErrorSpy.mockRestore();
   });
 });

@@ -8,18 +8,28 @@
  * const user = getStorage('user');
  * console.log(user); // { name: 'John', age: 30 }
  */
+export function getStorage<T>(key: string, defaultValue?: T): T | null | undefined {
+  if (!localStorageAvailable()) {
+    return defaultValue ?? null;
+  }
 
-export function getStorage(key: string): any | null {
-  const storedValue = localStorageGetItem(key);
+  const storedValue = localStorage.getItem(key);
+
+  if (storedValue === 'undefined') {
+    return undefined as T;
+  }
 
   if (storedValue) {
     try {
-      return JSON.parse(storedValue);
+      // value as object
+      return JSON.parse(storedValue) as T;
     } catch {
-      return storedValue;
+      // value as string
+      return (storedValue as unknown as T) ?? defaultValue ?? null;
     }
   }
-  return null;
+
+  return defaultValue ?? null;
 }
 
 // ----------------------------------------------------------------------
@@ -84,28 +94,4 @@ export function localStorageAvailable(): boolean {
   } catch {
     return false;
   }
-}
-
-// ----------------------------------------------------------------------
-
-/**
- * Retrieves a value from local storage by key, with an optional default value.
- *
- * @param {string} key - The key of the item to retrieve.
- * @param {string} [defaultValue=''] - The default value to return if the item is not found.
- * @returns {string | undefined} - The value of the item, or the default value if not found.
- *
- * @example
- * const value = localStorageGetItem('theme', 'light');
- * console.log(value); // 'dark' or 'light'
- */
-
-export function localStorageGetItem(key: string, defaultValue: string = ''): string | undefined {
-  if (!localStorageAvailable()) {
-    return defaultValue;
-  }
-
-  const value = localStorage.getItem(key);
-
-  return value ?? defaultValue;
 }

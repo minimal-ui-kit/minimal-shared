@@ -9,18 +9,18 @@ import { setCookie, getCookie, removeCookie } from '../../utils/cookies';
  *
  * @param {string} key - The key for the cookie.
  * @param {T} initialState - The initial state value.
- * @param {T} defaultValues - The default values to reset to.
  * @param {Object} [options] - Optional settings.
+ * @param {boolean} [options.initializeWithValue=true] - Whether to initialize the cookie with the initial state value.
  * @param {number} [options.daysUntilExpiration] - Number of days until the cookie expires.
  *
  * @returns {UseCookiesReturn<T>} - An object containing:
  * - `state`: The current state.
- * - `resetState`: A function to reset the state to default values.
- * - `setState`: A function to update the state.
- * - `setField`: A function to update a specific field in the state.
+ * - `resetState`: A function to reset the state to the initial value and remove the cookie.
+ * - `setState`: A function to update the state and save it to the cookie.
+ * - `setField`: A function to update a specific field in the state and save it to the cookie.
  *
  * @example
- * const { state, setState, setField, resetState } = useCookies('user', { name: '', age: 0 }, { name: '', age: 0 });
+ * const { state, setState, setField, resetState } = useCookies('user', { name: '', age: 0 });
  *
  * return (
  *   <div>
@@ -32,6 +32,11 @@ import { setCookie, getCookie, removeCookie } from '../../utils/cookies';
  * );
  */
 
+export type UseCookiesOptions = {
+  initializeWithValue?: boolean;
+  daysUntilExpiration?: number;
+};
+
 export type UseCookiesReturn<T> = {
   state: T;
   resetState: (defaultState?: T) => void;
@@ -42,78 +47,70 @@ export type UseCookiesReturn<T> = {
 export function useCookies<T>(
   key: string,
   initialState?: T,
-  options?: {
-    initOnLoad?: boolean;
-    daysUntilExpiration?: number;
-  }
+  options?: UseCookiesOptions
 ): UseCookiesReturn<T> {
-  const isValuePresent = !!getCookie(key);
-  const storedValue: T = getCookie(key) ?? initialState;
+  const { initializeWithValue = true, daysUntilExpiration } = options ?? {};
+  const isObjectState = initialState && typeof initialState === 'object';
 
-  const [state, set] = useState(storedValue);
-
-  const { initOnLoad = true, daysUntilExpiration } = options ?? {};
-  const hasMultipleValues = state && typeof state === 'object';
+  const [state, setState] = useState<T | undefined>(initialState);
 
   useEffect(() => {
-    if (storedValue) {
-      if (hasMultipleValues) {
-        set((prevValue) => ({ ...prevValue, ...storedValue }));
-      } else {
-        set(storedValue);
-      }
+    const storedValue: T = getCookie(key);
 
-      if (!isValuePresent && initOnLoad) {
-        setCookie<T>(key, storedValue, daysUntilExpiration);
+    if (storedValue) {
+      if (isObjectState) {
+        setState((prevValue) => ({ ...prevValue, ...storedValue }));
+      } else {
+        setState(storedValue);
       }
+    } else if (initialState && initializeWithValue) {
+      setCookie<T>(key, initialState as T, daysUntilExpiration);
     }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const setState = useCallback(
-    (updateState: T | Partial<T>) => {
-      if (hasMultipleValues) {
-        set((prevValue) => {
-          const updatedState = { ...prevValue, ...updateState } as T;
-
+  const updateState = useCallback(
+    (newState: T | Partial<T>) => {
+      if (isObjectState) {
+        setState((prevValue) => {
+          const updatedState = { ...prevValue, ...newState } as T;
           setCookie<T>(key, updatedState, daysUntilExpiration);
           return updatedState;
         });
       } else {
-        setCookie<T>(key, updateState as T, daysUntilExpiration);
-        set(updateState as T);
+        setCookie<T>(key, newState as T, daysUntilExpiration);
+        setState(newState as T);
       }
     },
-    [hasMultipleValues, key, daysUntilExpiration]
+    [isObjectState, key, daysUntilExpiration]
   );
 
-  const setField = useCallback(
-    (name: keyof T, updateValue: T[keyof T]) => {
-      if (hasMultipleValues) {
-        setState({ [name]: updateValue } as Partial<T>);
+  const updateField = useCallback(
+    (fieldName: keyof T, updateValue: T[keyof T]) => {
+      if (isObjectState) {
+        updateState({ [fieldName]: updateValue } as Partial<T>);
       }
     },
-    [hasMultipleValues, setState]
+    [isObjectState, updateState]
   );
 
   const resetState = useCallback(
     (defaultState?: T) => {
-      if (defaultState) {
-        set(defaultState);
-      }
+      setState(defaultState ?? initialState);
       removeCookie(key);
     },
-    [key]
+    [initialState, key]
   );
 
   const memoizedValue = useMemo(
     () => ({
-      state,
-      setState,
-      setField,
+      state: state as T,
+      setState: updateState,
+      setField: updateField,
       resetState,
     }),
-    [resetState, setField, setState, state]
+    [resetState, updateField, updateState, state]
   );
 
   return memoizedValue;

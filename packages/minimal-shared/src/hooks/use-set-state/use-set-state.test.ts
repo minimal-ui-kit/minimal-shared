@@ -57,7 +57,7 @@ describe('useSetState()', () => {
     expect(result.current.state).toEqual({ name: 'John', age: 30 });
 
     act(() => {
-      result.current.onReset();
+      result.current.resetState();
     });
 
     expect(result.current.state).toEqual(defaultState);

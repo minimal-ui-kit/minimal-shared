@@ -10,26 +10,30 @@ import { setStorage, getStorage, removeStorage } from '../../utils/local-storage
  * @param {string} key - The key for the local storage.
  * @param {T} initialState - The initial state value.
  * @param {Object} [options] - Optional settings.
- * @param {boolean} [options.initOnLoad=false] - Whether to initialize the local storage on load.
+ * @param {boolean} [options.initializeWithValue=true] - Whether to initialize the local storage with the initial state value.
  *
  * @returns {UseLocalStorageReturn<T>} - An object containing:
  * - `state`: The current state.
  * - `resetState`: A function to reset the state to the initial value and remove it from local storage.
- * - `updateState`: A function to update the state and save it to local storage.
- * - `updateField`: A function to update a specific field in the state and save it to local storage.
+ * - `setState`: A function to update the state and save it to local storage.
+ * - `setField`: A function to update a specific field in the state and save it to local storage.
  *
  * @example
- * const { state, resetState, updateState, updateField } = useLocalStorage('settings', initialState);
+ * const { state, resetState, setState, setField } = useLocalStorage('settings', initialState);
  *
  * return (
  *   <div>
  *     <p>State: {JSON.stringify(state)}</p>
- *     <button onClick={() => updateState({name: 'John', age: 20})}>Set Name</button>
- *     <button onClick={() => updateField('name', 'John')}>Set Name</button>
+ *     <button onClick={() => setState({name: 'John', age: 20})}>Set State</button>
+ *     <button onClick={() => setField('name', 'John')}>Set Name</button>
  *     <button onClick={resetState}>Reset</button>
  *   </div>
  * );
  */
+
+export type UseLocalStorageOptions = {
+  initializeWithValue?: boolean;
+};
 
 export type UseLocalStorageReturn<T> = {
   state: T;
@@ -41,77 +45,70 @@ export type UseLocalStorageReturn<T> = {
 export function useLocalStorage<T>(
   key: string,
   initialState?: T,
-  options?: {
-    initOnLoad?: boolean;
-  }
+  options?: UseLocalStorageOptions
 ): UseLocalStorageReturn<T> {
-  const isValuePresent = !!getStorage(key);
-  const storedValue: T = getStorage(key) ?? initialState;
+  const { initializeWithValue = true } = options ?? {};
+  const isObjectState = initialState && typeof initialState === 'object';
 
-  const [state, set] = useState<T>(storedValue);
-
-  const { initOnLoad = true } = options ?? {};
-  const hasMultipleValues = state && typeof state === 'object';
+  const [state, setState] = useState<T | undefined>(initialState);
 
   useEffect(() => {
-    if (storedValue) {
-      if (hasMultipleValues) {
-        set((prevValue) => ({ ...prevValue, ...storedValue }));
-      } else {
-        set(storedValue);
-      }
+    const storedValue = getStorage<T>(key);
 
-      if (!isValuePresent && initOnLoad) {
-        setStorage<T>(key, storedValue);
+    if (storedValue) {
+      if (isObjectState) {
+        setState((prevState) => ({ ...prevState, ...storedValue }));
+      } else {
+        setState(storedValue);
       }
+    } else if (initialState && initializeWithValue) {
+      setStorage(key, initialState);
     }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const setState = useCallback(
+  const updateState = useCallback(
     (newState: T | Partial<T>) => {
-      if (hasMultipleValues) {
-        set((prevValue) => {
+      if (isObjectState) {
+        setState((prevValue) => {
           const updatedState = { ...prevValue, ...newState } as T;
-
           setStorage<T>(key, updatedState);
           return updatedState;
         });
       } else {
         setStorage<T>(key, newState as T);
-        set(newState as T);
+        setState(newState as T);
       }
     },
-    [key, hasMultipleValues]
+    [key, isObjectState]
   );
 
-  const setField = useCallback(
-    (name: keyof T, updateValue: T[keyof T]) => {
-      if (hasMultipleValues) {
-        setState({ [name]: updateValue } as Partial<T>);
+  const updateField = useCallback(
+    (fieldName: keyof T, updateValue: T[keyof T]) => {
+      if (isObjectState) {
+        updateState({ [fieldName]: updateValue } as Partial<T>);
       }
     },
-    [hasMultipleValues, setState]
+    [isObjectState, updateState]
   );
 
   const resetState = useCallback(
     (defaultState?: T) => {
-      if (defaultState) {
-        set(defaultState);
-      }
+      setState(defaultState ?? initialState);
       removeStorage(key);
     },
-    [key]
+    [initialState, key]
   );
 
   const memoizedValue = useMemo(
     () => ({
-      state,
-      setState,
-      setField,
+      state: state as T,
+      setState: updateState,
+      setField: updateField,
       resetState,
     }),
-    [resetState, setField, setState, state]
+    [resetState, updateField, updateState, state]
   );
 
   return memoizedValue;

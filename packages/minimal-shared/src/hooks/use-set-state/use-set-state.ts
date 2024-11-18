@@ -9,52 +9,55 @@ import { useState, useCallback } from 'react';
  *
  * @returns {UseSetStateReturn<T>} - An object containing:
  * - `state`: The current state.
- * - `onReset`: A function to reset the state to the initial value.
+ * - `resetState`: A function to reset the state to the initial value.
  * - `setState`: A function to update the state.
  * - `setField`: A function to update a specific field in the state.
  *
  * @example
- * const { state, setState, setField, onReset } = useSetState({ name: '', age: 0 });
+ * const { state, setState, setField, resetState } = useSetState({ name: '', age: 0 });
  *
  * return (
  *   <div>
  *     <p>Name: {state.name}</p>
  *     <p>Age: {state.age}</p>
  *     <button onClick={() => setField('name', 'John')}>Set Name</button>
- *     <button onClick={onReset}>Reset</button>
+ *     <button onClick={resetState}>Reset</button>
  *   </div>
  * );
  */
 
 export type UseSetStateReturn<T> = {
   state: T;
-  onReset: () => void;
+  resetState: (defaultState?: T) => void;
   setState: (updateState: T | Partial<T>) => void;
   setField: (name: keyof T, updateValue: T[keyof T]) => void;
 };
 
-export function useSetState<T>(initialState: T): UseSetStateReturn<T> {
-  const [state, set] = useState(initialState);
+export function useSetState<T>(initialState?: T): UseSetStateReturn<T> {
+  const [state, setState] = useState<T | undefined>(initialState);
 
-  const setState = useCallback((updateState: T | Partial<T>) => {
-    set((prevValue) => ({ ...prevValue, ...updateState }));
+  const updateState = useCallback((newState: T | Partial<T>) => {
+    setState((prevValue) => ({ ...prevValue, ...newState }) as T);
   }, []);
 
-  const setField = useCallback(
-    (name: keyof T, updateValue: T[keyof T]) => {
-      setState({ [name]: updateValue } as Partial<T>);
+  const updateField = useCallback(
+    (fieldName: keyof T, updateValue: T[keyof T]) => {
+      updateState({ [fieldName]: updateValue } as Partial<T>);
     },
-    [setState]
+    [updateState]
   );
 
-  const onReset = useCallback(() => {
-    set(initialState);
-  }, [initialState]);
+  const resetState = useCallback(
+    (defaultState?: T) => {
+      setState(defaultState ?? initialState);
+    },
+    [initialState]
+  );
 
   return {
-    state,
-    setState,
-    setField,
-    onReset,
+    state: state as T,
+    setState: updateState,
+    setField: updateField,
+    resetState,
   };
 }

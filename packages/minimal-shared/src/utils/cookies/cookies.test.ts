@@ -29,14 +29,14 @@ afterEach(() => {
 });
 
 describe('Cookie Utility Functions', () => {
-  it('should set a cookie', () => {
-    setCookie('user', { name: 'John', age: 30 }, 7);
+  it('1. Should set a cookie', () => {
+    setCookie('user', { name: 'John', age: 30 }, { daysUntilExpiration: 7 });
     const storedCookie = cookieStore['user'];
 
     expect(storedCookie).toBe(encodeURIComponent(JSON.stringify({ name: 'John', age: 30 })));
   });
 
-  it('should retrieve a cookie', () => {
+  it('2. Should retrieve a cookie', () => {
     // Manually set a cookie for testing retrieval
     cookieStore['user'] = encodeURIComponent(JSON.stringify({ name: 'John', age: 30 }));
 
@@ -44,12 +44,12 @@ describe('Cookie Utility Functions', () => {
     expect(user).toEqual({ name: 'John', age: 30 });
   });
 
-  it('should return null if the cookie does not exist', () => {
+  it('3. Should return null if the cookie does not exist', () => {
     const nonExistent = getCookie('nonExistent');
     expect(nonExistent).toBe(null);
   });
 
-  it('should handle non-JSON cookie value', () => {
+  it('4. Should handle non-JSON cookie value', () => {
     // Simulate a non-JSON string as the cookie value
     cookieStore['sessionId'] = encodeURIComponent('abc123');
 
@@ -57,7 +57,7 @@ describe('Cookie Utility Functions', () => {
     expect(sessionId).toBe('abc123');
   });
 
-  it('should remove a cookie', () => {
+  it('5. Should remove a cookie', () => {
     // Simulate setting a cookie to remove
     cookieStore['user'] = encodeURIComponent(JSON.stringify({ name: 'John', age: 30 }));
 

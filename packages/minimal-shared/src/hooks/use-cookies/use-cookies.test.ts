@@ -43,7 +43,7 @@ describe('useCookies()', () => {
     act(() => result.current.setState(updatedState));
 
     expect(result.current.state).toEqual(updatedState);
-    expect(setCookie).toHaveBeenCalledWith(key, updatedState, undefined);
+    expect(setCookie).toHaveBeenCalledWith(key, updatedState, {});
   });
 
   it(`4. Should update specific field and set cookie when setField is called`, () => {
@@ -53,7 +53,7 @@ describe('useCookies()', () => {
     act(() => result.current.setField('name', 'Jane'));
 
     expect(result.current.state).toEqual({ ...initialState, name: 'Jane' });
-    expect(setCookie).toHaveBeenCalledWith(key, { ...initialState, name: 'Jane' }, undefined);
+    expect(setCookie).toHaveBeenCalledWith(key, { ...initialState, name: 'Jane' }, {});
   });
 
   it(`5. Should remove cookie when resetState is called`, () => {

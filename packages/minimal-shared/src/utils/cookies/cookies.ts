@@ -1,64 +1,96 @@
+export type CookieOptions = {
+  secure?: boolean;
+  daysUntilExpiration?: number;
+  sameSite?: 'Strict' | 'Lax' | 'None';
+  domain?: string;
+  path?: string;
+};
+
 /**
  * Retrieves a cookie value by key.
  *
  * @param {string} key - The key of the cookie to retrieve.
- * @returns {any | null} - The parsed value of the cookie, or null if not found or an error occurs.
+ * @returns {T | null} - The parsed value of the cookie, or null if not found or an error occurs.
  *
  * @example
- * const user = getCookie('user');
+ * const user = getCookie<{ name: string, age: number }>('user');
  * console.log(user); // { name: 'John', age: 30 }
  */
-
-export function getCookie(key: string): any | null {
-  try {
-    const keyName = `${key}=`;
-    const cDecoded = decodeURIComponent(document.cookie);
-    const cArr = cDecoded.split('; ');
-
-    for (const val of cArr) {
-      if (val.startsWith(keyName)) {
-        const cookieValue = val.substring(keyName.length);
-        try {
-          return JSON.parse(cookieValue);
-        } catch {
-          return cookieValue;
-        }
-      }
-    }
-  } catch {
+export function getCookie<T>(key: string): T | null {
+  if (!key || typeof key !== 'string') {
+    console.warn('Invalid cookie key provided');
     return null;
   }
 
-  return null;
+  try {
+    const keyName = `${key}=`;
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookie.split('; ');
+
+    const matchedCookie = cookieArray.find((cookie) => cookie.startsWith(keyName));
+    if (!matchedCookie) return null;
+
+    const cookieValue = matchedCookie.substring(keyName.length);
+
+    try {
+      return JSON.parse(cookieValue) as T;
+    } catch {
+      return cookieValue as T;
+    }
+  } catch (error) {
+    console.error('Error retrieving cookie:', error);
+    return null;
+  }
 }
 
 // ----------------------------------------------------------------------
 
 /**
- * Sets a cookie with a specified key, value, and expiration time.
+ * Sets a cookie with a specified key, value, and options.
  *
  * @template T
  * @param {string} key - The key of the cookie to set.
  * @param {T} value - The value of the cookie to set.
- * @param {number} [daysUntilExpiration=0] - The number of days until the cookie expires. Defaults to session cookie if not set.
+ * @param {CookieOptions} [options] - The options for the cookie.
  *
  * @example
- * setCookie('user', { name: 'John', age: 30 }, 7);
+ * setCookie('user', { name: 'John', age: 30 }, { daysUntilExpiration: 7, sameSite: 'Lax', secure: true });
  */
+export function setCookie<T>(key: string, value: T, options?: CookieOptions): void {
+  if (!key || typeof key !== 'string') {
+    console.error('Invalid cookie key provided');
+    return;
+  }
 
-export function setCookie<T>(key: string, value: T, daysUntilExpiration: number = 0): void {
+  const {
+    daysUntilExpiration = 0,
+    sameSite = 'Strict',
+    secure = false,
+    path = '/',
+    domain,
+  } = options ?? {};
+
   try {
-    const serializedValue = encodeURIComponent(JSON.stringify(value));
-    let cookieOptions = `${key}=${serializedValue}; path=/`;
+    const serializedValue = encodeURIComponent(
+      typeof value === 'string' ? value : JSON.stringify(value)
+    );
+
+    const cookieParts = [
+      `${key}=${serializedValue}`,
+      `path=${path}`,
+      sameSite && `SameSite=${sameSite}`,
+      secure && 'Secure',
+      domain && `domain=${domain}`,
+    ];
 
     if (daysUntilExpiration > 0) {
       const expirationDate = new Date(Date.now() + daysUntilExpiration * 24 * 60 * 60 * 1000);
-      cookieOptions += `; expires=${expirationDate.toUTCString()}`;
+      cookieParts.push(`expires=${expirationDate.toUTCString()}`);
     }
 
-    document.cookie = cookieOptions;
+    document.cookie = cookieParts.filter(Boolean).join('; ');
   } catch (error) {
-    console.error('Error while setting cookie:', error);
+    console.error('Error setting cookie:', error);
   }
 }
 
@@ -68,15 +100,30 @@ export function setCookie<T>(key: string, value: T, daysUntilExpiration: number 
  * Removes a cookie by key.
  *
  * @param {string} key - The key of the cookie to remove.
+ * @param {Pick<CookieOptions, 'path' | 'domain'>} [options] - The options for the cookie removal.
  *
  * @example
  * removeCookie('user');
  */
+export function removeCookie(key: string, options?: Pick<CookieOptions, 'path' | 'domain'>): void {
+  if (!key || typeof key !== 'string') {
+    console.error('Invalid cookie key provided');
+    return;
+  }
 
-export function removeCookie(key: string): void {
+  const { path = '/', domain } = options ?? {};
+
   try {
-    document.cookie = `${key}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+    const cookieParts = [
+      `${key}=`,
+      'expires=Thu, 01 Jan 1970 00:00:00 GMT',
+      `path=${path}`,
+      domain && `domain=${domain}`,
+      'Secure',
+    ];
+
+    document.cookie = cookieParts.filter(Boolean).join('; ');
   } catch (error) {
-    console.error('Error while removing cookie:', error);
+    console.error('Error removing cookie:', error);
   }
 }

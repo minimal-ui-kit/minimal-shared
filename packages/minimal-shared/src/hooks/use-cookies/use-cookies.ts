@@ -2,16 +2,17 @@ import { useMemo, useState, useEffect, useCallback } from 'react';
 
 import { setCookie, getCookie, removeCookie } from '../../utils/cookies';
 
+import type { CookieOptions } from '../../utils/cookies';
+
 // ----------------------------------------------------------------------
 
 /**
  * Custom hook to manage state with cookies.
  *
+ * @template T
  * @param {string} key - The key for the cookie.
  * @param {T} initialState - The initial state value.
- * @param {Object} [options] - Optional settings.
- * @param {boolean} [options.initializeWithValue=true] - Whether to initialize the cookie with the initial state value.
- * @param {number} [options.daysUntilExpiration] - Number of days until the cookie expires.
+ * @param {UseCookiesOptions} [options] - Optional settings.
  *
  * @returns {UseCookiesReturn<T>} - An object containing:
  * - `state`: The current state.
@@ -31,10 +32,8 @@ import { setCookie, getCookie, removeCookie } from '../../utils/cookies';
  *   </div>
  * );
  */
-
-export type UseCookiesOptions = {
+export type UseCookiesOptions = CookieOptions & {
   initializeWithValue?: boolean;
-  daysUntilExpiration?: number;
 };
 
 export type UseCookiesReturn<T> = {
@@ -49,13 +48,13 @@ export function useCookies<T>(
   initialState?: T,
   options?: UseCookiesOptions
 ): UseCookiesReturn<T> {
-  const { initializeWithValue = true, daysUntilExpiration } = options ?? {};
+  const { initializeWithValue = true, ...cookieOptions } = options ?? {};
   const isObjectState = initialState && typeof initialState === 'object';
 
   const [state, setState] = useState<T | undefined>(initialState);
 
   useEffect(() => {
-    const storedValue: T = getCookie(key);
+    const storedValue = getCookie<T>(key);
 
     if (storedValue) {
       if (isObjectState) {
@@ -64,7 +63,7 @@ export function useCookies<T>(
         setState(storedValue);
       }
     } else if (initialState && initializeWithValue) {
-      setCookie<T>(key, initialState as T, daysUntilExpiration);
+      setCookie<T>(key, initialState as T, cookieOptions);
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -75,15 +74,15 @@ export function useCookies<T>(
       if (isObjectState) {
         setState((prevValue) => {
           const updatedState = { ...prevValue, ...newState } as T;
-          setCookie<T>(key, updatedState, daysUntilExpiration);
+          setCookie<T>(key, updatedState, cookieOptions);
           return updatedState;
         });
       } else {
-        setCookie<T>(key, newState as T, daysUntilExpiration);
+        setCookie<T>(key, newState as T, cookieOptions);
         setState(newState as T);
       }
     },
-    [isObjectState, key, daysUntilExpiration]
+    [cookieOptions, isObjectState, key]
   );
 
   const updateField = useCallback(

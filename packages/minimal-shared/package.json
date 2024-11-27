@@ -1,7 +1,7 @@
 {
   "name": "minimal-shared",
   "author": "Minimals",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Shared hooks and utils used by Mnimal UI and Zone UI.",
   "keywords": [
     "typescript",
@@ -65,13 +65,13 @@
     "tsc:print": "npx tsc --showConfig"
   },
   "dependencies": {
-    "es-toolkit": "^1.26.1"
+    "es-toolkit": "^1.27.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^22.8.6",
+    "@types/node": "^22.10.0",
     "@types/react": "18.3.12",
     "chalk": "^5.3.0",
     "fast-glob": "^3.3.2",
@@ -82,10 +82,10 @@
     "jsdom": "^25.0.1",
     "react": "^18.3.1",
     "tsup": "^8.3.5",
-    "typescript": "^5.5.4",
-    "vitest": "^2.1.4"
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.6"
   },
   "peerDependencies": {
-    "react": "^17 || ^18"
+    "react": "^18"
   }
 }

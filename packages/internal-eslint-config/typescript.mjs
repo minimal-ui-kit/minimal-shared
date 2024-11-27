@@ -58,7 +58,7 @@ const importRules = () => ({
   'import/newline-after-import': 2,
   'import/no-named-as-default-member': 0,
   'import/no-cycle': [
-    2,
+    0, // disabled if slow
     { maxDepth: '∞', ignoreExternal: false, allowUnsafeDynamicCyclicDependency: false },
   ],
 });
@@ -111,7 +111,7 @@ const sortImportsRules = () => {
         environment: 'node',
         maxLineLength: undefined,
         newlinesBetween: 'always',
-        internalPattern: ['src/**'],
+        internalPattern: ['^src/.+'],
         groups: [
           'style',
           'side-effect',
@@ -133,14 +133,14 @@ const sortImportsRules = () => {
         ],
         customGroups: {
           value: {
-            [customGroups.mui]: '@mui/**',
-            [customGroups.auth]: 'src/auth/**',
-            [customGroups.hooks]: 'src/hooks/**',
-            [customGroups.utils]: 'src/utils/**',
-            [customGroups.types]: 'src/types/**',
-            [customGroups.routes]: 'src/routes/**',
-            [customGroups.sections]: 'src/sections/**',
-            [customGroups.components]: 'src/components/**',
+            [customGroups.mui]: ['^@mui/.+'],
+            [customGroups.auth]: ['^src/auth/.+'],
+            [customGroups.hooks]: ['^src/hooks/.+'],
+            [customGroups.utils]: ['^src/utils/.+'],
+            [customGroups.types]: ['^src/types/.+'],
+            [customGroups.routes]: ['^src/routes/.+'],
+            [customGroups.sections]: ['^src/sections/.+'],
+            [customGroups.components]: ['^src/components/.+'],
           },
         },
       },
@@ -179,12 +179,8 @@ export const customConfig = {
 // ----------------------------------------------------------------------
 
 export default [
-  {
-    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
-  },
-  {
-    ignores: ['*', '!src/', 'eslint.config.*'],
-  },
+  { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
+  { ignores: ['*', '!src/', 'eslint.config.*'] },
   {
     languageOptions: {
       globals: { ...globals.browser, ...globals.node },

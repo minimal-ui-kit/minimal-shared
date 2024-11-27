@@ -1,4 +1,4 @@
-# @minimals/hooks
+# minimal-shared
 
 ## 1.0.0
 

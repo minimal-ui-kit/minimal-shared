@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/minimal-ui-kit/minimal-shared"
+    "url": "https://github.com/minimal-ui-kit/minimal-shared/tree/main/packages/minimal-shared"
   },
   "license": "MIT",
   "sideEffects": false,
@@ -87,5 +87,10 @@
   },
   "peerDependencies": {
     "react": "^18"
+  },
+  "pnpm": {
+    "overrides": {
+      "cross-spawn@>=7.0.0 <7.0.5": ">=7.0.5"
+    }
   }
 }

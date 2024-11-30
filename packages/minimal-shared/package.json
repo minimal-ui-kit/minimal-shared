@@ -88,10 +88,5 @@
   },
   "peerDependencies": {
     "react": "^18"
-  },
-  "pnpm": {
-    "overrides": {
-      "cross-spawn@>=7.0.0 <7.0.5": ">=7.0.5"
-    }
   }
 }

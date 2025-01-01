@@ -1,4 +1,4 @@
-import eslintShared from './index.mjs';
+import eslintShared from './typescript.mjs';
 
 // ----------------------------------------------------------------------
 

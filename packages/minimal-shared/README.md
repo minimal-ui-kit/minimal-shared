@@ -2,14 +2,14 @@
 
 Shared hooks and utils used by Mnimal UI and Zone UI.
 
-###### List of hooks
+## Hooks
 
-[https://github.com/minimal-ui-kit/minimal-shared/tree/main/packages/minimal-shared/src/hooks](https://github.com/minimal-ui-kit/minimal-shared/tree/main/packages/minimal-shared/src/hooks)
+[Visit list of hooks](https://github.com/minimal-ui-kit/minimal-shared/tree/main/packages/minimal-shared/src/hooks)
 
-###### List of utils
+## Utils
 
-[https://github.com/minimal-ui-kit/minimal-shared/tree/main/packages/minimal-shared/src/utils](https://github.com/minimal-ui-kit/minimal-shared/tree/main/packages/minimal-shared/src/utils)
+[Visit list of utils](https://github.com/minimal-ui-kit/minimal-shared/tree/main/packages/minimal-shared/src/utils)
 
-###### CHANGELOG
+## Changelog
 
 [https://github.com/minimal-ui-kit/minimal-shared/blob/main/packages/minimal-shared/CHANGELOG.md](https://github.com/minimal-ui-kit/minimal-shared/blob/main/packages/minimal-shared/CHANGELOG.md)

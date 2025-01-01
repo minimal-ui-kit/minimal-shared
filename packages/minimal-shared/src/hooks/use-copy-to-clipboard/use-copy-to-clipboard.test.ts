@@ -25,12 +25,12 @@ describe('useCopyToClipboard()', () => {
     });
   });
 
-  it(`1. Should initialize with ${highlightText.value('empty string | null')} copiedText`, () => {
+  it(`1. Should initialize with ${highlightText.val('empty string | null')} copiedText`, () => {
     const { result } = renderHook(() => useCopyToClipboard());
     expect(result.current.copiedText === null || result.current.copiedText === '').toBe(true);
   });
 
-  it(`2. Should copy text to clipboard and update ${highlightText.value('copiedText')}`, async () => {
+  it(`2. Should copy text to clipboard and update ${highlightText.val('copiedText')}`, async () => {
     const { result } = renderHook(() => useCopyToClipboard());
 
     await act(async () => {
@@ -42,7 +42,7 @@ describe('useCopyToClipboard()', () => {
     expect(result.current.copiedText).toBe(textToCopy);
   });
 
-  it('3. Should handle clipboard not supported', async () => {
+  it(`3. Should handle clipboard not supported`, async () => {
     Object.defineProperty(navigator, 'clipboard', {
       value: undefined,
       writable: true,
@@ -58,7 +58,7 @@ describe('useCopyToClipboard()', () => {
     expect(result.current.copiedText).toBe(null);
   });
 
-  it('4. Should handle copy failure', async () => {
+  it(`4. Should handle copy failure`, async () => {
     navigator.clipboard.writeText = vi
       .fn()
       .mockRejectedValue(console.error('CopyToClipboard failed'));

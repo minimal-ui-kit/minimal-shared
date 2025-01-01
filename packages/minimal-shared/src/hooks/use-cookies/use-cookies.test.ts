@@ -65,7 +65,7 @@ describe('useCookies()', () => {
     expect(removeCookie).toHaveBeenCalledWith(key);
   });
 
-  it('6. Should initialize state with cookie value if available when only key is provided', () => {
+  it(`6. Should initialize state with cookie value if available when only key is provided`, () => {
     (getCookie as ReturnType<typeof vi.fn>).mockReturnValue(initialState);
     const { result } = renderHook(() => useCookies(key));
 

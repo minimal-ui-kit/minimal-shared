@@ -42,7 +42,7 @@ describe('usePopoverHover', () => {
     expect(result.current.open).toBe(false);
   });
 
-  it(`4. Should set the popover ${highlightText.value('open')} state manually`, () => {
+  it(`4. Should set the popover ${highlightText.val('open')} state manually`, () => {
     const { result } = setup();
 
     act(() => {
@@ -58,7 +58,7 @@ describe('usePopoverHover', () => {
     expect(result.current.open).toBe(false);
   });
 
-  it(`5. Should use the provided ${highlightText.value('ref')} if inputRef is passed`, () => {
+  it(`5. Should use the provided ${highlightText.val('ref')} if inputRef is passed`, () => {
     const ref = { current: document.createElement('button') };
     const { result } = setup(ref);
 

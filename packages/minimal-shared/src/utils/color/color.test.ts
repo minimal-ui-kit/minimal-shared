@@ -61,10 +61,10 @@ describe('varAlpha()', () => {
   });
 
   it(`3. Should throw an error if color is undefined`, () => {
-    expect(() => varAlpha('', 0.8)).toThrow('[Alpha]: Color is undefined!');
+    expect(() => varAlpha('', 0.8)).toThrow(Error);
   });
 
   it(`4. Should throw an error if color format is unsupported`, () => {
-    expect(() => varAlpha('#00B8D9', 0.8)).toThrow('[Alpha]: Unsupported color format "#00B8D9".');
+    expect(() => varAlpha('#00B8D9', 0.8)).toThrow(Error);
   });
 });

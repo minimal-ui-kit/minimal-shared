@@ -6,7 +6,7 @@ import { highlightText } from '../../../tests/highlight-text';
 // ----------------------------------------------------------------------
 
 describe('useIsClient', () => {
-  it(`1. Should update to ${highlightText.value('true')} after useEffect runs`, () => {
+  it(`1. Should update to ${highlightText.val('true')} after useEffect runs`, () => {
     const { result } = renderHook(() => useIsClient());
     expect(result.current).toBe(true);
   });

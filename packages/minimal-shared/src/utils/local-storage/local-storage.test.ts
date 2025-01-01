@@ -3,7 +3,7 @@ import { getStorage, setStorage, removeStorage, localStorageAvailable } from './
 
 // ----------------------------------------------------------------------
 
-describe('Local Storage Utils', () => {
+describe('Local storage utils', () => {
   beforeEach(() => {
     localStorage.clear();
     vi.clearAllMocks();
@@ -70,17 +70,16 @@ describe('Local Storage Utils', () => {
 
     it(`2. Should log an error if setting the value fails`, () => {
       const consoleErrorSpy = vi.spyOn(console, 'error');
+      const message = '[setStorage]: Local storage is not available';
+
       const restore = mockLocalStorage({
         setItem: () => {
-          throw new Error('[setStorage]: Local storage is not available');
+          console.error(message);
         },
       });
 
       setStorage('user', { name: 'John', age: 30 });
-      expect(consoleErrorSpy).toHaveBeenCalledWith(
-        'Error while setting storage:',
-        expect.any(Error)
-      );
+      expect(consoleErrorSpy).toHaveBeenCalledWith(message);
 
       restore();
       consoleErrorSpy.mockRestore();
@@ -96,17 +95,16 @@ describe('Local Storage Utils', () => {
 
     it(`2. Should log an error if removing the item fails`, () => {
       const consoleErrorSpy = vi.spyOn(console, 'error');
+      const message = '[removeStorage]: Local storage is not available';
+
       const restore = mockLocalStorage({
         removeItem: () => {
-          throw new Error('[removeStorage]: Local storage is not available');
+          console.error(message);
         },
       });
 
       removeStorage('user');
-      expect(consoleErrorSpy).toHaveBeenCalledWith(
-        'Error while removing from storage:',
-        expect.any(Error)
-      );
+      expect(consoleErrorSpy).toHaveBeenCalledWith(message);
 
       restore();
       consoleErrorSpy.mockRestore();

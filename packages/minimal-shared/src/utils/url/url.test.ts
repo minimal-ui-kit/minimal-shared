@@ -4,15 +4,15 @@ import { hasParams, isEqualPath, removeParams, isExternalLink, removeLastSlash }
 // ----------------------------------------------------------------------
 
 describe('hasParams()', () => {
-  it(`1. Should return ${highlightText.value('true')} if URL has query parameters`, () => {
+  it(`1. Should return ${highlightText.val('true')} if URL has query parameters`, () => {
     expect(hasParams('https://example.com?page=1')).toBe(true);
   });
 
-  it(`2. Should return ${highlightText.value('false')} if URL does not have query parameters`, () => {
+  it(`2. Should return ${highlightText.val('false')} if URL does not have query parameters`, () => {
     expect(hasParams('https://example.com')).toBe(false);
   });
 
-  it(`3. Should return ${highlightText.value('false')} if URL has empty query parameters`, () => {
+  it(`3. Should return ${highlightText.val('false')} if URL has empty query parameters`, () => {
     expect(hasParams('https://example.com?')).toBe(false);
   });
 });
@@ -32,11 +32,11 @@ describe('removeLastSlash()', () => {
 });
 
 describe('isEqualPath()', () => {
-  it('should return true if both paths are equal after removing trailing slashes', () => {
+  it(`1. Should return true if both paths are equal after removing trailing slashes`, () => {
     expect(isEqualPath('/dashboard/calendar/', '/dashboard/calendar/')).toBe(true);
   });
 
-  it('should return true if both paths are equal after removing trailing slashes', () => {
+  it(`2. Should return true if both paths are equal after removing trailing slashes`, () => {
     expect(isEqualPath('/dashboard/calendar', '/dashboard/calendar/')).toBe(true);
   });
 });
@@ -64,15 +64,15 @@ describe('removeParams()', () => {
 });
 
 describe('isExternalLink()', () => {
-  it(`1. Should return ${highlightText.value('true')} if URL is an external link`, () => {
+  it(`1. Should return ${highlightText.val('true')} if URL is an external link`, () => {
     expect(isExternalLink('https://example.com')).toBe(true);
   });
 
-  it(`2. Should return ${highlightText.value('false')} if URL is not an external link`, () => {
+  it(`2. Should return ${highlightText.val('false')} if URL is not an external link`, () => {
     expect(isExternalLink('/internal/page')).toBe(false);
   });
 
-  it(`3. Should return ${highlightText.value('true')} if URL starts with http`, () => {
+  it(`3. Should return ${highlightText.val('true')} if URL starts with http`, () => {
     expect(isExternalLink('http://example.com')).toBe(true);
   });
 });

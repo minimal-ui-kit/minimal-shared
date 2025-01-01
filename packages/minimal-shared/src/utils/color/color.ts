@@ -107,15 +107,16 @@ export function varAlpha(color: string, opacity: number = 1): string {
 
   if (unsupported) {
     throw new Error(
-      `[Alpha]: Unsupported color format "${color}".
-       Supported formats are:
-       - RGB channels: "0 184 217".
-       - CSS variables with "Channel" prefix: "var(--palette-common-blackChannel, #000000)".
-       Unsupported formats are:
-       - Hex: "#00B8D9".
-       - RGB: "rgb(0, 184, 217)".
-       - RGBA: "rgba(0, 184, 217, 1)".
-       `
+      [
+        `[Alpha]: Unsupported color format "${color}"`,
+        'Supported formats are:',
+        '- RGB channels: "0 184 217"',
+        '- CSS variables with "Channel" prefix: "var(--palette-common-blackChannel, #000000)"',
+        'Unsupported formats are:',
+        '- Hex: "#00B8D9"',
+        '- RGB: "rgb(0, 184, 217)"',
+        '- RGBA: "rgba(0, 184, 217, 1)"',
+      ].join('\n')
     );
   }
 

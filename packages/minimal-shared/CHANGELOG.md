@@ -1,6 +1,6 @@
 # minimal-shared
 
-## 1.0.6
+<!-- ## 1.0.6
 
 _Feb 23, 2025_
 
@@ -8,7 +8,7 @@ _Feb 23, 2025_
 - Update `hooks/use-client-rect`.
 - Update `hooks/use-popover-hover`.
 - Update `utils/refs`.
-- Clean devDependencies
+- Clean devDependencies -->
 
 ---
 

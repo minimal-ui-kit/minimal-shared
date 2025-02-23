@@ -1,0 +1,17 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema-jsonc.json",
+  "paths": {
+    "src/*": ["./src/*"],
+  },
+  "project": ["src/**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}"],
+  "ignoreExportsUsedInFile": true,
+  "ignoreDependencies": [
+    // ignore dependencies
+    "chalk",
+    "es-toolkit",
+    "internal-eslint-config",
+  ],
+  "ignore": [
+    // ignore folders or files
+  ],
+}

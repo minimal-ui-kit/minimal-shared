@@ -21,7 +21,7 @@
     "re:dev": "pnpm clean && pnpm install && pnpm dev",
     "re:build": "pnpm clean && pnpm install && pnpm build",
     "check:update": "pnpm update --interactive --recursive --latest",
-    "build:release": "turbo build --filter=minimal-shared",
+    "build:release": "turbo build --filter=minimal-shared --filter=minimal-shared-test",
     "pre:release": "pnpm build:release && changeset version",
     "release": "pnpm build:release && changeset version && changeset publish"
   },

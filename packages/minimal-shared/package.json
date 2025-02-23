@@ -1,7 +1,7 @@
 {
   "name": "minimal-shared",
   "author": "Minimals",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Shared hooks and utils used by Minimal UI and Zone UI.",
   "keywords": [
     "typescript",
@@ -60,31 +60,27 @@
     "test:watch": "vitest",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint --fix \"**/*.{js,jsx,ts,tsx}\"",
-    "lint:print": "npx eslint --print-config eslint.config.mjs > eslint-current-config.json",
+    "lint:print": "npx eslint --print-config eslint.config.mjs > eslint-show-config.json",
     "clean": "rm -rf node_modules .turbo .next out dist build",
     "re:build": "pnpm clean && pnpm install && pnpm test && pnpm build",
     "tsc:print": "npx tsc --showConfig"
   },
   "dependencies": {
-    "es-toolkit": "^1.31.0"
+    "es-toolkit": "^1.32.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.1.0",
-    "@types/fs-extra": "^11.0.4",
-    "@types/node": "^22.10.3",
-    "@types/react": "18.3.12",
+    "@testing-library/react": "^16.2.0",
+    "@types/node": "^22.13.5",
+    "@types/react": "19.0.10",
     "chalk": "^5.4.1",
-    "fast-glob": "^3.3.2",
-    "fs-extra": "^11.2.0",
-    "glob": "^11.0.0",
     "internal-eslint-config": "workspace:*",
     "internal-ts-config": "workspace:*",
-    "jsdom": "^25.0.1",
-    "react": "^18.3.1",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2",
-    "vitest": "^2.1.8"
+    "jsdom": "^26.0.0",
+    "react": "^19.0.0",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.6"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0"

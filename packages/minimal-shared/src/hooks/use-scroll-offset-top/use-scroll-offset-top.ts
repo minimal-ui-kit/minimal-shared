@@ -26,13 +26,13 @@ import { useRef, useState, useEffect, useCallback } from 'react';
 
 export type UseScrollOffsetTopReturn<T> = {
   offsetTop: boolean;
-  elementRef: RefObject<T>;
+  elementRef: RefObject<T | null>;
 };
 
 export function useScrollOffsetTop<T extends HTMLElement>(
   defaultValue: number = 0
 ): UseScrollOffsetTopReturn<T> {
-  const elementRef = useRef<T | null>(null);
+  const elementRef = useRef<T>(null);
 
   const [offsetTop, setOffsetTop] = useState<boolean>(false);
 

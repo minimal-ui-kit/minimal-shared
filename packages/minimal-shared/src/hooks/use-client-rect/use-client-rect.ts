@@ -7,7 +7,7 @@ import { useRef, useMemo, useState, useEffect, useCallback, useLayoutEffect } fr
 /**
  * Custom hook to get the bounding client rect and scroll dimensions of a DOM element.
  *
- * @param {RefObject<HTMLDivElement>} [inputRef] - Optional ref object to the target element.
+ * @param {RefObject<T | null>} [inputRef] - Optional ref object to the target element.
  * @param {string} [eventType] - Optional event type to trigger updates (e.g., 'scroll', 'resize').
  * @returns {UseClientRectReturn} - Object containing the bounding rect, scroll dimensions, and ref to the element.
  */
@@ -28,17 +28,17 @@ type DOMRectValue = {
   height: number;
 };
 
-export type UseClientRectReturn = DOMRectValue &
+export type UseClientRectReturn<T> = DOMRectValue &
   ScrollElValue & {
-    elementRef: RefObject<HTMLDivElement>;
+    elementRef: RefObject<T | null>;
   };
 
-export function useClientRect(
-  inputRef?: RefObject<HTMLDivElement>,
+export function useClientRect<T extends HTMLElement>(
+  inputRef?: RefObject<T | null>,
   eventType?: string
-): UseClientRectReturn {
-  const initialRef = useRef<HTMLDivElement>(null);
-  const elementRef = inputRef || initialRef;
+): UseClientRectReturn<T> {
+  const localRef = useRef<T>(null);
+  const elementRef = inputRef || localRef;
 
   const [rect, setRect] = useState<DOMRect | undefined>(undefined);
   const [scroll, setScroll] = useState<ScrollElValue | undefined>(undefined);

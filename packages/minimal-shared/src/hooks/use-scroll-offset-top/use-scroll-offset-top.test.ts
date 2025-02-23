@@ -1,5 +1,3 @@
-import type { MutableRefObject } from 'react';
-
 import { act, renderHook } from '@testing-library/react';
 
 import { useScrollOffsetTop } from './use-scroll-offset-top';
@@ -28,12 +26,12 @@ describe('useScrollOffsetTop()', () => {
   };
 
   it(`1. Should return offsetTop as ${highlightText.val('false')} when window.scrollY is less than default value`, () => {
-    const { result } = renderHook(() => useScrollOffsetTop<HTMLDivElement>(defaultOffset));
+    const { result } = renderHook(() => useScrollOffsetTop(defaultOffset));
     expect(result.current.offsetTop).toBe(false);
   });
 
   it(`2. Should update offsetTop to ${highlightText.val('true')} when scroll position is greater than default value`, () => {
-    const { result } = renderHook(() => useScrollOffsetTop<HTMLDivElement>(defaultOffset));
+    const { result } = renderHook(() => useScrollOffsetTop(defaultOffset));
     setScrollY(defaultOffset + 10);
     expect(result.current.offsetTop).toBe(true);
   });
@@ -45,10 +43,10 @@ describe('useScrollOffsetTop()', () => {
 
     Object.defineProperty(mockElement, 'offsetTop', { value: elementOffsetTop, writable: false });
 
-    const { result } = renderHook(() => useScrollOffsetTop<HTMLDivElement>(0));
+    const { result } = renderHook(() => useScrollOffsetTop(0));
 
     act(() => {
-      (result.current.elementRef as MutableRefObject<HTMLDivElement>).current = mockElement;
+      result.current.elementRef.current = mockElement;
     });
 
     setScrollY(elementOffsetTop - 1);
@@ -59,7 +57,7 @@ describe('useScrollOffsetTop()', () => {
   });
 
   it(`4. Should update offsetTop to ${highlightText.val('false')} when scroll position is less than default value`, () => {
-    const { result } = renderHook(() => useScrollOffsetTop<HTMLDivElement>(defaultOffset));
+    const { result } = renderHook(() => useScrollOffsetTop(defaultOffset));
     setScrollY(defaultOffset - 1);
     expect(result.current.offsetTop).toBe(false);
   });

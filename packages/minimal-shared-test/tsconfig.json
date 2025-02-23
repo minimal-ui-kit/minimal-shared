@@ -1,9 +1,0 @@
-{
-  "extends": "internal-ts-config/react-lib.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "types": ["vitest/globals"]
-  },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
-}

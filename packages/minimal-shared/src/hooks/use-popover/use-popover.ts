@@ -28,19 +28,19 @@ import { useState, useCallback } from 'react';
  * );
  */
 
-export type UsePopoverReturn<T> = {
+export type UsePopoverReturn<T extends HTMLElement = HTMLElement> = {
   open: boolean;
   anchorEl: T | null;
   onClose: () => void;
-  onOpen: (event: MouseEvent<HTMLElement>) => void;
+  onOpen: (event: MouseEvent<T>) => void;
   setAnchorEl: Dispatch<SetStateAction<T | null>>;
 };
 
-export function usePopover<T extends HTMLElement>(): UsePopoverReturn<T> {
+export function usePopover<T extends HTMLElement = HTMLElement>(): UsePopoverReturn<T> {
   const [anchorEl, setAnchorEl] = useState<T | null>(null);
 
-  const onOpen = useCallback((event: MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget as T);
+  const onOpen = useCallback((event: MouseEvent<T>) => {
+    setAnchorEl(event.currentTarget);
   }, []);
 
   const onClose = useCallback(() => {

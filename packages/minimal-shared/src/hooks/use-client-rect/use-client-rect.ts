@@ -9,7 +9,7 @@ import { useRef, useMemo, useState, useEffect, useCallback, useLayoutEffect } fr
  *
  * @param {RefObject<T | null>} [inputRef] - Optional ref object to the target element.
  * @param {string} [eventType] - Optional event type to trigger updates (e.g., 'scroll', 'resize').
- * @returns {UseClientRectReturn} - Object containing the bounding rect, scroll dimensions, and ref to the element.
+ * @returns {UseClientRectReturn<T>} - Object containing the bounding rect, scroll dimensions, and ref to the element.
  */
 
 type ScrollElValue = {
@@ -28,17 +28,17 @@ type DOMRectValue = {
   height: number;
 };
 
-export type UseClientRectReturn<T> = DOMRectValue &
+export type UseClientRectReturn<T extends HTMLElement = HTMLElement> = DOMRectValue &
   ScrollElValue & {
-    elementRef: RefObject<T | null>;
+    elementRef: RefObject<T>;
   };
 
-export function useClientRect<T extends HTMLElement>(
+export function useClientRect<T extends HTMLElement = HTMLElement>(
   inputRef?: RefObject<T | null>,
   eventType?: string
 ): UseClientRectReturn<T> {
   const localRef = useRef<T>(null);
-  const elementRef = inputRef || localRef;
+  const elementRef = (inputRef || localRef) as RefObject<T>;
 
   const [rect, setRect] = useState<DOMRect | undefined>(undefined);
   const [scroll, setScroll] = useState<ScrollElValue | undefined>(undefined);

@@ -102,49 +102,6 @@ importers:
         specifier: ^3.0.6
         version: 3.0.6(@types/node@22.13.5)(jsdom@26.0.0)
 
-  packages/minimal-shared-test:
-    dependencies:
-      es-toolkit:
-        specifier: ^1.32.0
-        version: 1.32.0
-    devDependencies:
-      '@testing-library/jest-dom':
-        specifier: ^6.6.3
-        version: 6.6.3
-      '@testing-library/react':
-        specifier: ^16.2.0
-        version: 16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.4(@types/react@19.0.10))(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@types/node':
-        specifier: ^22.13.5
-        version: 22.13.5
-      '@types/react':
-        specifier: 19.0.10
-        version: 19.0.10
-      chalk:
-        specifier: ^5.4.1
-        version: 5.4.1
-      internal-eslint-config:
-        specifier: workspace:*
-        version: link:../internal-eslint-config
-      internal-ts-config:
-        specifier: workspace:*
-        version: link:../internal-ts-config
-      jsdom:
-        specifier: ^26.0.0
-        version: 26.0.0
-      react:
-        specifier: ^19.0.0
-        version: 19.0.0
-      tsup:
-        specifier: ^8.3.6
-        version: 8.3.6(postcss@8.5.3)(typescript@5.7.3)
-      typescript:
-        specifier: ^5.7.3
-        version: 5.7.3
-      vitest:
-        specifier: ^3.0.6
-        version: 3.0.6(@types/node@22.13.5)(jsdom@26.0.0)
-
 packages:
 
   '@adobe/css-tools@4.4.2':

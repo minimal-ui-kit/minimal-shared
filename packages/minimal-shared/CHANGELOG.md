@@ -1,14 +1,14 @@
 # minimal-shared
 
-<!-- ## 1.0.6
+## 1.0.7
 
-_Feb 23, 2025_
+_Feb 24, 2025_
 
-- Update `hooks/use-scroll-offset-top`.
-- Update `hooks/use-client-rect`.
+- Update `hooks/use-popover`.
 - Update `hooks/use-popover-hover`.
+- Update `hooks/use-client-rect`.
+- Update `hooks/use-scroll-offset-top`.
 - Update `utils/refs`.
-- Clean devDependencies -->
 
 ---
 

@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Shared packages for Minimal UI and Zone UI",
   "engines": {
-    "node": ">=20.x"
+    "node": ">=20"
   },
   "packageManager": "pnpm@9.15.1",
   "scripts": {
@@ -21,7 +21,7 @@
     "re:dev": "pnpm clean && pnpm install && pnpm dev",
     "re:build": "pnpm clean && pnpm install && pnpm build",
     "check:update": "pnpm update --interactive --recursive --latest",
-    "build:release": "turbo build --filter=minimal-shared --filter=minimal-shared-test",
+    "build:release": "turbo build --filter=minimal-shared",
     "pre:release": "pnpm build:release && changeset version",
     "release": "pnpm build:release && changeset version && changeset publish"
   },

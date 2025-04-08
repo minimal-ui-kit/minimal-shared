@@ -3,55 +3,56 @@ import { hasParams, removeParams, isExternalLink, removeLastSlash } from '../url
 // ----------------------------------------------------------------------
 
 /**
- * Determines if a given link is active based on the current pathname.
+ * Determines whether a given target path is considered "active"
+ * based on the current pathname — typically used for highlighting
+ * active navigation links.
  *
- * @param {string} pathnameProps - The current pathname.
- * @param {string} itemPath - The path of the item to check.
- * @param {boolean} [deep=true] - Whether to perform a deep check, including child paths and parameters.
+ * ✅ Features:
+ * - Removes trailing slashes and query parameters before comparison.
+ * - Ignores external links (e.g. `https://...`) and hash links (e.g. `#section`).
+ * - Supports deep matching to detect nested routes or links with query strings.
  *
- * @returns {boolean} - True if the link is active, false otherwise.
+ * @param {string} currentPathname - The current URL pathname (e.g., from `window.location.pathname` or router).
+ * @param {string} targetPath - The target path to check (can include query parameters).
+ * @param {boolean} [deep=true] - If true, performs deep matching (for nested routes or param links).
+ *
+ * @returns {boolean} - Returns `true` if the target path is considered active; otherwise, `false`.
  *
  * @example
- * const isActive = isActiveLink('/dashboard/user', '/dashboard/user', true);
- * console.log(isActive); // true
+ * isActiveLink('/dashboard/user/list', '/dashboard/user');          // true (deep match)
+ * isActiveLink('/dashboard/user', '/dashboard/user?id=123');        // true (query param)
+ * isActiveLink('/dashboard/user', '/dashboard/user', false);        // true (exact match)
+ * isActiveLink('/dashboard/user', '/dashboard');                    // false
+ * isActiveLink('/dashboard/user', '#section');                      // false (hash link)
+ * isActiveLink('/dashboard/user', 'https://example.com');           // false (external link)
  */
-
 export function isActiveLink(
-  pathnameProps: string,
-  itemPath: string,
+  currentPathname: string,
+  targetPath: string,
   deep: boolean = true
 ): boolean {
-  const pathname = removeLastSlash(pathnameProps);
-
-  const pathHasParams = hasParams(itemPath);
-
-  // Check if the item path is invalid (starts with '#' or is an external link)
-  const notValid = itemPath.startsWith('#') || isExternalLink(itemPath);
-
-  if (notValid) {
+  if (!currentPathname || !targetPath) {
+    console.warn('isActiveLink: pathname or itemPath is empty!');
     return false;
   }
 
-  // Determine if a deep check is needed
-  const isDeep = deep || pathHasParams;
-
-  if (isDeep) {
-    // Deep check: default
-    // Example: itemPath = '/dashboard/user'
-    // Matches: pathname = '/dashboard/user', '/dashboard/user/list', '/dashboard/user/e99f09a7-dd88-49d5-b1c8-1daf80c2d7b15/edit'
-    const defaultActive = pathname.includes(itemPath);
-
-    // Deep check: has params
-    // Example: itemPath = '/dashboard/test?id=e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1'
-    // Matches: pathname = '/dashboard/test'
-    const originItemPath = removeParams(itemPath);
-    const hasParamsActive = pathHasParams && originItemPath === pathname;
-
-    return defaultActive || hasParamsActive;
+  if (targetPath.startsWith('#') || isExternalLink(targetPath)) {
+    return false;
   }
 
-  // Normal check: active
-  // Example: itemPath = '/dashboard/calendar'
-  // Matches: pathname = '/dashboard/calendar'
-  return pathname === itemPath;
+  const pathname = removeLastSlash(currentPathname);
+  const cleanedItemPath = removeLastSlash(removeParams(targetPath));
+  const isDeep = deep || hasParams(targetPath);
+
+  // For deep match (nested routes)
+  if (isDeep) {
+    return (
+      pathname === cleanedItemPath ||
+      pathname.startsWith(`${cleanedItemPath}/`) ||
+      pathname.startsWith(`${cleanedItemPath}?`)
+    );
+  }
+
+  // For exact match
+  return pathname === cleanedItemPath;
 }

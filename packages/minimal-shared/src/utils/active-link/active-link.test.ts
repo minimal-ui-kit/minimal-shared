@@ -2,33 +2,130 @@ import { isActiveLink } from './active-link';
 
 // ----------------------------------------------------------------------
 
+type TestCase = [
+  description: string,
+  currentPathname: string,
+  targetPath: string,
+  deep: boolean,
+  expected: boolean,
+];
+
+function runTests(cases: TestCase[]) {
+  test.each(cases.map((testCase, index) => [index + 1, ...testCase]))(
+    '%i. %s',
+    (_index, _desc, current, target, deep, expected) => {
+      expect(isActiveLink(current, target, deep)).toBe(expected);
+    }
+  );
+}
+
 describe('isActiveLink', () => {
-  it(`1. Should return true for exact match without deep check`, () => {
-    expect(isActiveLink('/dashboard/user', '/dashboard/user', false)).toBe(true);
+  describe('Without deep check', () => {
+    const cases: TestCase[] = [
+      ['Should return true for exact match', '/dashboard/user', '/dashboard/user', false, true],
+      [
+        'Should return false for non-matching paths',
+        '/dashboard/user',
+        '/dashboard/admin',
+        false,
+        false,
+      ],
+      [
+        'Should return false for partial match',
+        '/dashboard/user/list',
+        '/dashboard/user',
+        false,
+        false,
+      ],
+      [
+        'Should return true for trailing slash match',
+        '/dashboard/user/',
+        '/dashboard/user',
+        false,
+        true,
+      ],
+      ['Should return true for root path match', '/', '/', false, true],
+      [
+        'Should return false for case-sensitive mismatch',
+        '/Dashboard/User',
+        '/dashboard/user',
+        false,
+        false,
+      ],
+    ];
+
+    runTests(cases);
   });
 
-  it(`2. Should return false for non-matching paths without deep check`, () => {
-    expect(isActiveLink('/dashboard/user', '/dashboard/admin', false)).toBe(false);
-  });
+  describe('With deep check', () => {
+    const cases: TestCase[] = [
+      [
+        'Should return true for parent-child match',
+        '/dashboard/user/list',
+        '/dashboard/user',
+        true,
+        true,
+      ],
+      [
+        'Should return false for unrelated paths',
+        '/dashboard/user-test/list',
+        '/dashboard/user',
+        true,
+        false,
+      ],
+      [
+        'Should return true for match with query params',
+        '/dashboard/test',
+        '/dashboard/test?id=123',
+        true,
+        true,
+      ],
+      [
+        'Should return true for nested path with query params',
+        '/dashboard/test/list',
+        '/dashboard/test?id=123',
+        true,
+        true,
+      ],
+      ['Should return false for hash path', '/dashboard/user', '#section', true, false],
+      [
+        'Should return false for external link',
+        '/dashboard/user',
+        'https://external.com',
+        true,
+        false,
+      ],
+      [
+        'Should return true for different query values',
+        '/dashboard/test',
+        '/dashboard/test?id=999',
+        true,
+        true,
+      ],
+      [
+        'Should return true for trailing slash match',
+        '/dashboard/user/',
+        '/dashboard/user',
+        true,
+        true,
+      ],
+      [
+        'Should return false for similar prefix (not nested)',
+        '/dashboard/usersettings',
+        '/dashboard/user',
+        true,
+        false,
+      ],
+      ['Should return false for empty itemPath', '/dashboard', '', true, false],
+      [
+        'Should return false for undefined itemPath',
+        '/dashboard',
+        undefined as unknown as string,
+        true,
+        false,
+      ],
+    ];
 
-  it(`3. Should return true for matching paths with deep check`, () => {
-    expect(isActiveLink('/dashboard/user/list', '/dashboard/user', true)).toBe(true);
-  });
-
-  it(`4. Should return false for invalid item paths`, () => {
-    expect(isActiveLink('/dashboard/user', '#section', true)).toBe(false);
-    expect(isActiveLink('/dashboard/user', 'https://external.com', true)).toBe(false);
-  });
-
-  it(`5. Should return true for matching paths with parameters`, () => {
-    expect(isActiveLink('/dashboard/test', '/dashboard/test?id=123', true)).toBe(true);
-  });
-
-  it(`6. Should return true for non-matching paths with parameters`, () => {
-    expect(isActiveLink('/dashboard/test', '/dashboard/test?id=123', true)).toBe(true);
-  });
-
-  it(`7. Should return false for matching paths with deep check and parameters`, () => {
-    expect(isActiveLink('/dashboard/test/list', '/dashboard/test?id=123', true)).toBe(false);
+    runTests(cases);
   });
 });

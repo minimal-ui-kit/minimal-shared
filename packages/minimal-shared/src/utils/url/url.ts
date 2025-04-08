@@ -1,56 +1,52 @@
 /**
  * Checks if a URL has query parameters.
  *
- * @param {string} url - The URL to check.
- * @returns {boolean} - True if the URL has query parameters, false otherwise.
+ * @param url - The URL to check.
+ * @returns True if the URL has query parameters, false otherwise.
  *
  * @example
- * const hasQueryParams = hasParams('https://example.com?page=1');
- * console.log(hasQueryParams); // true
+ * hasParams('https://example.com?page=1'); // true
+ * hasParams('https://example.com'); // false
  */
-
-export const hasParams = (url: string): boolean => {
-  const queryString = url.split('?')[1];
-  return queryString ? new URLSearchParams(queryString).toString().length > 0 : false;
-};
-
-// ----------------------------------------------------------------------
-
-/**
- * Removes the trailing slash from a pathname if it exists.
- *
- * @param {string} pathname - The pathname to process.
- * @returns {string} - The pathname without the trailing slash.
- *
- * @example
- * const cleanPathname = removeLastSlash('/dashboard/calendar/');
- * console.log(cleanPathname); // '/dashboard/calendar'
- */
-export function removeLastSlash(pathname: string): string {
-  /**
-   * Remove last slash
-   * [1]
-   * @input  = '/dashboard/calendar/'
-   * @output = '/dashboard/calendar'
-   * [2]
-   * @input  = '/dashboard/calendar'
-   * @output = '/dashboard/calendar'
-   */
-  if (pathname !== '/' && pathname.endsWith('/')) {
-    return pathname.slice(0, -1);
+export function hasParams(url: string): boolean {
+  try {
+    const urlObj = new URL(url, window.location.origin);
+    return Array.from(urlObj.searchParams.keys()).length > 0;
+  } catch {
+    return false;
   }
-
-  return pathname;
 }
 
 // ----------------------------------------------------------------------
 
 /**
- * Checks if two URLs have the same path.
+ * Removes the trailing slash from a pathname if present.
  *
- * @param {string} targetUrl - The target URL to compare.
- * @param {string} pathname - The pathname to compare.
- * @returns {boolean} - True if the paths are equal, false otherwise.
+ * @param pathname - The pathname to process.
+ * @returns The pathname without the trailing slash.
+ *
+ * @example
+ * removeLastSlash('/dashboard/'); // '/dashboard'
+ * removeLastSlash('/dashboard'); // '/dashboard'
+ */
+export function removeLastSlash(pathname: string): string {
+  const isValid = pathname !== '/' && pathname.endsWith('/');
+
+  return isValid ? pathname.slice(0, -1) : pathname;
+}
+
+// ----------------------------------------------------------------------
+
+/**
+ * Checks if two paths are equal after removing trailing slashes.
+ *
+ * @param targetUrl - The target URL to compare.
+ * @param pathname - The pathname to compare.
+ * @returns True if the paths are equal, false otherwise.
+ *
+ * @example
+ * isEqualPath('/dashboard/', '/dashboard'); // true
+ * isEqualPath('/home', '/dashboard'); // false
  */
 export function isEqualPath(targetUrl: string, pathname: string): boolean {
   return removeLastSlash(targetUrl) === removeLastSlash(pathname);
@@ -59,16 +55,15 @@ export function isEqualPath(targetUrl: string, pathname: string): boolean {
 // ----------------------------------------------------------------------
 
 /**
- * Removes query parameters from a URL.
+ * Removes query parameters from a URL and returns only the cleaned pathname.
  *
- * @param {string} url - The URL to process.
- * @returns {string} - The URL without query parameters.
+ * @param url - The URL to process.
+ * @returns The pathname without query parameters.
  *
  * @example
- * const cleanUrl = removeParams('https://example.com/page?param=value');
- * console.log(cleanUrl); // 'https://example.com/page'
+ * removeParams('https://example.com/dashboard/user?id=123'); // '/dashboard/user'
+ * removeParams('/dashboard/user?id=123'); // '/dashboard/user'
  */
-
 export function removeParams(url: string): string {
   try {
     const urlObj = new URL(url, window.location.origin);
@@ -82,16 +77,15 @@ export function removeParams(url: string): string {
 // ----------------------------------------------------------------------
 
 /**
- * Checks if a URL is an external link.
+ * Determines whether a given URL is external (i.e., starts with "http").
  *
- * @param {string} url - The URL to check.
- * @returns {boolean} - True if the URL is an external link, false otherwise.
+ * @param url - The URL to check.
+ * @returns True if the URL is external, false otherwise.
  *
  * @example
- * const isExternal = isExternalLink('https://example.com');
- * console.log(isExternal); // true
+ * isExternalLink('https://example.com'); // true
+ * isExternalLink('/internal'); // false
  */
-
 export function isExternalLink(url: string): boolean {
-  return url.startsWith('http');
+  return /^https?:\/\//i.test(url);
 }

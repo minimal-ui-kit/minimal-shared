@@ -1,78 +1,75 @@
-import { highlightText } from '../../../tests/highlight-text';
 import { hasParams, isEqualPath, removeParams, isExternalLink, removeLastSlash } from './url';
 
 // ----------------------------------------------------------------------
 
+const mapWithIndex = <T extends readonly any[][]>(cases: T) =>
+  cases.map((testCase, index) => [index + 1, ...testCase] as const);
+
 describe('hasParams()', () => {
-  it(`1. Should return ${highlightText.val('true')} if URL has query parameters`, () => {
-    expect(hasParams('https://example.com?page=1')).toBe(true);
-  });
+  const cases = [
+    ['Should return true with single param', '/dashboard?page=1', true],
+    ['Should return true with multiple params', '/dashboard?x=1&y=2', true],
+    ['Should return false with no params', '/dashboard', false],
+    ['Should return false with trailing "?"', '/dashboard?', false],
+    ['Should return false for empty string', '', false],
+  ];
 
-  it(`2. Should return ${highlightText.val('false')} if URL does not have query parameters`, () => {
-    expect(hasParams('https://example.com')).toBe(false);
-  });
-
-  it(`3. Should return ${highlightText.val('false')} if URL has empty query parameters`, () => {
-    expect(hasParams('https://example.com?')).toBe(false);
+  test.each(mapWithIndex(cases))('%i. %s', (_i, _desc, input, expected) => {
+    expect(hasParams(input)).toBe(expected);
   });
 });
 
 describe('removeLastSlash()', () => {
-  it(`1. Should remove trailing slash from pathname`, () => {
-    expect(removeLastSlash('/dashboard/calendar/')).toBe('/dashboard/calendar');
-  });
+  const cases = [
+    ['Removes trailing slash', '/dashboard/', '/dashboard'],
+    ['Keeps path without slash', '/dashboard', '/dashboard'],
+    ['Removes slash from nested path', '/dashboard/user/', '/dashboard/user'],
+    ['Preserves root slash', '/', '/'],
+    ['Removes extra trailing slashes', '/test//', '/test/'],
+  ];
 
-  it(`2. Should return the same pathname if there is no trailing slash`, () => {
-    expect(removeLastSlash('/dashboard/calendar')).toBe('/dashboard/calendar');
-  });
-
-  it(`3. Should not remove the slash if pathname is just "/"`, () => {
-    expect(removeLastSlash('/')).toBe('/');
+  test.each(mapWithIndex(cases))('%i. %s', (_i, _desc, input, expected) => {
+    expect(removeLastSlash(input)).toBe(expected);
   });
 });
 
 describe('isEqualPath()', () => {
-  it(`1. Should return true if both paths are equal after removing trailing slashes`, () => {
-    expect(isEqualPath('/dashboard/calendar/', '/dashboard/calendar/')).toBe(true);
-  });
+  const cases = [
+    ['Exact match', '/dashboard', '/dashboard', true],
+    ['Match with trailing slash', '/dashboard/', '/dashboard', true],
+    ['Both paths have trailing slashes', '/dashboard/', '/dashboard/', true],
+    ['Different paths', '/dashboard', '/settings', false],
+  ];
 
-  it(`2. Should return true if both paths are equal after removing trailing slashes`, () => {
-    expect(isEqualPath('/dashboard/calendar', '/dashboard/calendar/')).toBe(true);
+  test.each(mapWithIndex(cases))('%i. %s', (_i, _desc, a, b, expected) => {
+    expect(isEqualPath(a, b)).toBe(expected);
   });
 });
 
 describe('removeParams()', () => {
-  it(`1. Should remove query parameters from URL`, () => {
-    expect(removeParams('https://example.com/page?param=value')).toBe('/page');
-  });
+  const cases = [
+    ['Removes simple query', '/dashboard?page=1', '/dashboard'],
+    ['Removes complex query', '/dashboard/user?id=123&filter=active', '/dashboard/user'],
+    ['Ignores when no query', '/dashboard/user', '/dashboard/user'],
+    ['Removes query with trailing slash', '/dashboard/user/?id=1', '/dashboard/user'],
+    ['Removes query from full URL', 'https://example.com/page?id=1', '/page'],
+  ];
 
-  it(`2. Should return the same URL if there are no query parameters`, () => {
-    expect(removeParams('https://example.com/page')).toBe('/page');
-  });
-
-  it(`3. Should return the same URL if there are no query parameters`, () => {
-    expect(removeParams('https://example.com/')).toBe('/');
-  });
-
-  it(`4. Should return the same URL if there are no query parameters`, () => {
-    expect(removeParams('https://example.com')).toBe('/');
-  });
-
-  it(`5. Should return the same URL if it is invalid`, () => {
-    expect(removeParams('invalid-url')).toBe('/invalid-url');
+  test.each(mapWithIndex(cases))('%i. %s', (_i, _desc, input, expected) => {
+    expect(removeParams(input)).toBe(expected);
   });
 });
 
 describe('isExternalLink()', () => {
-  it(`1. Should return ${highlightText.val('true')} if URL is an external link`, () => {
-    expect(isExternalLink('https://example.com')).toBe(true);
-  });
+  const cases = [
+    ['Detects http link', 'http://example.com', true],
+    ['Detects https link', 'https://example.com', true],
+    ['Returns false for local path', '/dashboard', false],
+    ['Returns false for anchor', '#section', false],
+    ['Does not false-positive on "http123"', 'http123', false],
+  ];
 
-  it(`2. Should return ${highlightText.val('false')} if URL is not an external link`, () => {
-    expect(isExternalLink('/internal/page')).toBe(false);
-  });
-
-  it(`3. Should return ${highlightText.val('true')} if URL starts with http`, () => {
-    expect(isExternalLink('http://example.com')).toBe(true);
+  test.each(mapWithIndex(cases))('%i. %s', (_i, _desc, input, expected) => {
+    expect(isExternalLink(input)).toBe(expected);
   });
 });

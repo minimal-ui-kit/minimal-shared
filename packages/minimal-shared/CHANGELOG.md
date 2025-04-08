@@ -1,5 +1,14 @@
 # minimal-shared
 
+## 1.0.8
+
+_Apr 8, 2025_
+
+- Update `utils/active-link`.
+- Update `utils/url`.
+
+---
+
 ## 1.0.7
 
 _Feb 24, 2025_

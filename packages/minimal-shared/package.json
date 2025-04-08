@@ -1,7 +1,7 @@
 {
   "name": "minimal-shared",
   "author": "Minimals",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Shared hooks and utils used by Minimal UI and Zone UI.",
   "keywords": [
     "typescript",
@@ -73,7 +73,6 @@
     "@testing-library/react": "^16.2.0",
     "@types/node": "^22.13.5",
     "@types/react": "19.0.10",
-    "chalk": "^5.4.1",
     "internal-eslint-config": "workspace:*",
     "internal-ts-config": "workspace:*",
     "jsdom": "^26.0.0",

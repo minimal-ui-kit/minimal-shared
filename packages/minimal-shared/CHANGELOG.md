@@ -1,5 +1,13 @@
 # minimal-shared
 
+## 1.0.9
+
+_May 7, 2025_
+
+- Add `utils/css-variables`.
+
+---
+
 ## 1.0.8
 
 _Apr 8, 2025_

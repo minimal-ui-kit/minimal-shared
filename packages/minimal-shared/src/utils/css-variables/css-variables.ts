@@ -5,11 +5,11 @@
  * @returns The extracted CSS variable name (e.g., '--palette-Tooltip-bg').
  *
  * @example
- * getCssVarName('var(--palette-Tooltip-bg)'); // → '--palette-Tooltip-bg'
- * getCssVarName('var(--palette-Tooltip-bg, rgba(69, 79, 91, 0.92))'); // → '--palette-Tooltip-bg'
- * getCssVarName(theme.vars.palette.Tooltip.bg); // → '--palette-Tooltip-bg'
+ * parseCssVar('var(--palette-Tooltip-bg)'); // → '--palette-Tooltip-bg'
+ * parseCssVar('var(--palette-Tooltip-bg, rgba(69, 79, 91, 0.92))'); // → '--palette-Tooltip-bg'
+ * parseCssVar(theme.vars.palette.Tooltip.bg); // → '--palette-Tooltip-bg'
  */
-export function getCssVarName(cssValue: unknown): string {
+export function parseCssVar(cssValue: unknown): string {
   if (typeof cssValue !== 'string' || !cssValue.trim()) {
     console.error('Invalid input: CSS value must be a non-empty string');
     return '';

@@ -1,8 +1,8 @@
-import { getCssVarName } from './css-variables';
+import { parseCssVar } from './css-variables';
 
 // ----------------------------------------------------------------------
 
-describe('getCssVarName()', () => {
+describe('parseCssVar()', () => {
   const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
 
   afterEach(() => {
@@ -14,11 +14,11 @@ describe('getCssVarName()', () => {
   });
 
   it('1. Extracts variable without fallback', () => {
-    expect(getCssVarName('var(--palette-Tooltip-bg)')).toBe('--palette-Tooltip-bg');
+    expect(parseCssVar('var(--palette-Tooltip-bg)')).toBe('--palette-Tooltip-bg');
   });
 
   it('2. Extracts variable with fallback', () => {
-    expect(getCssVarName('var(--palette-Tooltip-bg, rgba(69, 79, 91, 0.92))')).toBe(
+    expect(parseCssVar('var(--palette-Tooltip-bg, rgba(69, 79, 91, 0.92))')).toBe(
       '--palette-Tooltip-bg'
     );
   });
@@ -27,7 +27,7 @@ describe('getCssVarName()', () => {
     const badInputs = [null, undefined, '', 123, {}, true];
 
     for (const val of badInputs) {
-      expect(getCssVarName(val)).toBe('');
+      expect(parseCssVar(val)).toBe('');
     }
 
     expect(errorSpy).toHaveBeenCalledTimes(badInputs.length);
@@ -38,7 +38,7 @@ describe('getCssVarName()', () => {
     const invalidFormats = ['rgba(0,0,0,0.5)', 'var(-bad)', 'var()', 'var(--bad value)'];
 
     for (const val of invalidFormats) {
-      expect(getCssVarName(val)).toBe('');
+      expect(parseCssVar(val)).toBe('');
     }
 
     expect(errorSpy).toHaveBeenCalledTimes(invalidFormats.length);

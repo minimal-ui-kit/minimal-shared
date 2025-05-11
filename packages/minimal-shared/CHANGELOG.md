@@ -1,5 +1,14 @@
 # minimal-shared
 
+## 1.0.10
+
+_May 12, 2025_
+
+- Update `hooks/use-tabs`.
+- Update `utils/css-variables`.
+
+---
+
 ## 1.0.9
 
 _May 7, 2025_

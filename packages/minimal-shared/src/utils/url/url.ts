@@ -1,3 +1,7 @@
+import { isEqual } from 'es-toolkit';
+
+// ----------------------------------------------------------------------
+
 /**
  * Checks if a URL has query parameters.
  *
@@ -41,15 +45,36 @@ export function removeLastSlash(pathname: string): string {
  * Checks if two paths are equal after removing trailing slashes.
  *
  * @param targetUrl - The target URL to compare.
- * @param pathname - The pathname to compare.
+ * @param currentUrl - The pathname to compare.
+ * @param options.deep - Options for deep comparison.
  * @returns True if the paths are equal, false otherwise.
  *
  * @example
  * isEqualPath('/dashboard/', '/dashboard'); // true
  * isEqualPath('/home', '/dashboard'); // false
  */
-export function isEqualPath(targetUrl: string, pathname: string): boolean {
-  return removeLastSlash(targetUrl) === removeLastSlash(pathname);
+export type EqualPathOptions = {
+  deep?: boolean;
+};
+
+export function isEqualPath(
+  targetUrl: string,
+  currentUrl: string,
+  options: EqualPathOptions = {
+    deep: true,
+  }
+): boolean {
+  const parseUrl = (url: string) => {
+    try {
+      const { pathname, searchParams } = new URL(url.trim(), 'http://dummy');
+      return options.deep
+        ? { pathname: removeLastSlash(pathname), params: Object.fromEntries(searchParams) }
+        : { pathname: removeLastSlash(pathname) };
+    } catch {
+      return { pathname: '' };
+    }
+  };
+  return isEqual(parseUrl(currentUrl), parseUrl(targetUrl));
 }
 
 // ----------------------------------------------------------------------

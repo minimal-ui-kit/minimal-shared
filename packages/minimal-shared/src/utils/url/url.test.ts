@@ -39,10 +39,23 @@ describe('isEqualPath()', () => {
     ['Match with trailing slash', '/dashboard/', '/dashboard', true],
     ['Both paths have trailing slashes', '/dashboard/', '/dashboard/', true],
     ['Different paths', '/dashboard', '/settings', false],
-  ];
+    ['Path with and without trailing slash', '/dashboard/params', '/dashboard/params/', true],
+    [
+      'Same path with query params and trailing slash',
+      '/dashboard/params?id=123&filter=active',
+      '/dashboard/params/?id=123&filter=active',
+      true,
+    ],
+    ['Invalid URLs fallback to false', 'not-a-url', '/valid', false],
+  ] as const;
 
-  test.each(mapWithIndex(cases))('%i. %s', (_i, _desc, a, b, expected) => {
-    expect(isEqualPath(a, b)).toBe(expected);
+  describe.each([true, false])('deep = %s', (deep) => {
+    test.each(cases)('%s | a: "%s", b: "%s" => %s', (description, a, b, expected) => {
+      const result = isEqualPath(a, b, { deep });
+      const mode = deep ? 'including params' : 'ignoring params';
+      console.log(`[${mode}] ${description}: Comparing "${a}" and "${b}" => ${result}`);
+      expect(result).toBe(expected);
+    });
   });
 });
 

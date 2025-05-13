@@ -1,5 +1,13 @@
 # minimal-shared
 
+## 1.0.11
+
+_May 14, 2025_
+
+- Update `src/utils/url`.
+
+---
+
 ## 1.0.10
 
 _May 12, 2025_

@@ -99,7 +99,7 @@ function validateOpacity(opacity: string | number, color: string): string {
   const isPercentage = (val: string) => val.trim().endsWith('%');
 
   const errors = {
-    invalid: `[varAlphaX]: Invalid opacity "${opacity}" for ${color}.`,
+    invalid: `[Alpha]: Invalid opacity "${opacity}" for ${color}.`,
     range: 'Must be a number between 0 and 1 (e.g., 0.48).',
     format: 'Must be a percentage (e.g., "48%") or CSS variable (e.g., "var(--opacity)").',
   };
@@ -112,7 +112,7 @@ function validateOpacity(opacity: string | number, color: string): string {
 
   if (typeof opacity === 'number') {
     if (opacity >= 0 && opacity <= 1) {
-      return `${opacity * 100}%`;
+      return `${Number((opacity * 100).toFixed(2))}%`;
     }
     throw new Error(`${errors.invalid} ${errors.range}`);
   }

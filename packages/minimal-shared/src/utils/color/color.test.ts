@@ -51,20 +51,48 @@ describe('createPaletteChannel()', () => {
 
 describe('varAlpha()', () => {
   it(`1. Should add alpha channel to RGB channels`, () => {
-    expect(varAlpha('200 250 214', 0.8)).toBe('rgba(200 250 214 / 0.8)');
+    expect(varAlpha('200 250 214', 0.8)).toBe('rgba(200 250 214 / 80%)');
+    expect(varAlpha('200 250 214', '48%')).toBe('rgba(200 250 214 / 48%)');
   });
 
   it(`2. Should add alpha channel to CSS variable`, () => {
     expect(varAlpha('var(--palette-primary-lighterChannel)', 0.8)).toBe(
-      'rgba(var(--palette-primary-lighterChannel) / 0.8)'
+      'rgba(var(--palette-primary-lighterChannel) / 80%)'
+    );
+    expect(varAlpha('var(--palette-primary-lighterChannel)', '48%')).toBe(
+      'rgba(var(--palette-primary-lighterChannel) / 48%)'
+    );
+    expect(varAlpha('var(--palette-primary-lighterChannel)', 'var(--opacity)')).toBe(
+      'rgba(var(--palette-primary-lighterChannel) / calc(var(--opacity) * 100%))'
     );
   });
 
-  it(`3. Should throw an error if color is undefined`, () => {
-    expect(() => varAlpha('', 0.8)).toThrow(Error);
+  it(`3. Should handle currentColor`, () => {
+    expect(varAlpha('currentColor', 0.5)).toBe('color-mix(in srgb, currentColor 50%, transparent)');
+    expect(varAlpha('currentColor', '48%')).toBe(
+      'color-mix(in srgb, currentColor 48%, transparent)'
+    );
+    expect(varAlpha('currentColor', 'var(--opacity)')).toBe(
+      'color-mix(in srgb, currentColor calc(var(--opacity) * 100%), transparent)'
+    );
   });
 
-  it(`4. Should throw an error if color format is unsupported`, () => {
+  it(`4. Should throw an error if color is undefined`, () => {
+    expect(() => varAlpha('', 0.8)).toThrow(Error);
+    expect(() => varAlpha('   ', 0.8)).toThrow(Error);
+  });
+
+  it(`5. Should throw an error if color format is unsupported`, () => {
     expect(() => varAlpha('#00B8D9', 0.8)).toThrow(Error);
+    expect(() => varAlpha('rgb(0, 184, 217)', 0.8)).toThrow(Error);
+    expect(() => varAlpha('rgba(0, 184, 217, 1)', 0.8)).toThrow(Error);
+    expect(() => varAlpha('500Channel', 0.8)).toThrow(Error);
+  });
+
+  it(`6. Should throw an error for invalid opacity`, () => {
+    expect(() => varAlpha('200 250 214', 1.5)).toThrow(Error);
+    expect(() => varAlpha('200 250 214', -0.1)).toThrow(Error);
+    expect(() => varAlpha('200 250 214', 'bad')).toThrow(Error);
+    expect(() => varAlpha('currentColor', 'bad')).toThrow(Error);
   });
 });

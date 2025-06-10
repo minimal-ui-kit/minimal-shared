@@ -94,25 +94,51 @@ export function createPaletteChannel<T extends InputPalette>(hexPalette: T): Cha
  * const rgbaVarColor = varAlpha('var(--palette-primary-lighterChannel)', 0.8);
  * console.log(rgbaVarColor); // "rgba(var(--palette-primary-lighterChannel) / 0.8)"
  */
-export function varAlpha(color: string, opacity: number = 1): string {
-  if (!color) {
-    throw new Error('[Alpha]: Color is undefined!');
+function validateOpacity(opacity: string | number, color: string): string {
+  const isCSSVar = (val: string) => val.includes('var(--');
+  const isPercentage = (val: string) => val.trim().endsWith('%');
+
+  const errors = {
+    invalid: `[varAlphaX]: Invalid opacity "${opacity}" for ${color}.`,
+    range: 'Must be a number between 0 and 1 (e.g., 0.48).',
+    format: 'Must be a percentage (e.g., "48%") or CSS variable (e.g., "var(--opacity)").',
+  };
+
+  if (typeof opacity === 'string') {
+    if (isPercentage(opacity)) return opacity;
+    if (isCSSVar(opacity)) return `calc(${opacity} * 100%)`;
+    throw new Error(`${errors.invalid} ${errors.format}`);
   }
 
-  const unsupported =
+  if (typeof opacity === 'number') {
+    if (opacity >= 0 && opacity <= 1) {
+      return `${opacity * 100}%`;
+    }
+    throw new Error(`${errors.invalid} ${errors.range}`);
+  }
+
+  throw new Error(`${errors.invalid}`);
+}
+
+export function varAlpha(color: string, opacity: string | number = 1): string {
+  if (!color?.trim()) {
+    throw new Error('[Alpha]: Color is undefined or empty!');
+  }
+
+  const isUnsupported =
     color.startsWith('#') ||
     color.startsWith('rgb') ||
     color.startsWith('rgba') ||
     (!color.includes('var') && color.includes('Channel'));
 
-  if (unsupported) {
+  if (isUnsupported) {
     throw new Error(
       [
         `[Alpha]: Unsupported color format "${color}"`,
-        'Supported formats are:',
+        '✅ Supported formats:',
         '- RGB channels: "0 184 217"',
         '- CSS variables with "Channel" prefix: "var(--palette-common-blackChannel, #000000)"',
-        'Unsupported formats are:',
+        '❌ Unsupported formats:',
         '- Hex: "#00B8D9"',
         '- RGB: "rgb(0, 184, 217)"',
         '- RGBA: "rgba(0, 184, 217, 1)"',
@@ -120,5 +146,11 @@ export function varAlpha(color: string, opacity: number = 1): string {
     );
   }
 
-  return `rgba(${color} / ${opacity})`;
+  const alpha = validateOpacity(opacity, color);
+
+  if (color.toLowerCase() === 'currentcolor') {
+    return `color-mix(in srgb, currentColor ${alpha}, transparent)`;
+  }
+
+  return `rgba(${color} / ${alpha})`;
 }

@@ -1,6 +1,24 @@
-import { hasParams, isEqualPath, removeParams, isExternalLink, removeLastSlash } from './url';
+import {
+  hasParams,
+  isEqualPath,
+  removeParams,
+  safeReturnUrl,
+  isExternalLink,
+  removeLastSlash,
+} from './url';
 
 // ----------------------------------------------------------------------
+
+const originalLocation = window.location;
+
+beforeAll(() => {
+  delete (window as any).location;
+  (window as any).location = new URL('https://example.com');
+});
+
+afterAll(() => {
+  window.location = originalLocation;
+});
 
 const mapWithIndex = <T extends readonly any[][]>(cases: T) =>
   cases.map((testCase, index) => [index + 1, ...testCase] as const);
@@ -84,5 +102,22 @@ describe('isExternalLink()', () => {
 
   test.each(mapWithIndex(cases))('%i. %s', (_i, _desc, input, expected) => {
     expect(isExternalLink(input)).toBe(expected);
+  });
+});
+
+describe('safeReturnUrl()', () => {
+  const cases = [
+    ['Null value → fallback "/"', null, '/', '/'],
+    ['Null value → fallback "/home"', null, '/home', '/home'],
+    ['Valid local path', '/dashboard', '/', '/dashboard'],
+    ['External URL → fallback', 'https://evil.com', '/', '/'],
+    ['Invalid URL → fallback', '::::', '/', '/'],
+    ['Malformed path "//path" → fallback', '//path', '/', '/'],
+    ['Same-origin full URL', 'https://example.com/account?x=1#hash', '/', '/account?x=1#hash'],
+    ['Anchor-only → fallback', '#section', '/', '/'],
+  ];
+
+  test.each(mapWithIndex(cases))('%i. %s', (_i, _desc, input, fallback, expected) => {
+    expect(safeReturnUrl(input, fallback)).toBe(expected);
   });
 });

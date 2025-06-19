@@ -114,3 +114,43 @@ export function removeParams(url: string): string {
 export function isExternalLink(url: string): boolean {
   return /^https?:\/\//i.test(url);
 }
+
+// ----------------------------------------------------------------------
+/**
+ * Safely returns a URL or a fallback if the URL is invalid or not same-origin.
+ *
+ * @param value - The URL to validate.
+ * @param fallback - The fallback URL to return if the value is invalid.
+ * @returns A safe URL or the fallback.
+ *
+ * @example
+ * safeReturnUrl('/dashboard', '/home'); // '/dashboard'
+ * safeReturnUrl('https://example.com', '/home'); // '/'
+ */
+export function safeReturnUrl(value: string | null, fallback?: string | null): string {
+  const safeFallback = fallback ?? '/';
+
+  if (!value) return safeFallback;
+
+  if (typeof window === 'undefined' || !window.location?.origin) {
+    return safeFallback;
+  }
+
+  try {
+    const url = new URL(value, window.location.origin);
+
+    const isSameOrigin = url.origin === window.location.origin;
+    const isValidPath = url.pathname.startsWith('/') && !url.pathname.startsWith('//');
+    const looksLikeJunk = /^\/:+$/.test(url.pathname);
+    const isAnchorOnly = url.pathname === '/' && !url.search && url.hash;
+
+    if (isSameOrigin && isValidPath && !looksLikeJunk && !isAnchorOnly) {
+      return `${url.pathname}${url.search}${url.hash}`;
+    }
+
+    return safeFallback;
+  } catch {
+    const isSafePath = value.startsWith('/') && !value.startsWith('//');
+    return isSafePath ? value : safeFallback;
+  }
+}

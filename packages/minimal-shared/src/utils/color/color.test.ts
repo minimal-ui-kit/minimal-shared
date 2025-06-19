@@ -53,6 +53,7 @@ describe('varAlpha()', () => {
   it(`1. Should add alpha channel to RGB channels`, () => {
     expect(varAlpha('200 250 214', 0.8)).toBe('rgba(200 250 214 / 80%)');
     expect(varAlpha('200 250 214', '48%')).toBe('rgba(200 250 214 / 48%)');
+    expect(varAlpha('200 250 214', '0.24')).toBe('rgba(200 250 214 / 24%)');
   });
 
   it(`2. Should add alpha channel to CSS variable`, () => {

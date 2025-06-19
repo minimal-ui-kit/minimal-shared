@@ -1,5 +1,13 @@
 # minimal-shared
 
+## 1.0.15
+
+_Jun 20, 2025_
+
+- Update `src/utils/color`.
+
+---
+
 ## 1.0.14
 
 _Jun 10, 2025_

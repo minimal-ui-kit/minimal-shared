@@ -6,7 +6,7 @@
   "engines": {
     "node": ">=20"
   },
-  "packageManager": "pnpm@9.15.1",
+  "packageManager": "pnpm@10.17.1",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "turbo dev",
@@ -26,9 +26,9 @@
     "release": "pnpm build:release && changeset version && changeset publish"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.28.1",
-    "prettier": "^3.5.2",
-    "turbo": "^2.4.2",
-    "typescript": "^5.7.3"
+    "@changesets/cli": "^2.29.7",
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.8",
+    "typescript": "^5.9.2"
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "minimal-shared",
   "author": "Minimals",
-  "version": "1.0.15",
+  "version": "1.1.0",
   "description": "Shared hooks and utils used by Minimal UI and Zone UI.",
   "keywords": [
     "typescript",
@@ -66,20 +66,20 @@
     "tsc:print": "npx tsc --showConfig"
   },
   "dependencies": {
-    "es-toolkit": "^1.32.0"
+    "es-toolkit": "^1.39.10"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
-    "@types/node": "^22.13.5",
-    "@types/react": "19.0.10",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^24.5.2",
+    "@types/react": "19.1.14",
     "internal-eslint-config": "workspace:*",
     "internal-ts-config": "workspace:*",
-    "jsdom": "^26.0.0",
+    "jsdom": "^27.0.0",
     "react": "^19.0.0",
-    "tsup": "^8.3.6",
-    "typescript": "^5.7.3",
-    "vitest": "^3.0.6"
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0"

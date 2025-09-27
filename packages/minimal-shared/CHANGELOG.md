@@ -1,5 +1,13 @@
 # minimal-shared
 
+## 1.1.0
+
+_Sep 27, 2025_
+
+- Add `src/utils/right-to-left`.
+
+---
+
 ## 1.0.15
 
 _Jun 20, 2025_

@@ -1,0 +1,91 @@
+# ==========================================
+# 🚀 NPM Trusted Publishing Workflow
+# ==========================================
+# Automates publishing to npm using GitHub Actions
+# with "Trusted Publishing" — no NPM_TOKEN needed.
+# Uses GitHub’s OpenID Connect (OIDC) for secure identity verification.
+#
+# Docs:
+# - Trusted Publishers: https://docs.npmjs.com/trusted-publishers
+# - setup-node:  https://github.com/actions/setup-node
+# - setup-pnpm:  https://github.com/pnpm/action-setup
+# ==========================================
+
+name: Release
+
+on:
+  push:
+    branches: ['main'] # Trigger when code is pushed to main
+  pull_request:
+    types: [opened, synchronize] # Optional: validate PRs to main
+
+permissions:
+  id-token: write # ✅ Required for Trusted Publishing (OIDC)
+  contents: write # Required if creating git tags or GitHub releases
+
+jobs:
+  build:
+    name: 🚀 Release
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      # ---------------------------------------------------------
+      # 🧩 1. Checkout source code
+      # ---------------------------------------------------------
+      - name: 📂 Check repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 # Fetch recent commits for changelog or versioning tools
+
+      # ---------------------------------------------------------
+      # 🧩 2. Setup pnpm
+      # ---------------------------------------------------------
+      - name: 📦 Setup pnpm # https://github.com/marketplace/actions/setup-pnpm
+        uses: pnpm/action-setup@v4
+
+      # ---------------------------------------------------------
+      # 🧩 3. Setup Node.js environment
+      # ---------------------------------------------------------
+      - name: 📦 Setup Node.js (v20+) # https://github.com/actions/setup-node
+        uses: actions/setup-node@v4 # Reads Node.js version from package.json > engines.node
+        with:
+          node-version-file: './package.json'
+          cache: 'pnpm' # Enable caching for pnpm dependencies
+          registry-url: 'https://registry.npmjs.org/' # Set npm registry for publishing
+
+      # ---------------------------------------------------------
+      # 🧩 4. Update npm to latest (ensure OIDC-compatible version)
+      # ---------------------------------------------------------
+      - name: 🆙 Update npm
+        run: |
+          echo "Current npm version: $(npm -v)"
+          npm install -g npm@latest
+          echo "Updated npm version: $(npm -v)"
+
+      # ---------------------------------------------------------
+      # 🧩 5. Install dependencies
+      # ---------------------------------------------------------
+      - name: 📦 Install dependencies
+        run: pnpm install --frozen-lockfile # --frozen-lockfile ensures exact versions from pnpm-lock.yaml are used
+
+      # ---------------------------------------------------------
+      # 🧩 6. (Optional) Test or build project
+      # ---------------------------------------------------------
+      # - name: 🧪 Run tests
+      #   run: pnpm test
+
+      # - name: 🛠️ Build project
+      #   run: pnpm build
+
+      # ---------------------------------------------------------
+      # 🧩 7. Release / Publish package
+      # ---------------------------------------------------------
+      - name: 🚀 Release (Trusted Publishing)
+        # --access public ensures the package is published as a public npm package
+        # pnpm release = pnpm build:release && changeset version && changeset publish
+        run: pnpm release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # GITHUB_TOKEN is used only for GitHub authentication (tags/releases).
+          # npm authentication happens automatically via OIDC (Trusted Publishing).

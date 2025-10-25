@@ -10,6 +10,12 @@ Run the following command:
 cd my-turborepo
 ```
 
+## Install dependencies
+
+```sh
+pnpm install
+```
+
 ## Development and Build
 
 ```sh

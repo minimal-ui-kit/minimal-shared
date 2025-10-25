@@ -1,15 +1,40 @@
 # minimal-shared
 
-Shared hooks and utils used by Mnimal UI and Zone UI.
+A collection of **shared hooks** and **utility functions** used across [Minimal UI](https://minimals.cc/) and [Zone UI](https://zone-ui.vercel.app/).
+
+---
 
 ## Hooks
 
-[Visit list of hooks](https://github.com/minimal-ui-kit/minimal-shared/tree/main/packages/minimal-shared/src/hooks)
+A collection of reusable React hooks for Minimal UI and Zone UI.
+You can browse the available hooks here:
 
-## Utils
+👉 [**View all hooks →**](https://github.com/minimal-ui-kit/minimal-shared/tree/main/packages/minimal-shared/src/hooks)
 
-[Visit list of utils](https://github.com/minimal-ui-kit/minimal-shared/tree/main/packages/minimal-shared/src/utils)
+---
+
+## Utilities
+
+Helper and utility functions for common frontend patterns and workflows.
+Explore the list of available utils:
+
+👉 [**View all utils →**](https://github.com/minimal-ui-kit/minimal-shared/tree/main/packages/minimal-shared/src/utils)
+
+---
 
 ## Changelog
 
-[https://github.com/minimal-ui-kit/minimal-shared/blob/main/packages/minimal-shared/CHANGELOG.md](https://github.com/minimal-ui-kit/minimal-shared/blob/main/packages/minimal-shared/CHANGELOG.md)
+[**CHANGELOG.md →**](https://github.com/minimal-ui-kit/minimal-shared/blob/main/packages/minimal-shared/CHANGELOG.md)
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## About
+
+`minimal-shared` is part of the [**Minimal UI Kit**](https://github.com/minimal-ui-kit) ecosystem,
+a modern UI framework built with **TypeScript**, **React**, and **Turborepo**.

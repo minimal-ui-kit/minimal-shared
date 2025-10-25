@@ -1,5 +1,13 @@
 # minimal-shared
 
+## 1.1.1
+
+_Oct 25, 2025_
+
+- Update README.md
+
+---
+
 ## 1.1.0
 
 _Sep 27, 2025_

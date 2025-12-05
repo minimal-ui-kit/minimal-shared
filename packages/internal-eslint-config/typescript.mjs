@@ -36,6 +36,11 @@ const commonRules = () => ({
   'react/react-in-jsx-scope': 0,
   'react/jsx-no-useless-fragment': [1, { allowExpressions: true }],
   'react/jsx-curly-brace-presence': [2, { props: 'never', children: 'never' }],
+  'react-hooks/refs': 0,
+  'react-hooks/immutability': 0,
+  'react-hooks/set-state-in-effect': 0,
+  'react-hooks/incompatible-library': 0,
+  'react-hooks/preserve-manual-memoization': 0,
   // typescript
   '@typescript-eslint/no-shadow': 2,
   '@typescript-eslint/no-explicit-any': 0,
@@ -59,7 +64,7 @@ const importRules = () => ({
   'import/no-named-as-default-member': 0,
   'import/no-cycle': [
     0, // disabled if slow
-    { maxDepth: '∞', ignoreExternal: false, allowUnsafeDynamicCyclicDependency: false },
+    { ignoreExternal: true, disableScc: true },
   ],
 });
 
@@ -91,6 +96,12 @@ const sortImportsRules = () => {
     components: ['custom-components'],
   };
 
+  const typeGroups = [
+    ['type', 'external-type', 'builtin-type'],
+    { newlinesBetween: 'never' },
+    ['index-type', 'parent-type', 'sibling-type', 'internal-type'],
+  ];
+
   return {
     'perfectionist/sort-named-imports': [1, { type: 'line-length', order: 'asc' }],
     'perfectionist/sort-named-exports': [1, { type: 'line-length', order: 'asc' }],
@@ -115,7 +126,7 @@ const sortImportsRules = () => {
         groups: [
           'style',
           'side-effect',
-          'type',
+          ...typeGroups,
           ['builtin', 'external'],
           customGroups.mui,
           customGroups.routes,
@@ -127,7 +138,6 @@ const sortImportsRules = () => {
           customGroups.auth,
           customGroups.types,
           ['parent', 'sibling', 'index'],
-          ['parent-type', 'sibling-type', 'index-type'],
           'object',
           'unknown',
         ],

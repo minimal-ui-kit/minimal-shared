@@ -62,7 +62,7 @@ export function useBackToTop(
 
   // Debounce the scroll handler to improve performance
   const debouncedHandleScroll = useMemo(() => {
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: ReturnType<typeof setTimeout>;
 
     return () => {
       clearTimeout(timeoutId);

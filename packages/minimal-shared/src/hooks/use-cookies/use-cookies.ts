@@ -1,8 +1,8 @@
+import type { CookieOptions } from '../../utils/cookies';
+
 import { useMemo, useState, useEffect, useCallback } from 'react';
 
 import { setCookie, getCookie, removeCookie } from '../../utils/cookies';
-
-import type { CookieOptions } from '../../utils/cookies';
 
 // ----------------------------------------------------------------------
 

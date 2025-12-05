@@ -12,12 +12,32 @@ import {
 const originalLocation = window.location;
 
 beforeAll(() => {
+  const url = new URL('https://example.com');
+
   delete (window as any).location;
-  (window as any).location = new URL('https://example.com');
+
+  Object.defineProperty(window, 'location', {
+    value: {
+      ...originalLocation,
+      href: url.href,
+      origin: url.origin,
+      protocol: url.protocol,
+      host: url.host,
+      hostname: url.hostname,
+      pathname: url.pathname,
+      search: url.search,
+      hash: url.hash,
+    },
+    writable: true,
+    configurable: true,
+  });
 });
 
 afterAll(() => {
-  window.location = originalLocation;
+  Object.defineProperty(window, 'location', {
+    value: originalLocation,
+    configurable: true,
+  });
 });
 
 const mapWithIndex = <T extends readonly any[][]>(cases: T) =>

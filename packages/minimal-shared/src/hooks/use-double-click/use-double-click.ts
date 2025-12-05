@@ -35,7 +35,7 @@ export function useDoubleClick({
   doubleClick,
   timeout = 250,
 }: UseDoubleClickProps): UseDoubleClickReturn {
-  const clickTimeout = useRef<NodeJS.Timeout | null>(null);
+  const clickTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const clearClickTimeout = useCallback(() => {
     if (clickTimeout.current) {

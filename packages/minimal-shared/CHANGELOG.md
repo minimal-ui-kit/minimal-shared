@@ -1,10 +1,18 @@
 # minimal-shared
 
-## 1.1.3
+## 1.1.5
 
-_Oct 25, 2025_
+_Dec 6, 2025_
 
-- Update README.md
+- Resolved security vulnerabilities. See details: https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components
+
+---
+
+## 1.1.4
+
+_Dec 14, 2025_
+
+- Resolved security vulnerabilities. See details: https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components
 
 ---
 

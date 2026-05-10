@@ -11,9 +11,8 @@ export const COLORS = {
 
 type ColorName = Exclude<keyof typeof COLORS, 'reset'>;
 
-const colorize = (color: ColorName, message: string): string => {
-  return `${COLORS[color]}${message}${COLORS.reset}`;
-};
+const colorize = (color: ColorName, message: string): string =>
+  `${COLORS[color]}${message}${COLORS.reset}`;
 
 export const colorLogger: Record<ColorName, (message: string) => string> = {
   magenta: (msg) => colorize('magenta', msg),

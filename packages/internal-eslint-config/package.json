@@ -5,6 +5,13 @@
   "description": "Share configuration eslint in Minimal UI and Zone UI.",
   "license": "MIT",
   "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./eslint.config.js",
+      "types": "./index.d.ts"
+    }
+  },
   "scripts": {
     "clean": "rm -rf node_modules .turbo .next out dist build",
     "lint:print": "npx eslint --print-config eslint.config.mjs > eslint-current-config.json",
